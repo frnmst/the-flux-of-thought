@@ -1,22 +1,39 @@
-# The Plain v2.2
+# The Plain Deblobbed
 
-The Plain is just another white clean and minimalist Jekyll theme that designed to focus on writing matters. This theme is best use for personal blog type. Font or typeface used is [Karla](https://fonts.google.com/specimen/Karla?selection.family=Karla) from Google Web Fonts. This theme is inspired from Leonard Lamprecht's original [Jekyll theme](https://github.com/leo/leo.github.io).
+The Plain is just another white clean and minimalist Jekyll theme that 
+designed to focus on writing matters. This theme is best use for personal blog 
+type.
 
-[**Live Demo**](http://heiswayi.github.io/the-plain/)
+## This version compared to the original one
 
-### Screenshot
+- Removed all analytics
+- Removed Google font
+- Removed Gravatar
+- Removed MathJax
 
-![Screenshot](http://i.imgur.com/btWdSS0.png)
+- Added a few personalizations
 
-### Changelogs
+## Building
 
-```
-2016/12/22 v2.2
-===============
-- Fixed footnote issue. Use classic way of displaying the footnotes at the bottom of the content.
-- Removed footnote scripts.
-```
+    $ make
 
-### License
+## Avatar
+
+Use a square avatar in `./assets/avatar.jpg` (more coming soon).
+
+## Todo
+
+- Add a static comment system using `mailto` and
+  mail aliases for each post (using the posts' title)
+  This could imply copying the comments by hand...
+- Remove link "square" effect (I don't remember the attribute name) after
+  clicking links.
+- Add link to cc-by-sa page on respective picture.
+
+## Screenshot
+
+todo
+
+## License
 
 [MIT](LICENSE.md)
