@@ -1,6 +1,20 @@
 ---
 # Front matter comment to ensure Jekyll properly reads file.
+
+#@font-face {
+#    font-family: 'TowerPrintStandard';
+#    src: url('{{ site.baseurl }}/fonts/Tower_Print.eot');
+#    src: url('{{ site.baseurl }}/fonts/Tower_Print.woff');
+#    src: url('{{ site.baseurl }}/fonts/Tower_Print.svg');
+#    src: url('{{ site.baseurl }}/fonts/Tower_Print.ttf');
+#};
 ---
 
+@font-face {
+    font-family: 'HiLo-DecoRegular';
+    src: url('{{ site.baseurl }}/fonts/HiLo-Deco.ttf');
+};
 @import 'main';
 @import 'syntax';
+
+

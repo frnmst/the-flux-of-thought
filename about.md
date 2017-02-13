@@ -9,4 +9,7 @@ The main purpose of this theme is to be as simple as it could be, so you can foc
 
 **Just write thing that matters..**
 
+The font is released uder the "SIL Open Font License".
+Website: <https://fontlibrary.org/en/font/hilo-deco>
+
 Enjoy!
