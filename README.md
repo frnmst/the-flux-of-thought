@@ -17,6 +17,9 @@ type.
   - Bigger font rendering
   - Changed background color
   - `outline: none` for links
+  - Static comment system using `mailto` and
+    mail aliases for each post (using the posts' path).
+    This could implies copying the comments by hand
 
 ## Installation
 
@@ -32,11 +35,15 @@ type.
 
 Use a square avatar in `./assets/avatar.jpg` (more coming soon).
 
+## Local media content
+
+Put your local media content in `./assets/posts` and use the posts' name as 
+prefix to the files. You should then reference these files form the `_posts`
+directory easily.
+
 ## TODO
 
-- Add a static comment system using `mailto` and
-  mail aliases for each post (using the posts' title)
-  This could imply copying the comments by hand...
+- Tags and categories
 - Add link to cc-by-sa page on respective picture.
 
 ## Screenshot

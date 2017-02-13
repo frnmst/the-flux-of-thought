@@ -1,0 +1,16 @@
+<article><div class="divider"></div></article>
+
+<div class="comments">
+<h3>Comments</h3>
+
+    {% capture mail %}
+{{ site.author_email }}
+    {% endcapture %}
+    {% assign mail_substring = mail | split: '@' %}
+    {% assign mail_username = mail_substring[0] %}
+    {% assign mail_domain = mail_substring[1] %}
+    <a href="mailto:{{ mail_username }}+{{ page.path | remove: ".md" | remove:
+"_posts/" }}@{{ mail_domain }}">Add comment</a>
+</div>
+
+<article><div class="divider"></div></article>

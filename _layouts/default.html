@@ -13,6 +13,14 @@
 			{{ content | replace: '&#8617;', '&#8617;&#xfe0e;' }}
 		</main>
 
+        {% if page.is_home != true %}
+            {% include comments.html %}
+        {% endif %}
+
+        {% if page.is_post == true %}
+            {% include post_navigation.html %}
+        {% endif %}
+
 		{% include footer.html %}
 
 	</body>

@@ -43,3 +43,15 @@ defaults:
       type:         "posts"
     values:
       layout:       "post"
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      is_post: true
+  -
+    scope:
+      path: "index.html"
+    values:
+      is_home: true
+
