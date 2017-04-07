@@ -27,6 +27,11 @@ exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "Mak
 gems:
   - jekyll-sitemap
 
+collections:
+ - comments
+#  comments:
+#    output: true
+
 defaults:
   -
     scope:
@@ -46,12 +51,24 @@ defaults:
   -
     scope:
       path: ""
-      type: posts
+      type:         "posts"
     values:
-      is_post: true
+      is_post:      true
   -
     scope:
-      path: "index.html"
+      path:         "index.html"
     values:
-      is_home: true
+      is_home:      true
+  -
+    scope:
+      path:         ""
+      type:         comments
+    values:
+      layout:       comment
+  -
+    scope:
+      type:         "comments"
+    values:
+      is_comment:   true
 
+#      layout: page

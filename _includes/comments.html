@@ -1,7 +1,10 @@
 <article><div class="divider"></div></article>
 
 <div class="comments">
-<h3>Comments</h3>
+    <article>
+    <div class="comment">
+        <br />
+        <div class="title"><h2>Comments</h2></div>
 
     {% capture mail %}
 {{ site.author_email }}
@@ -9,8 +12,58 @@
     {% assign mail_substring = mail | split: '@' %}
     {% assign mail_username = mail_substring[0] %}
     {% assign mail_domain = mail_substring[1] %}
-    <a href="mailto:{{ mail_username }}+{{ page.path | remove: ".md" | remove:
-"_posts/" }}@{{ mail_domain }}">Add comment</a>
+    <div class="title"><h3><a href="mailto:{{ mail_username }}+{{ page.path | remove: ".md" | remove:"_posts/" }}@{{ mail_domain }}">Post a new comment</a></h3></div>
+
+<!-- Reference to comments here -->
+  {% for comment in site.comments %}
+    {% assign page_realid = page.id | replace: "/notes/", "" %} 
+    {% assign comment_realid = comment.id | replace: "/comments/", "" %} 
+    {% assign comment_metadata = comment_realid | split: '_' %}
+    {% assign comment_realid = comment_metadata[0] %}
+    <!-- Can be used to reference comment as paragraph -->
+    {% assign comment_number = comment_metadata[1] %}
+
+
+    {% if comment_realid == page_realid %}
+        {% if forloop.first == true %}
+            <div class="divider"></div>
+        {% endif %}    
+
+        <b>
+        <em>
+
+        <table>
+            <tr>
+                <td>Subject</td>
+                <!-- Link to single comment -->
+                <td><a href="#{{ comment_number }}" id={{ comment_number}}>{{ comment.subject }}</a></td>
+            </tr>
+            <tr>
+                <td>From</td>
+                <td>{{ comment.from }}</td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td>{{ comment.date | date: "%c, %:z GMT" }}</td>
+            </tr>
+        </table>
+
+        </em>
+        </b>
+
+        {{ comment.content | markdownify }}
+        <!-- Don't print the divider after the last comment -->
+        {% if forloop.last == false %}
+            <div class="divider"></div>
+        {% endif %}
+    {% endif %}
+  {% endfor %}
+
+        <br />
+
+    </div>
+
+    </article>
+
 </div>
 
-<article><div class="divider"></div></article>

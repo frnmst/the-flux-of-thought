@@ -3,7 +3,7 @@ title: For Example of very Long Title Would Be Typography Elements in One
 updated: 2016-10-18 23:37
 ---
 
-> This is Markdown Cheatsheet Demo for **The Plain**, this Jekyll theme. Please check the raw content of this file for the markdown usage.
+> This is Markdown Cheatsheet Demo for **The Plain Libre**, this Jekyll theme. Please check the raw content of this file for the markdown usage.
 
 ## Typography Elements in One
 
