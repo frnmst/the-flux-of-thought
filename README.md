@@ -17,7 +17,9 @@ type.
   - Bigger font rendering
   - Changed background colors
   - `outline: none` for links
-  - Static comment system
+- Static commenting system
+- Tags and categories (TODO)
+- <!--more--> tag support
 
 ## Commenting system
 
@@ -36,29 +38,35 @@ for the `another-post` post. The `mailto` link will have this structure:
 
     <your_gmail_email>+2017-02-11-another-post@gmail.com
 
-You may notice the substring `2017-02-11-another-post` after the gmail's email. 
+You may notice the substring `2017-02-11-another-post` after the gmail's email 
+(but it works for any mailer system supporting these kind of mail aliases).
 This string is part of the file name corresponding to the post which is:
 
     ./_posts/2017-02-11-another-post.md
 
-Let's ingnore the `./_posts/` substring for a moment and save 
-`2017-02-11-another-post.md` somewhere. Since a post may have more than a 
-comment, we must distinguish between one and 
-another. To do this we identify each comment by adding a new 
-substring to the comment path, for example:
+Let's ingnore the `./_posts/` and `.md` substrings for a moment and save 
+`2017-02-11-another-post` somewhere. Since a post may have more than a 
+comment, we must distinguish between one and another. To do this we create a 
+new directory using the comment path, like the following:
 
-    2017-02-11-another-post_0.md
+    $ mkdir _/comments/2017-02-11-another-post
 
-The separator between the id `0` and the rest of the path must always be `_`.
-If you receive another comment you can use `1`, and so on. Using numbers is 
-just a convention, you may use any string in this case.
+and we will save the comment files inside to keep things tidy.
 
-Out final comment file name is:
+We then create a new markdown file corresponding to the comment, and its 
+file name will be used as an id, for example:
 
-    ./comments/2017-02-11-another-post_0.md
+    0.md
+
+You can use any non spaced string, and avoid using `.md` except at the end of 
+this file name.
+
+Out final comment path is:
+
+    ./comments/2017-02-11-another-post/0.md
 
 As a final remark you may have noticed that each comment is referenced as a 
-paragraph and that markdown is enabled by default.
+paragraph (using the id) and that markdown is enabled by default.
 
 ### Comment attributes.
 
@@ -94,6 +102,10 @@ For example:
     def hi
     ```
 
+## Media
+
+Unlike comments, media content may be referenced from more than one post...
+
 ## Avatar
 
 Use a square avatar in `./assets/avatar.jpg` (more coming soon).
@@ -113,12 +125,6 @@ directory easily.
 ## Building
 
     $ make
-
-## TODO
-
-- Tags and categories.
-- Add link to cc-by-sa page on respective picture.
-- Misc.
 
 ## Screenshot
 

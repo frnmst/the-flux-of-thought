@@ -14,17 +14,14 @@
     {% assign mail_domain = mail_substring[1] %}
     <div class="title"><h3><a href="mailto:{{ mail_username }}+{{ page.path | remove: ".md" | remove:"_posts/" }}@{{ mail_domain }}">Post a new comment</a></h3></div>
 
-<!-- Reference to comments here -->
   {% for comment in site.comments %}
-    {% assign page_realid = page.id | replace: "/notes/", "" %} 
-    {% assign comment_realid = comment.id | replace: "/comments/", "" %} 
-    {% assign comment_metadata = comment_realid | split: '_' %}
-    {% assign comment_realid = comment_metadata[0] %}
-    <!-- Can be used to reference comment as paragraph -->
-    {% assign comment_number = comment_metadata[1] %}
 
+    {% assign page_path = page.path | replace: "_posts/", "" | remove: ".md" %}
+    {% assign comment_fullpath = comment.path | replace: "_comments/", "" | split: "/" %}
+    {% assign comment_path = comment_fullpath[0] %}
+    {% assign comment_id = comment_fullpath[1] | remove: ".md" %}
 
-    {% if comment_realid == page_realid %}
+    {% if comment_path == page_path %}
         {% if forloop.first == true %}
             <div class="divider"></div>
         {% endif %}    
@@ -35,8 +32,10 @@
         <table>
             <tr>
                 <td>Subject</td>
+                {% comment %}
                 <!-- Link to single comment -->
-                <td><a href="#{{ comment_number }}" id={{ comment_number}}>{{ comment.subject }}</a></td>
+                {% endcomment %}
+                <td><a href="#{{ comment_id }}" id={{ comment_id}}>{{ comment.subject }}</a></td>
             </tr>
             <tr>
                 <td>From</td>
@@ -52,7 +51,9 @@
         </b>
 
         {{ comment.content | markdownify }}
+        {% comment %}
         <!-- Don't print the divider after the last comment -->
+        {% endcomment %}
         {% if forloop.last == false %}
             <div class="divider"></div>
         {% endif %}
@@ -66,4 +67,3 @@
     </article>
 
 </div>
-

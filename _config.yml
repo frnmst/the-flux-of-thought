@@ -10,7 +10,8 @@ avatar_path:        avatar.jpg
 
 # Site Settings
 baseurl:            "" # Base URL must end WITHOUT a slash, default: ""
-permalink:          /notes/:title # Post permalink
+permalink:          /notes/:title # Post permalink. If you change this you must 
+                                  # modify all the occurencies manually.
 timezone:           Europe/Rome # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Site Build
@@ -22,15 +23,21 @@ sass:
     style:          :compressed
 
 # Other Params
-include:            [ "robots.txt" ]
+include:            [ "_pages" ]
 exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "Makefile" ]
 gems:
   - jekyll-sitemap
 
+# Keep comments hidden
 collections:
- - comments
-#  comments:
-#    output: true
+  comments:
+    output:         false
+  pages:
+    output:         false
+  media:
+    output:         true
+  assets:
+    output:         true
 
 defaults:
   -
@@ -48,27 +55,22 @@ defaults:
       type:         "posts"
     values:
       layout:       "post"
-  -
-    scope:
-      path: ""
-      type:         "posts"
-    values:
       is_post:      true
   -
     scope:
-      path:         "index.html"
+      path:         "_pages/index.html"
     values:
       is_home:      true
   -
     scope:
-      path:         ""
+      path:         "_pages/404.md"
+    values:
+      is_404:       true
+  -
+    scope:
+      path:         "comments"
       type:         comments
     values:
       layout:       comment
-  -
-    scope:
-      type:         "comments"
-    values:
       is_comment:   true
 
-#      layout: page

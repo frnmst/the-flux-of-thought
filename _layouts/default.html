@@ -13,7 +13,10 @@
 			{{ content | replace: '&#8617;', '&#8617;&#xfe0e;' }}
 		</main>
 
-        {% if page.is_home != true %}
+        {% comment %}
+        Can't use == false since page.is_home might be undefined.
+        {% endcomment %}
+        {% if page.is_home != true and page.is_404 != true %}
             {% include comments.html %}
         {% endif %} 
 
