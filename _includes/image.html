@@ -1,5 +1,18 @@
-{% assign url = '/assets/static/' | append: include.file %}
+{% if include.otherpost == true %}
+    {% assign url = "/media/" | append: include.file %}
+{% else %}
+    {% capture url %}/media/{{ page.path | remove: "_posts/" | remove: ".md" | append: "/" | append: include.file }}{% endcapture %}
+{% endif %}
 
+{% if include.caption %}
+<figure>
+    <a href="{{ url | prepend: site.baseurl }}" target="_blank" class="image">
+        <img src="{{ url | prepend: site.baseurl }}" alt="{% if include.alt %}{{ include.alt }}{% else %}Image{% endif %}">
+    </a>
+    <caption>{{ include.caption }}</caption>
+</figure>
+{% else %}
 <a href="{{ url | prepend: site.baseurl }}" target="_blank" class="image">
-	<img src="{{ url | prepend: site.baseurl }}" alt="{% if include.alt %}{{ include.alt }}{% else %}Image{% endif %}">
+    <img src="{{ url | prepend: site.baseurl }}" alt="{% if include.alt %}{{ include.alt }}{% else %}Image{% endif %}">
 </a>
+{% endif %}

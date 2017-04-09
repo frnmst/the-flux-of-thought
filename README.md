@@ -12,14 +12,15 @@ type.
 - Removed Google font
 - Removed Gravatar
 - Removed MathJax
-- Added a few personalizations
-  - Changed main font
-  - Bigger font rendering
-  - Changed background colors
-  - `outline: none` for links
+- Changed main font
+- Bigger font rendering
+- Changed background colors
+- `outline: none` for links
+- Simpler image handling
+- Last post update shown
 - Static commenting system
 - Tags and categories (TODO)
-- <!--more--> tag support
+- <!--more--> tag support (TODO)
 
 ## Commenting system
 
@@ -102,19 +103,79 @@ For example:
     def hi
     ```
 
-## Media
+## Media files
 
-Unlike comments, media content may be referenced from more than one post...
+Extending [this](https://eduardoboucas.com/blog/2014/12/07/including-and-managing-images-in-jekyll.html) 
+ideas I came up with the following:
+
+### Overview
+
+Just like comments, each media file is contained in one directory corresponding 
+to a post. However, unlike comments, media content may be referenced from more 
+than one post. This is how it works.
+
+### File locations
+
+If out example post is `./_posts/2017-02-11-another-post.md` and we want to add 
+media files to it, we must create a corresponding directory in `_media`:
+
+    ./_media/2017-02-11-another-post
+
+We can now place our file inside, for example:
+
+    ./_media/2017-02-11-another-post/terminal.png
+
+### Possible combinations
+
+Now, let's go back to `./_posts/2017-02-11-another-post.md`. To be able to 
+display that picture we need to use the `include` liquid tag. In the simplest 
+form the only required parameter is the file name:
+
+```liquid
+{% include image.html file="terminal.png" %}
+```
+
+You can also use the `alt` and/or `capiton` tags:
+
+```liquid
+{% include image.html file="terminal.png" alt="ter" caption="A terminal example caption" %}
+```
+
+You can also use plain markdown, which is not advisable in this case, since 
+you need to input the whole path:
+
+    ![ter]({{ site.baseurl }}/media/2017-02-11-another-post/terminal.png)
+
+### Calling files from another post.
+
+In some cases you may want to recall media files from another post. You can do 
+that using the `otherpost` tag. Let's say we are in the 
+`_posts/2015-09-09-download-this-theme.md` post.
+
+```liquid
+{% include image.html file="2017-02-11-another-post/terminal.png" alt="Terminal" caption="A terminal image from the other post" otherpost=true %}
+```
+
+As you can see you don't have to specify the full path but only the post name 
+slash the file name. The rest is filled in automatically.
+
+Finally, notice the `otherpost=true` tag at the end.
+
+### Warning
+
+This feature is currently available only for images.
+
+## Static pages
+
+Reading [this](https://mademistakes.com/articles/using-jekyll-2016/#pages-for-everything-else)
+gave me the idea to move the static pages like index, 404, etc.. in the 
+`_pages` directory. If you want to add new pages remember to add a sensible 
+`permalink` for each page and remember to keep `include: [ "_pages" ]`
+and `collections: pages: output: false` in the `_config.yml` file.
 
 ## Avatar
 
-Use a square avatar in `./assets/avatar.jpg` (more coming soon).
-
-## Local media content
-
-Put your local media content in `./assets/posts` and use the posts' name as 
-prefix to the files. You should then reference these files form the `_posts`
-directory easily.
+Use a square avatar in `./_assets/avatar.jpg`.
 
 ## Theme installation
 
