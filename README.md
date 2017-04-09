@@ -6,7 +6,7 @@ type.
 
 [Original version](https://github.com/heiswayi/the-plain)
 
-## This version compared to the original one
+## This version compared to the original one [1443d83](https://github.com/frnmst/the-plain-libre/commit/1443d83ec881a7bfd4b62975da29f72f8f99d38a)
 
 - Removed all analytics
 - Removed Google font
@@ -146,7 +146,7 @@ you need to input the whole path:
 
     ![ter]({{ site.baseurl }}/media/2017-02-11-another-post/terminal.png)
 
-### Calling files from another post.
+### Calling files from another post
 
 In some cases you may want to recall media files from another post. You can do 
 that using the `otherpost` tag. Let's say we are in the 
