@@ -29,9 +29,9 @@ type.
 - CNAME?
 - shell scipt that builds example posts, images (base64 or similar), etc using:
 
-    cat <<-EOF
-    # whatever
-    EOF
+      cat <<-EOF
+      # whatever
+      EOF
 
   so that examples and real blong content can be decoupled.
   This script will be called using the Makefile.
