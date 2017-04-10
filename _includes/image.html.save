@@ -1,0 +1,20 @@
+{% assign url = '/media/' | append: include.file %}
+
+{% if fromotherpost == true %}
+
+{% else %}
+    {% capture imagePath %}{{ page.date | date: "%Y-%m-%d" }}-{{ page.title | slugify }}/{{ include.name }}{% endcapture %}
+{% endif %}
+
+{% if include.caption %}
+<figure>
+    <a href="{{ url | prepend: site.baseurl }}" target="_blank" class="image">
+        <img src="{{ url | prepend: site.baseurl }}" alt="{% if include.alt %}{{ include.alt }}{% else %}Image{% endif %}">
+    </a>
+    <caption>{{ include.caption }}</caption>
+</figure>
+{% else %}
+<a href="{{ url | prepend: site.baseurl }}" target="_blank" class="image">
+    <img src="{{ url | prepend: site.baseurl }}" alt="{% if include.alt %}{{ include.alt }}{% else %}Image{% endif %}">
+</a>
+{% endif %}

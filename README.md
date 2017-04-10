@@ -19,12 +19,42 @@ type.
 - Simpler image handling
 - Last post update shown
 - Static commenting system
-- Tags and categories (TODO)
-- <!--more--> tag support (TODO)
 
-## Commenting system
+### TODO
 
-### Overview
+- Tags and categories
+- <!--more--> tag support
+- Check and fix `feed.xml` if necessary 
+- Search Engine Optimization (SEO)
+- CNAME?
+- shell scipt that builds example posts, images (base64 or similar), etc using:
+
+    cat <<-EOF
+    # whatever
+    EOF
+
+  so that examples and real blong content can be decoupled.
+  This script will be called using the Makefile.
+
+## Theme installation
+
+    # pacman -S ruby
+    $ gem update
+    $ gem install jekyll jekyll-sitemap
+
+## Building
+
+    $ make
+
+## Screenshots
+
+TODO
+
+## Tutorial
+
+### Commenting system
+
+#### Overview
 
 This theme handles comments in the most static way possible: 
 a `mailto` link is generated for each post thanks to GMAIL mail aliases, using 
@@ -69,7 +99,7 @@ Out final comment path is:
 As a final remark you may have noticed that each comment is referenced as a 
 paragraph (using the id) and that markdown is enabled by default.
 
-### Comment attributes.
+#### Comment attributes
 
 Comment files have 5 attributes:
 
@@ -103,18 +133,18 @@ For example:
     def hi
     ```
 
-## Media files
+### Media files
 
 Extending [this](https://eduardoboucas.com/blog/2014/12/07/including-and-managing-images-in-jekyll.html) 
 ideas I came up with the following:
 
-### Overview
+#### Overview
 
 Just like comments, each media file is contained in one directory corresponding 
 to a post. However, unlike comments, media content may be referenced from more 
 than one post. This is how it works.
 
-### File locations
+#### File locations
 
 If out example post is `./_posts/2017-02-11-another-post.md` and we want to add 
 media files to it, we must create a corresponding directory in `_media`:
@@ -125,7 +155,7 @@ We can now place our file inside, for example:
 
     ./_media/2017-02-11-another-post/terminal.png
 
-### Possible combinations
+#### Possible combinations
 
 Now, let's go back to `./_posts/2017-02-11-another-post.md`. To be able to 
 display that picture we need to use the `include` liquid tag. In the simplest 
@@ -146,7 +176,7 @@ you need to input the whole path:
 
     ![ter]({{ site.baseurl }}/media/2017-02-11-another-post/terminal.png)
 
-### Calling files from another post
+#### Calling files from another post
 
 In some cases you may want to recall media files from another post. You can do 
 that using the `otherpost` tag. Let's say we are in the 
@@ -161,11 +191,11 @@ slash the file name. The rest is filled in automatically.
 
 Finally, notice the `otherpost=true` tag at the end.
 
-### Warning
+#### Warning
 
 This feature is currently available only for images.
 
-## Static pages
+### Static pages
 
 Reading [this](https://mademistakes.com/articles/using-jekyll-2016/#pages-for-everything-else)
 gave me the idea to move the static pages like index, 404, etc.. in the 
@@ -173,23 +203,9 @@ gave me the idea to move the static pages like index, 404, etc.. in the
 `permalink` for each page and remember to keep `include: [ "_pages" ]`
 and `collections: pages: output: false` in the `_config.yml` file.
 
-## Avatar
+### Avatar
 
 Use a square avatar in `./_assets/avatar.jpg`.
-
-## Theme installation
-
-    # pacman -S ruby
-    $ gem update
-    $ gem install jekyll jekyll-sitemap
-
-## Building
-
-    $ make
-
-## Screenshot
-
-TODO
 
 ## License
 
