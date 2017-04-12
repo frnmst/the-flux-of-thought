@@ -99,7 +99,7 @@ blockquote {
     padding: 5px;
     border-radius: 3px;
     background: #666;
-    background: rgba(0,0,0,.5);
+    background: rgba(0,0,0,0.5);
     margin-left: 15px;
     color: #fff;
     font-size: 1.23525em;
@@ -127,6 +127,7 @@ iframe {
 
 ul,
 ol {
+  list-style-type: circle;
   margin: 40px 0;
   padding-left: 50px;
   li {
@@ -173,7 +174,7 @@ pre {
   border: 1px solid #ddd;
   padding: 1rem;
   code {
-  #  font-size: 100%;
+  /*  font-size: 100%; */
     color: inherit;
     background-color: transparent;
     padding: 0;

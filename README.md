@@ -21,12 +21,12 @@ any Javascript. The font used is served from the local instance.
 - Last post update shown
 - Static commenting system
 - Full tag support
+- Lists style CSS: `circle` instead of `disk`
 
 ### TODO
 
-- Fix ul li html tags in CSS
-- Full category support
 - <!--more--> tag support
+- Full category support
 - Check and fix `feed.xml` if necessary 
 - Search Engine Optimization (SEO)
 - CNAME?
