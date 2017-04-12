@@ -1,8 +1,9 @@
 # The Plain Libre
 
-The Plain is just another white clean and minimalist Jekyll theme that 
+The Plain Libre is just another minimalist Jekyll theme that 
 designed to focus on writing matters. This theme is best use for personal blog 
-type.
+type, it relies on free software only and does not include
+any Javascript. The font used is served from the local instance.
 
 [Original version](https://github.com/heiswayi/the-plain)
 
@@ -19,10 +20,12 @@ type.
 - Simpler image handling
 - Last post update shown
 - Static commenting system
+- Full tag support
 
 ### TODO
 
-- Tags and categories
+- Fix ul li html tags in CSS
+- Full category support
 - <!--more--> tag support
 - Check and fix `feed.xml` if necessary 
 - Search Engine Optimization (SEO)
@@ -33,7 +36,7 @@ type.
       # whatever
       EOF
 
-  so that examples and real blong content can be decoupled.
+  so that examples and real blog content can be decoupled.
   This script will be called using the Makefile.
 
 ## Theme installation
@@ -203,12 +206,54 @@ gave me the idea to move the static pages like index, 404, etc.. in the
 `permalink` for each page and remember to keep `include: [ "_pages" ]`
 and `collections: pages: output: false` in the `_config.yml` file.
 
+### Tags
+
+#### Overview
+
+I gathered some ideas from [here](https://blog.webjeda.com/jekyll-categories/) 
+and using the official Jekyll documentation.
+
+A full list of tags is present on the home page, i.e: `index.html`. This list 
+is just a set of links pointing to the appropriate entry in the `tags.md` 
+page. This page has that same list as well as links to each post 
+belonging to a tag.
+
+If a post contains at least one tag, this is reported at the top of the page 
+with a link pointing to the appropriate bookmark of `tags.md` (just like in 
+the home page).
+
+#### Format
+
+The tag entry is optional which means that you can specify from 0 to n tags. If 
+you want to add some, simply write your comma separated list of tags in the 
+front matter of your post:
+
+    tags: [tag 0, tag 1, ... , tag n]
+
+Let's make an example. What follows is the front matter of the
+`./_posts/2015-09-09-download-this-theme.md` post.
+
+    ---
+    title: Download this Theme
+    updated: 2017-04-09 00:29
+    categories:  Download
+    tags: [download, terminal, image from another post]
+    ---
+
+As you may have noticed, tags can contain spaces.
+
+Once you run make, you should see the following links
+just below the `Download this Theme` title:
+
+    *download* *terminal* *image from another post*
+
 ### Avatar
 
-Use a square avatar in `./_assets/avatar.jpg`.
+Use a squared avatar in `./_assets/avatar.jpg`.
 
 ## License
 
 Copyright (C) 2017, Franco Masotti <franco.masotti@student.unife.it>
 
 [MIT](LICENSE.md)
+

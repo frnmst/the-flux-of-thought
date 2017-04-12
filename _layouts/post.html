@@ -7,13 +7,23 @@ layout: default
 	<div class="center">
 		<h1>{{ page.title }}</h1>
 		<time>First written on {{ page.date | date: '%B %-d, %Y' }}</time>
-  {% assign page_date = page.date | date: '%F' %}
-  {% assign page_updated = page.updated | date: '%F' %}
-    {% if page_date  != page_updated %}
+        {% assign page_date = page.date | date: '%F' %}
+        {% assign page_updated = page.updated | date: '%F' %}
+        {% if page_date != page_updated %}
         <br />
         <br />
 		<time>Last updated on {{ page.updated | date: '%B %-d, %Y' }}</time>
-    {% endif %}
+        {% endif %}
+        {% if page.tags %}
+            {% assign page_tags = page.tags | sort %}
+            <br />
+            <br />
+            {% for tag in page_tags %}
+                {% assign tagg = tag | slugify %}
+                {% capture link %}{{ site.baseurl }}/tags/#{{ tagg }}{% endcapture %}
+                <a href="{{ link }}">{{ tag }}</a>&nbsp;
+            {% endfor %}
+        {% endif %}
 	</div>
 
 	<div class="divider"></div>
@@ -21,4 +31,3 @@ layout: default
 	{{ content }}
 
 </article>
-

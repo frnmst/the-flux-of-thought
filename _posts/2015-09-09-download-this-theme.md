@@ -1,6 +1,8 @@
 ---
 title: Download this Theme
 updated: 2017-04-09 00:29
+categories:  Download
+tags: [download, terminal, image from another post]
 ---
 
 The Plain Libre is just another white clean and minimalist Jekyll theme that 

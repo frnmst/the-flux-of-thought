@@ -1,0 +1,17 @@
+{% assign site_tags = site.tags | sort %}
+
+{% comment %}
+    <!--Tags summary with links as pararaphs -->
+{% endcomment %}
+
+<article>
+{% for tag in site_tags %}
+    {% assign tagg = tag[0] | slugify %}
+    {% if page.is_home %}
+    {% capture link %}{{ site.baseurl }}/tags/#{{ tagg }}{% endcapture %} 
+        <a href="{{ link }}">{{ tag[0] }}</a>&nbsp;
+    {% else %}
+        <a href="#{{ tagg }}">{{ tag[0] }}</a>&nbsp;
+    {% endif %}
+{% endfor %}
+</article>

@@ -8,10 +8,15 @@ layout: default
 
 	<div class="divider"></div>
 
+    {% if page.is_tags %}
+        {% include tag_list.html %}
+    	<div class="divider"></div>
+    {% endif %}
+
 	{{ content }}
 
 </article>
 
 <div class="page-navigation">
-	<a class="home" href="{{site.baseurl}}/" title="Back to Homepage">Home</a>
+	<a class="home" href="{{ site.baseurl }}/" title="Back to Homepage">Home</a>
 </div>

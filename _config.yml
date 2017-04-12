@@ -68,6 +68,11 @@ defaults:
       is_404:       true
   -
     scope:
+      path:         "_pages/tags.md"
+    values:
+      is_tags:       true
+  -
+    scope:
       path:         "comments"
       type:         comments
     values:

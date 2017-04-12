@@ -1,6 +1,7 @@
 ---
 title: For Example of very Long Title Would Be Typography Elements in One
 updated: 2016-10-18 23:37
+tags: [long post, full example, all elements]
 ---
 
 > This is Markdown Cheatsheet Demo for **The Plain Libre**, this Jekyll theme. Please check the raw content of this file for the markdown usage.
