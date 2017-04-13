@@ -5,6 +5,7 @@
 {% endcomment %}
 
 <article>
+    <div class="tag-list">
 {% for tag in site_tags %}
     {% assign tagg = tag[0] | slugify %}
     {% if page.is_home %}
@@ -14,4 +15,5 @@
         <a href="#{{ tagg }}">{{ tag[0] }}</a>&nbsp;
     {% endif %}
 {% endfor %}
+    </div>
 </article>

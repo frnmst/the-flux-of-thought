@@ -4,9 +4,9 @@ title: Tags
 permalink: /tags/
 ---
 
-<article>
+<div class="tag-posts">
 
-<tagposts>
+<article>
 
 {% assign site_tags = site.tags | sort %}
 
@@ -15,13 +15,14 @@ permalink: /tags/
    <ul>
    {% assign tag_name = tag | first %}
    {% for post in site.tags[tag_name] %}
-    <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
+        <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
    {% endfor %}
     </ul>
 {% endfor %}
 
-</tagposts>
-
 </article>
+
+</div>
+

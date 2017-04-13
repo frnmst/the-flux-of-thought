@@ -242,6 +242,26 @@ article {
         font-weight: bold;
     }
   }
+  .tag-list {
+    font-size: 20px;
+    color: #555;
+    a {
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        white-space: nowrap;
+        text-decoration: none;
+        width: 30px;
+        height: 15px;
+        border-radius: 8px;
+        color: #000000;
+        border: none;
+        background-color: #d6d6d6;
+        text-align: center;
+    }
+    a:hover {
+       background: #ffffff;
+    }
+  }
   .footnote {
     border: 0;
     color: #0087BE;
@@ -267,7 +287,11 @@ article {
   }
 }
 
-tagposts{
+.tag-posts {
+    a {
+        text-decoration: none;
+        border: none;
+    }
     color: #000000;
 }
 
