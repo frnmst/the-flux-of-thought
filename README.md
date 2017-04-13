@@ -22,10 +22,10 @@ any Javascript. The font used is served from the local instance.
 - Static commenting system
 - Full tag support
 - Lists style CSS: `circle` instead of `disk`
+- Excerpts support.
 
 ### TODO
 
-- <!--more--> tag support
 - Full category support
 - Check and fix `feed.xml` if necessary 
 - Search Engine Optimization (SEO)
@@ -246,6 +246,20 @@ Once you run make, you should see the following links
 just below the `Download this Theme` title:
 
     *download* *terminal* *image from another post*
+
+### Excerpts
+
+Excerpts are reported in the home page.
+
+Use the `<!--more-->` tag inside a post to mark the end of the excerpt.
+
+If this tag is omitted, the first 10 words of the post will be reported 
+instead. You can specify the number of words in the excerpt by editing the 
+`excerpt_words` variable in the `_config.yml` file.
+
+Have a look at 
+[this article](http://frontendcollisionblog.com/jekyll/snippet/2015/03/23/how-to-show-a-summary-of-your-post-with-jekyll.html) 
+for more ideas.
 
 ### Avatar
 

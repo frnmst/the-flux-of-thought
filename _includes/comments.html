@@ -1,18 +1,15 @@
 <article><div class="divider"></div></article>
 
-<div class="comments">
+<div class="comment-environment">
     <article>
-    <div class="comment">
-        <br />
-        <div class="title"><h2>Comments</h2></div>
+        <div class="comment">
+            <div class="title"><h2>Comments</h2></div>
 
-    {% capture mail %}
-{{ site.author_email }}
-    {% endcapture %}
+    {% capture mail %}{{ site.author_email }}{% endcapture %}
     {% assign mail_substring = mail | split: '@' %}
     {% assign mail_username = mail_substring[0] %}
     {% assign mail_domain = mail_substring[1] %}
-    <div class="title"><h3><a href="mailto:{{ mail_username }}+{{ page.path | remove: ".md" | remove:"_posts/" }}@{{ mail_domain }}">Post a new comment</a></h3></div>
+            <div class="title"><h3><a href="mailto:{{ mail_username }}+{{ page.path | remove: ".md" | remove:"_posts/" }}@{{ mail_domain }}">Post a new comment</a></h3></div>
 
   {% for comment in site.comments %}
 
@@ -22,33 +19,29 @@
     {% assign comment_id = comment_fullpath[1] | remove: ".md" %}
 
     {% if comment_path == page_path %}
-        {% if forloop.first == true %}
+        {% if forloop.first %}
             <div class="divider"></div>
         {% endif %}    
 
-        <b>
-        <em>
-
-        <table>
-            <tr>
-                <td>Subject</td>
-                {% comment %}
-                <!-- Link to single comment -->
-                {% endcomment %}
-                <td><a href="#{{ comment_id }}" id={{ comment_id}}>{{ comment.subject }}</a></td>
-            </tr>
-            <tr>
-                <td>From</td>
-                <td>{{ comment.from }}</td>
-            </tr>
-            <tr>
-                <td>Date</td>
-                <td>{{ comment.date | date: "%c, %:z GMT" }}</td>
-            </tr>
-        </table>
-
-        </em>
-        </b>
+            <div class="comment-headers">
+                <table>
+                    <tr>
+                        <td>Subject</td>
+                        {% comment %}
+                        <!-- Link to single comment -->
+                        {% endcomment %}
+                        <td><a href="#{{ comment_id }}" id={{ comment_id }}>{{ comment.subject }}</a></td>
+                    </tr>
+                    <tr>
+                        <td>From</td>
+                        <td>{{ comment.from }}</td>
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                        <td>{{ comment.date | date: "%c, %:z GMT" }}</td>
+                    </tr>
+                </table>
+            </div>
 
         {{ comment.content | markdownify }}
         {% comment %}
@@ -59,11 +52,6 @@
         {% endif %}
     {% endif %}
   {% endfor %}
-
-        <br />
-
-    </div>
-
+        </div>
     </article>
-
 </div>

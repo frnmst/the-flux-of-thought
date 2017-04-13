@@ -201,6 +201,7 @@ table {
 iframe {
   width: 100%;
 }
+
 article {
   max-width: 500px;
   margin: 0 auto;
@@ -225,10 +226,21 @@ article {
     border-bottom: 1px solid #000;
     margin: 30px 0;
   }
-  p,.comment {
+  p {
     font-size: 22.5px;
     line-height: 1.9em;
     word-wrap: break-word;
+  }
+  .comment {
+    font-size: 22.5px;
+    line-height: 1.9em;
+    word-wrap: break-word;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    .comment-headers {
+        font-style: italic;
+        font-weight: bold;
+    }
   }
   .footnote {
     border: 0;
@@ -253,6 +265,10 @@ article {
       color: #0087BE;
     }
   }
+}
+
+tagposts{
+    color: #000000;
 }
 
 .back {
@@ -336,6 +352,12 @@ section {
         letter-spacing: 1px;
         text-transform: uppercase;
       }
+      .excerpt {
+        padding-top: 20.0px;
+        font-style: italic;
+        font-size: 20.0px;
+        color: #555;
+      }
       @media (min-width: 992px) {a {
           border-bottom: 2px solid transparent;
           &:hover {
@@ -382,11 +404,12 @@ section {
 }
 
 
+/* Reset margin and padding for the comments class. */
 body {
     margin:0;
     padding: 0;
 }
 
-.comments {
+.comment-environment {
     background-color: #f2f2f2;
 }

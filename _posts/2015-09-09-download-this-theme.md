@@ -11,6 +11,8 @@ type. Font or typeface used is HiloDeco.
 
 > **_Fork_** or **_download_** the theme [**here**](https://github.com/frnmst/the-plain-libre).
 
+<!--more-->
+
 Let's call an image from antoher post using the liquid language
 
 {% include image.html file="2017-02-11-another-post/terminal.png" alt="Terminal" caption="A terminal image from the other post" otherpost=true %}

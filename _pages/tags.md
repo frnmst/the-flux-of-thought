@@ -6,6 +6,8 @@ permalink: /tags/
 
 <article>
 
+<tagposts>
+
 {% assign site_tags = site.tags | sort %}
 
 {% for tag in site_tags %}
@@ -19,4 +21,7 @@ permalink: /tags/
    {% endfor %}
     </ul>
 {% endfor %}
+
+</tagposts>
+
 </article>
