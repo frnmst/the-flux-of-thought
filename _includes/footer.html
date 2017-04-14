@@ -1,15 +1,29 @@
 <div class="footer">
     <span class="block">
+        <span class="rss">
+        <!--The feed svg image is a modified version of 
+https://publicdomainvectors.org/download.php?file=rodentia-icons_application-x-feed.svg
+which is released under public domain-->
+            <a href="{{ site.baseurl }}/feed.xml">
+                <img src="{{ site.baseurl }}/assets/rodentia-icons_application-x-feed.svg" 
+                    alt="RSS"></a>
+        </span>
+    </span>
+    <span class="block">
         Made using <a href="http://jekyllrb.com/">Jekyll</a> &amp;
-        <a href="https://github.com/frnmst/the-plain-libre" title="The Plain Libre theme by Franco Masotti">The Plain Libre</a> 
+           <a href="https://github.com/frnmst/the-plain-libre" title="The 
+                Plain Libre theme by Franco Masotti">The Plain Libre</a> 
     </span>
     <span class="block">
         Website content is released under the 
-        <img src="{{ site.baseurl }}/assets/by-sa.png" width="80px" 
-height="auto" 
-alt="CC-BY-SA"> license
+        <span class="copyright">
+            <img src="{{ site.baseurl }}/assets/by-sa.png" alt="CC-BY-SA">
+        </span>
+        license
     </span>
     <span class="block">
         &copy; {{ site.time | date: '%Y' }} {{ site.author_name }}
     </span>
 </div>
+
+

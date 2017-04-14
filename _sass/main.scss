@@ -311,10 +311,6 @@ article {
   }
 }
 
-.block {
-  display: block;
-}
-
 .page-navigation,
 .footer {
   text-align: center;
@@ -341,6 +337,21 @@ article {
   a {
     border: none;
     font-weight: bold;
+  }
+  .block {
+    display: block;
+    .copyright {
+      img {
+        width: 80px;
+        height: auto;
+      }
+    }
+    .rss {
+      img {
+        width: 48px;
+        height: auto;
+      }
+    }
   }
 }
 

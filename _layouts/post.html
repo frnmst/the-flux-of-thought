@@ -15,9 +15,9 @@ layout: default
 		<time>Last updated on {{ page.updated | date: '%B %-d, %Y' }}</time>
         {% endif %}
         {% if page.tags %}
+            <br />
+            <br />
             {% assign page_tags = page.tags | sort %}
-            <br />
-            <br />
             <div class="tag-list">
             {% for tag in page_tags %}
                 {% assign tagg = tag | slugify %}

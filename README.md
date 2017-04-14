@@ -27,7 +27,6 @@ any Javascript. The font used is served from the local instance.
 ### TODO
 
 - Full category support
-- Check and fix `feed.xml` if necessary 
 - Search Engine Optimization (SEO)
 - CNAME?
 - shell scipt that builds example posts, images (base64 or similar), etc using:
@@ -256,6 +255,9 @@ Use the `<!--more-->` tag inside a post to mark the end of the excerpt.
 If this tag is omitted, the first 10 words of the post will be reported 
 instead. You can specify the number of words in the excerpt by editing the 
 `excerpt_words` variable in the `_config.yml` file.
+
+If you are not interested in excerpts set the `excerpt_enabled` variable to 
+false in `_config.yml` file.
 
 Have a look at 
 [this article](http://frontendcollisionblog.com/jekyll/snippet/2015/03/23/how-to-show-a-summary-of-your-post-with-jekyll.html) 

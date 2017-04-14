@@ -24,13 +24,15 @@ permalink: index.html
 				<div class="title">
 					<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 				</div>
-                <div class="excerpt">
-                {% if post.content contains site.excerpt_separator %}
-                    {{ post.excerpt | strip_html }}
-                {% else %}
-                    {{ post.excerpt | strip_html | truncatewords: site.excerpt_words }}
+                {% if site.excerpt_enabled %}
+                    <div class="excerpt">
+                    {% if post.content contains site.excerpt_separator %}
+                        {{ post.excerpt | strip_html }}
+                    {% else %}
+                        {{ post.excerpt | strip_html | truncatewords: site.excerpt_words }}
+                    {% endif %}
+                    </div>
                 {% endif %}
-                </div>
 			</li>
 		</ul>
 

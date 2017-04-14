@@ -28,6 +28,7 @@ exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "Mak
 gems:
   - jekyll-sitemap
 
+excerpt_enabled:        true
 excerpt_separator:      "<!--more-->"
 excerpt_words:          20
 
