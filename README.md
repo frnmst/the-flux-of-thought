@@ -22,7 +22,7 @@ any Javascript. The font used is served from the local instance.
 - Static commenting system
 - Full tag support
 - Lists style CSS: `circle` instead of `disk`
-- Excerpts support.
+- Excerpts support
 
 ### TODO
 

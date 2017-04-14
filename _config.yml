@@ -9,7 +9,7 @@ github_username:    frnmst
 avatar_path:        avatar.jpg
 
 # Site Settings
-baseurl:            "" # Base URL must end WITHOUT a slash, default: ""
+baseurl:            "/the-plain-libre" # Base URL must end WITHOUT a slash, default: ""
 permalink:          /notes/:title # Post permalink. If you change this you must 
                                   # modify all the occurencies manually.
 timezone:           Europe/Rome # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
