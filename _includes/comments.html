@@ -9,7 +9,17 @@
     {% assign mail_substring = mail | split: '@' %}
     {% assign mail_username = mail_substring[0] %}
     {% assign mail_domain = mail_substring[1] %}
-            <div class="title"><h3><a href="mailto:{{ mail_username }}+{{ page.path | remove: ".md" | remove:"_posts/" }}@{{ mail_domain }}">Post a new comment</a></h3></div>
+    {% if page.is_post %}
+        {% capture mailto_prefix %}{{ mail_username }}+{{ page.path | remove: ".md" | remove: "_posts/" }}{% endcapture %}
+    {% else %}
+        {% capture mailto_prefix %}{{ mail_username }}+{{ page.path | remove: ".html" | remove: ".md" | remove: "_pages/" }}{% endcapture %}
+    {% endif %}
+            <div class="title">
+                <h3>
+                    <a href="mailto:{{ mailto_prefix }}@{{ mail_domain }}">
+                        Post a new comment</a>
+                </h3>
+            </div>
 
   {% for comment in site.comments %}
 
