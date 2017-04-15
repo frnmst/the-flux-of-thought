@@ -257,11 +257,25 @@ instead. You can specify the number of words in the excerpt by editing the
 `excerpt_words` variable in the `_config.yml` file.
 
 If you are not interested in excerpts set the `excerpt_enabled` variable to 
-false in `_config.yml` file.
+false in `./_config.yml` file.
 
 Have a look at 
 [this article](http://frontendcollisionblog.com/jekyll/snippet/2015/03/23/how-to-show-a-summary-of-your-post-with-jekyll.html) 
 for more ideas.
+
+### RSS feeds
+
+This theme contains an Atom file useful for RSS feeds in `./_pages/feed.xml`
+
+The link to `feed.xml` is available in the footer of every page
+thanks to a modified public domain svg icon. The purpose is that your readers 
+open this link with a feed reader so that they remain up to date with your 
+posts.
+
+A patch has been added to the SVG image because it was badly rendered on some 
+browsers available for Android. See 
+[this](http://bitiotic.com/blog/2012/04/12/fixing-svg-aspect-ratio-lossage-on-webkit/)
+article.
 
 ### Avatar
 
