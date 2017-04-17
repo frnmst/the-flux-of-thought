@@ -307,7 +307,7 @@ by web crawlers (a.k.a bots, spiders, etc) to get access information about the
 website. In our case it is also important to tell these programs that our site
 has a `sitemap`. Read [this](http://www.robotstxt.org/robotstxt.html) 
 and
-[this](https://support.google.com/webmasters/answer/6062596?hl=en&ref_topic=6061961
+[this](https://support.google.com/webmasters/answer/6062596?hl=en&ref_topic=6061961)
 for more information.
 
 For example, since this project is called `the-plain-libre` and is published
