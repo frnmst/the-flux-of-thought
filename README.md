@@ -283,19 +283,53 @@ article.
 
 ### Search Engine Optimizaition (SEO)
 
-I'm a noob in this field so I followed [this]() tutorial.
+I'm a noob in this field so I followed 
+[this](https://blog.webjeda.com/optimize-jekyll-seo/) tutorial
+and [this](ttps://varvy.com/) SEO checker.
 
-- sitemap is available thanks to the [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) plugin.
-- Always use image alt tags. For images in `./_assets` these are already coded 
-  in.
-- social media???
-- responsiveness: the theme is reported responsive by Google.
-- ...
+- sitemap
+  - available thanks to the [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) plugin.
+- images
+  - always use alt tags. For images in `./_assets` these are already coded 
+    in.
+- responsiveness
+  - the theme is reported
+    [responsive by Google](https://search.google.com/search-console/mobile-friendly?hl=it&id=LupFsm0FA2J9L4PoK8LAVw)
+- robots.txt
+  - read the next section
+- social media and other stuff
+  - TODO
+
+#### robots.txt
+
+This very important file must be put under the root of your domain. It is used 
+by web crawlers (a.k.a bots, spiders, etc) to get access information about the 
+website. In our case it is also important to tell these programs that our site
+has a `sitemap`. Read [this](http://www.robotstxt.org/robotstxt.html) 
+and
+[this](https://support.google.com/webmasters/answer/6062596?hl=en&ref_topic=6061961
+for more information.
+
+For example, since this project is called `the-plain-libre` and is published
+under `https://frnmst.github.io/the-plain-libre`, we need to put the robots.txt
+file just under `https://frnmst.github.io/`, i.e:
+
+    https://frnmst.github.io/robots.txt
+
+Since I didn't have neither a "user page" nor a domain I created a dummy [user 
+page](https://github.com/frnmst/frnmst.github.io) repository and I copied the 
+`robots.txt` file from the generated `./_site` directory from Jekyll. This 
+works for me. This means that in my case the `robots.txt` in this repository is 
+ignored by the bots.
+
+I guess that if you have multiple repository pages you can edit 
+the robots.txt file appropriately and set rules (and sitemap locations) for 
+each one of them.
 
 ### Mobile support
 
 Mobile support is available for this theme through the CSS file. It works but 
-it can be much better.
+it could be much better.
 
 ### Avatar
 
