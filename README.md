@@ -20,13 +20,12 @@ any Javascript. The font used is served from the local instance.
 - Simpler image handling
 - Last post update shown
 - Static commenting system
-- Full tag support
+- Full tag and category support
 - Lists style CSS: `circle` instead of `disk`
 - Excerpts support
 
 ### TODO
 
-- Full category support
 - Search Engine Optimization (SEO)
 - Better mobile support
 - CNAME?
@@ -206,9 +205,12 @@ gave me the idea to move the static pages like index, 404, etc.. in the
 `permalink` for each page and remember to keep `include: [ "_pages" ]`
 and `collections: pages: output: false` in the `_config.yml` file.
 
-### Tags
+### Tags and categories
 
 #### Overview
+
+In this theme tags and categories are considered the same thing. I will use the 
+word *tag* to speak about both tags and categories.
 
 I gathered some ideas from [here](https://blog.webjeda.com/jekyll-categories/) 
 and using the official Jekyll documentation.
@@ -220,7 +222,8 @@ post belonging to a tag.
 
 If a post contains at least one tag, this is reported at the top of the page 
 with a link pointing to the appropriate bookmark of `./_pages/tags.md` (just 
-like in the home page).
+like in the home page). A user looking at a post can see all related posts just 
+by clicking at those tag links.
 
 #### Format
 
@@ -277,6 +280,17 @@ A patch has been added to the SVG image because it was badly rendered on some
 browsers available for Android. See 
 [this](http://bitiotic.com/blog/2012/04/12/fixing-svg-aspect-ratio-lossage-on-webkit/)
 article.
+
+### Search Engine Optimizaition (SEO)
+
+I'm a noob in this field so I followed [this]() tutorial.
+
+- sitemap is available thanks to the [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) plugin.
+- Always use image alt tags. For images in `./_assets` these are already coded 
+  in.
+- social media???
+- responsiveness: the theme is reported responsive by Google.
+- ...
 
 ### Mobile support
 
