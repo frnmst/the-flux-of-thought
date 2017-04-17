@@ -28,6 +28,7 @@ any Javascript. The font used is served from the local instance.
 
 - Full category support
 - Search Engine Optimization (SEO)
+- Better mobile support
 - CNAME?
 - shell scipt that builds example posts, images (base64 or similar), etc using:
 
@@ -276,6 +277,11 @@ A patch has been added to the SVG image because it was badly rendered on some
 browsers available for Android. See 
 [this](http://bitiotic.com/blog/2012/04/12/fixing-svg-aspect-ratio-lossage-on-webkit/)
 article.
+
+### Mobile support
+
+Mobile support is available for this theme through the CSS file. It works but 
+it can be much better.
 
 ### Avatar
 
