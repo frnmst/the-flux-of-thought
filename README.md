@@ -182,7 +182,7 @@ you need to input the whole path:
 
 In some cases you may want to recall media files from another post. You can do 
 that using the `otherpost` tag. Let's say we are in the 
-`_posts/2015-09-09-download-this-theme.md` post.
+`./_posts/2015-09-09-download-this-theme.md` post.
 
 ```liquid
 {% include image.html file="2017-02-11-another-post/terminal.png" alt="Terminal" caption="A terminal image from the other post" otherpost=true %}
@@ -201,7 +201,7 @@ This feature is currently available only for images.
 
 Reading [this](https://mademistakes.com/articles/using-jekyll-2016/#pages-for-everything-else)
 gave me the idea to move the static pages like index, 404, etc.. in the 
-`_pages` directory. If you want to add new pages remember to add a sensible 
+`./_pages` directory. If you want to add new pages remember to add a sensible 
 `permalink` for each page and remember to keep `include: [ "_pages" ]`
 and `collections: pages: output: false` in the `_config.yml` file.
 
@@ -212,14 +212,14 @@ and `collections: pages: output: false` in the `_config.yml` file.
 I gathered some ideas from [here](https://blog.webjeda.com/jekyll-categories/) 
 and using the official Jekyll documentation.
 
-A full list of tags is present on the home page, i.e: `index.html`. This list 
-is just a set of links pointing to the appropriate entry in the `tags.md` 
-page. This page has that same list as well as links to each post 
-belonging to a tag.
+A full list of tags is present on the home page, i.e: `./_pages/index.html`. 
+This list is just a set of links pointing to the appropriate entry in the 
+`./_pages/tags.md` page. This page has that same list as well as links to each 
+post belonging to a tag.
 
 If a post contains at least one tag, this is reported at the top of the page 
-with a link pointing to the appropriate bookmark of `tags.md` (just like in 
-the home page).
+with a link pointing to the appropriate bookmark of `./_pages/tags.md` (just 
+like in the home page).
 
 #### Format
 
@@ -254,10 +254,10 @@ Use the `<!--more-->` tag inside a post to mark the end of the excerpt.
 
 If this tag is omitted, the first 10 words of the post will be reported 
 instead. You can specify the number of words in the excerpt by editing the 
-`excerpt_words` variable in the `_config.yml` file.
+`excerpt_words` variable in the `./_config.yml` file.
 
 If you are not interested in excerpts set the `excerpt_enabled` variable to 
-false in `./_config.yml` file.
+false in `./_config.yml`.
 
 Have a look at 
 [this article](http://frontendcollisionblog.com/jekyll/snippet/2015/03/23/how-to-show-a-summary-of-your-post-with-jekyll.html) 
