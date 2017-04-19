@@ -1,3 +1,7 @@
+---
+layout: compress
+---
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,9 +20,7 @@
 			{{ content | replace: '&#8617;', '&#8617;&#xfe0e;' }}
 		</main>
 
-        {% comment %}
-        <!--Can't use == false since page.is_home might be undefined.-->
-        {% endcomment %}
+        {% comment %}<!--Can't use == false since page.is_home might be undefined.-->{% endcomment %}
         {% if page.is_home != true and page.is_404 != true and page.is_tags != true %}
             {% include comments.html %}
         {% endif %} 

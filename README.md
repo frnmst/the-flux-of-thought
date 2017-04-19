@@ -23,6 +23,7 @@ any Javascript. The font used is served from the local instance.
 - Full tag and category support
 - Lists style CSS: `circle` instead of `disk`
 - Excerpts support
+- Compressed html output
 
 ### TODO
 
@@ -334,6 +335,21 @@ it could be much better.
 ### Avatar
 
 Use a squared avatar in `./_assets/avatar.jpg`.
+
+### Compressed HTML output
+
+By default Jekyll leaves lots of whitespace in the html source. You can verify 
+this yourself.
+
+Since useless white space == useless data, we transmit useless bytes, thus 
+slowing down the website.
+
+For this reason I decided to use a compressed html output thanks to 
+[jekyll-compress-html](https://github.com/penibelst/jekyll-compress-html),
+which is a pure liquid layout to be used as a wrapper on the 
+`./_layouts/default.html` layout.
+
+jekyll-compress-html is released under the MIT license.
 
 ## License
 

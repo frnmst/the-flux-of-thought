@@ -1,15 +1,15 @@
 <div class="page-navigation">
     {% if page.next.url %}
-    <a class="next" href="{{page.next.url}}" title="NEXT: 
+    <a class="next" href="{{ site.baseurl }}{{ page.next.url }}" title="NEXT: 
 {{page.next.title}}">&lt;&lt;</a>
         <span> &middot; </span>
   {% endif %}
-        <a class="home" href="{{site.baseurl}}/" title="Back to 
+        <a class="home" href="{{ site.baseurl }}/" title="Back to 
 Homepage">Home</a>
   {% if page.previous.url %}
         <span> &middot; </span>
-    <a class="prev" href="{{page.previous.url}}" title="PREV: 
-{{page.previous.title}}">&gt;&gt;</a>
+    <a class="prev" href="{{ site.baseurl }}{{ page.previous.url }}" 
+title="PREV: {{ page.previous.title }}">&gt;&gt;</a>
   {% endif %}
 </div>
 
