@@ -13,21 +13,22 @@ any Javascript. The font used is served from the local instance.
 - Removed Google font
 - Removed Gravatar
 - Removed MathJax
-- Changed main font
-- Bigger font rendering
-- Changed background colors
-- `outline: none` for links
 - Simpler image handling
 - Last post update shown
 - Static commenting system
 - Full tag and category support
 - Lists style CSS: `circle` instead of `disk`
 - Excerpts support
+- Better search Engine Optimization (SEO)
 - Compressed html output
+- Style
+  - Changed main font
+  - Changed background colors
+  - Bigger font rendering
+  - `outline: none` for links
 
 ### TODO
 
-- Search Engine Optimization (SEO)
 - Better mobile support
 - CNAME?
 - shell scipt that builds example posts, images (base64 or similar), etc using:
@@ -288,8 +289,8 @@ I'm a noob in this field so I followed
 [this](https://blog.webjeda.com/optimize-jekyll-seo/) tutorial
 and [this](ttps://varvy.com/) SEO checker.
 
+- meta
 - sitemap
-  - available thanks to the [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) plugin.
 - images
   - always use alt tags. For images in `./_assets` these are already coded 
     in.
@@ -297,9 +298,43 @@ and [this](ttps://varvy.com/) SEO checker.
   - the theme is reported
     [responsive by Google](https://search.google.com/search-console/mobile-friendly?hl=it&id=LupFsm0FA2J9L4PoK8LAVw)
 - robots.txt
-  - read the next section
 - social media and other stuff
   - TODO
+
+#### meta and other SEO tags
+
+meta tags are available in the `./_includes/head.html` file. These include:
+`title`, `description` and canonical links.
+
+The description meta tag uses the first available, in this order, of the 
+following:
+- Front matter `description` tag
+- Page excerpt
+- Site description
+
+It is advised to use the `description` tag since excerpts or the site 
+description may not relate to the (whole) page content. Here's an example:
+
+    ---
+    title: This is another post
+    updated: 2017-04-09 23:00
+    tags: [other, liquid, terminal]
+    description: How to use markdown and liquid to render images belonging to a 
+    post.
+    ---
+
+You can also edit the following variables in `./_config.yml`to limit the number  
+of words in the `description` meta tag. Avoid values greater than `160` as 
+reported by previously cited articles:
+
+    meta_description_words
+    meta_excerpt_words
+    meta_site_description_words
+
+#### Sitemap
+
+A sitemap used for web crawlers is available thanks to the 
+[jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) plugin.
 
 #### robots.txt
 

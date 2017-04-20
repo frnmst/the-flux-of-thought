@@ -32,6 +32,10 @@ excerpt_enabled:        true
 excerpt_separator:      "<!--more-->"
 excerpt_words:          20
 
+meta_description_words:         140
+meta_excerpt_words:             140
+meta_site_description_words:    140
+
 # Keep comments hidden
 collections:
   comments:
