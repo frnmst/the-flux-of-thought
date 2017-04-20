@@ -24,7 +24,7 @@ sass:
 
 # Other Params
 include:            [ "_pages" ]
-exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "Makefile", "screenshot.png" ]
+exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "Makefile", "_repository_assets" ]
 
 # Ruby gems
 gems:

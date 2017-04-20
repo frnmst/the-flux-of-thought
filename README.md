@@ -7,6 +7,11 @@ any Javascript. The font used is served from the local instance.
 
 [Original version](https://github.com/heiswayi/the-plain)
 
+## Screenshots
+
+![screenshot](_repository_assets/screenshot.png)
+![screenshot2](_repository_assets/screenshot2.png)
+
 ## This version compared to the original one [1443d83](https://github.com/frnmst/the-plain-libre/commit/1443d83ec881a7bfd4b62975da29f72f8f99d38a)
 
 - Removed all analytics
@@ -55,10 +60,6 @@ Local serving (127.0.0.1)
 Global serving (0.0.0.0)
 
     $ make serve-global
-
-## Screenshots
-
-![screenshot](screenshot.png)
 
 ## Tutorial
 
