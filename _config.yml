@@ -24,14 +24,18 @@ sass:
 
 # Other Params
 include:            [ "_pages" ]
-exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "Makefile" ]
+exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "Makefile", "screenshot.png" ]
+
+# Ruby gems
 gems:
   - jekyll-sitemap
 
+# Excerpts
 excerpt_enabled:        true
 excerpt_separator:      "<!--more-->"
 excerpt_words:          20
 
+# Meta tag options
 meta_description_words:         140
 meta_excerpt_words:             140
 meta_site_description_words:    140

@@ -46,13 +46,19 @@ any Javascript. The font used is served from the local instance.
     $ gem update
     $ gem install jekyll jekyll-sitemap
 
-## Building
+## Building and serving
+
+Local serving (127.0.0.1)
 
     $ make
 
+Global serving (0.0.0.0)
+
+    $ make serve-global
+
 ## Screenshots
 
-TODO
+![screenshot](screenshot.png)
 
 ## Tutorial
 
@@ -205,7 +211,13 @@ Reading [this](https://mademistakes.com/articles/using-jekyll-2016/#pages-for-ev
 gave me the idea to move the static pages like index, 404, etc.. in the 
 `./_pages` directory. If you want to add new pages remember to add a sensible 
 `permalink` for each page and remember to keep `include: [ "_pages" ]`
-and `collections: pages: output: false` in the `_config.yml` file.
+and:
+
+    collections:
+      pages:
+        output: false
+
+in the `_config.yml` file.
 
 ### Tags and categories
 
@@ -348,7 +360,7 @@ for more information.
 
 For example, since this project is called `the-plain-libre` and is published
 under `https://frnmst.github.io/the-plain-libre`, we need to put the robots.txt
-file just under `https://frnmst.github.io/`, i.e:
+file just under `https://frnmst.github.io/`, i.e
 
     https://frnmst.github.io/robots.txt
 
