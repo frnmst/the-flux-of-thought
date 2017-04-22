@@ -1,9 +1,11 @@
 # The Plain Libre
 
 The Plain Libre is just another minimalist Jekyll theme that 
-designed to focus on writing matters. This theme is best use for personal blog 
-type, it relies on free software only and does not include
-any Javascript. The font used is served from the local instance.
+designed to focus on writing matters. This theme is best use for personal blog.
+
+This theme relies on [100% free software](https://www.gnu.org/philosophy/free-sw.en.html),
+does not include any Javascript and the font used is served from the local instance.
+It has been tested on [Parabola GNU/Linux-libre](https://www.parabola.nu/).
 
 [Original version](https://github.com/heiswayi/the-plain)
 
@@ -19,10 +21,8 @@ any Javascript. The font used is served from the local instance.
 - Removed Gravatar
 - Removed MathJax
 - Simpler image handling
-- Last post update shown
-- Static commenting system
+- Fully static commenting system
 - Full tag and category support
-- Lists style CSS: `circle` instead of `disk`
 - Excerpts support
 - Better search Engine Optimization (SEO)
 - Compressed html output
@@ -31,9 +31,12 @@ any Javascript. The font used is served from the local instance.
   - Changed background colors
   - Bigger font rendering
   - `outline: none` for links
+  - Last post update shown
+  - Lists CSS: `circle` instead of `disk`
 
 ### TODO
 
+- Follow web typography guidelines like [these](http://webtypography.net/toc/)
 - Better mobile support
 - CNAME?
 - shell scipt that builds example posts, images (base64 or similar), etc using:
