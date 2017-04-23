@@ -122,6 +122,7 @@ Comment files have 5 attributes:
 
 - `date`
   - Use the format reported by the following date command:
+
         $ date "+%F %T %z"
 
 - `from`
