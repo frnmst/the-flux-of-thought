@@ -1,3 +1,9 @@
+<div class="main">
+    <a href="#main">skip to main content</a>
+    {% if page.url != '/sitemap/' %}
+        <a href="{{ site.baseurl }}/sitemap/">sitemap</a>
+    {% endif %}
+</div>
 <aside class="logo">
 
 	{% if page.url == '/index.html' or page.url == '/' %}

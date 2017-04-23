@@ -26,6 +26,7 @@ It has been tested on [Parabola GNU/Linux-libre](https://www.parabola.nu/).
 - Excerpts support
 - Better search Engine Optimization (SEO)
 - Compressed html output
+- Basic sitemap
 - Style
   - Changed main font
   - Changed background colors
@@ -309,7 +310,7 @@ I'm a noob in this field so I followed
 and [this](ttps://varvy.com/) SEO checker.
 
 - meta
-- sitemap
+- sitemaps
 - images
   - always use alt tags. For images in `./_assets` these are already coded 
     in.
@@ -350,10 +351,13 @@ reported by previously cited articles:
     meta_excerpt_words
     meta_site_description_words
 
-#### Sitemap
+#### Sitemaps
 
 A sitemap used for web crawlers is available thanks to the 
 [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) plugin.
+
+There is also a (very) basic sitemap for users under the `/sitemap/` permalink
+which has a link for it at the top of each page.
 
 #### robots.txt
 

@@ -4,13 +4,10 @@ layout: compress
 
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
 		{% include head.html %}
 	</head>
-
 	<body>
-
 		{% include header.html %}
 
         {% if page.is_home %}
@@ -21,16 +18,16 @@ layout: compress
 		</main>
 
         {% comment %}<!--Can't use == false since page.is_home might be undefined.-->{% endcomment %}
-        {% if page.is_home != true and page.is_404 != true and page.is_tags != true %}
+        {% if page.is_home != true and page.is_404 != true and page.is_tags != true and page.is_sitemap != true %}
             {% include comments.html %}
         {% endif %} 
 
         {% if page.is_post %}
             {% include post_navigation.html %}
+        {% else %}
+            {% include page_navigation.html %}
         {% endif %}
 
 		{% include footer.html %}
-
 	</body>
-
 </html>

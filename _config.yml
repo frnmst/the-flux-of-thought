@@ -85,6 +85,11 @@ defaults:
       is_tags:       true
   -
     scope:
+      path:         "_pages/sitemap.html"
+    values:
+      is_sitemap:   true
+  -
+    scope:
       path:         "comments"
       type:         comments
     values:

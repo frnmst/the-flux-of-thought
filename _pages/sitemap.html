@@ -1,0 +1,27 @@
+---
+layout: page
+title: Sitemap
+permalink: /sitemap/
+---
+
+{% assign site_pages = site.pages | sort %}
+<h3>Pages</h3>
+<ul>
+{% for page in site_pages %}
+    {% if page.title != 404 %}
+        <li>
+            <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>
+
+{% assign site_posts = site.posts | sort %}
+<h3>Posts</h3>
+<ul>
+{% for post in site_posts %}
+    <li>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </li>
+{% endfor %}
+</ul>
