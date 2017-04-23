@@ -205,9 +205,11 @@ slash the file name. The rest is filled in automatically.
 
 Finally, notice the `otherpost=true` tag at the end.
 
-#### Warning
+#### Notice and warning
 
-This feature is currently available only for images.
+If you do not include the `alt` tag a default one will be provided instead.
+
+This include feature is currently available only for images.
 
 ### Static pages
 
