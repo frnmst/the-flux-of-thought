@@ -48,6 +48,18 @@ It has been tested on [Parabola GNU/Linux-libre](https://www.parabola.nu/).
 
   so that examples and real blog content can be decoupled.
   This script will be called using the Makefile.
+- Add a hover link for paragraph titles in posts.
+- Change caption character for images. Use italics or something.
+- Add controls to avoid too much tags and dulpicates in the front matter.
+
+#### Tags score
+
+- Assign a score to each tag based on the number of global occurrences in the 
+posts' fron matter.
+- On the index page display only `n` tags, sorted by decreasing score.
+- This will avoid having too much irrelevant tags on the home page.
+
+
 
 ## Theme installation
 
