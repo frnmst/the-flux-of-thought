@@ -16,12 +16,14 @@ permalink: /sitemap/
 {% endfor %}
 </ul>
 
-{% assign site_posts = site.posts | sort %}
-<h3>Posts</h3>
-<ul>
-{% for post in site_posts %}
-    <li>
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </li>
-{% endfor %}
-</ul>
+{% if site.posts %}
+    {% assign site_posts = site.posts | sort %}
+    <h3>Posts</h3>
+    <ul>
+    {% for post in site_posts %}
+        <li>
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endif %}
