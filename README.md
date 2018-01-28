@@ -1,67 +1,60 @@
 # The Plain Libre
 
-The Plain Libre is just another minimalist Jekyll theme that 
-designed to focus on writing matters. This theme is best use for personal blog.
+A forked version of [the-plain](https://github.com/heiswayi/the-plain) which
+focuses on more features and aims to be [fully free
+software](https://www.gnu.org/philosophy/free-sw.en.html).
 
-This theme relies on [100% free software](https://www.gnu.org/philosophy/free-sw.en.html),
-does not include any Javascript and the font used is served from the local instance.
+No Javascript is included and the font used is served from the local instance.
+
 It has been tested on [Parabola GNU/Linux-libre](https://www.parabola.nu/).
-
-[Original version](https://github.com/heiswayi/the-plain)
 
 ## Screenshots
 
 ![screenshot](_repository_assets/screenshot.png)
 ![screenshot2](_repository_assets/screenshot2.png)
 
-## This version compared to the original one [1443d83](https://github.com/frnmst/the-plain-libre/commit/1443d83ec881a7bfd4b62975da29f72f8f99d38a)
+# Table of contents
 
-- Removed all analytics
-- Removed Google font
-- Removed Gravatar
-- Removed MathJax
-- Simpler image handling
-- Fully static commenting system
-- Full tag and category support
-- Excerpts support
-- Better search Engine Optimization (SEO)
-- Compressed html output
-- Basic sitemap
-- Style
-  - Changed main font
-  - Changed background colors
-  - Bigger font rendering
-  - `outline: none` for links
-  - Last post update shown
-  - Lists CSS: `circle` instead of `disk`
+[](TOC)
 
-### TODO
+- [The Plain Libre](#the-plain-libre)
+    - [Screenshots](#screenshots)
+- [Table of contents](#table-of-contents)
+    - [Dependencies](#dependencies)
+    - [Building and serving](#building-and-serving)
+    - [Tutorial](#tutorial)
+        - [Commenting system](#commenting-system)
+            - [Overview](#overview)
+            - [Comment attributes](#comment-attributes)
+        - [Media files](#media-files)
+            - [Overview](#overview-1)
+            - [File locations](#file-locations)
+            - [Possible combinations](#possible-combinations)
+            - [Calling files from another post](#calling-files-from-another-post)
+            - [Notice and warning](#notice-and-warning)
+        - [Static pages](#static-pages)
+        - [Tags and categories](#tags-and-categories)
+            - [Overview](#overview-2)
+            - [Format](#format)
+        - [Excerpts](#excerpts)
+        - [RSS feeds](#rss-feeds)
+        - [Search Engine Optimizaition (SEO)](#search-engine-optimizaition-seo)
+            - [meta and other SEO tags](#meta-and-other-seo-tags)
+            - [Sitemaps](#sitemaps)
+            - [robots.txt](#robotstxt)
+        - [Mobile support](#mobile-support)
+        - [Avatar](#avatar)
+        - [Compressed HTML output](#compressed-html-output)
+- [This version compared to the original one](#this-version-compared-to-the-original-one)
+- [TODO](#todo)
+    - [Tags score](#tags-score)
+- [License](#license)
 
-- Follow web typography guidelines like [these](http://webtypography.net/toc/)
-- Better mobile support
-- CNAME?
-- shell scipt that builds example posts, images (base64 or similar), etc using:
+[](TOC)
 
-      cat <<-EOF
-      # whatever
-      EOF
+## Dependencies
 
-  so that examples and real blog content can be decoupled.
-  This script will be called using the Makefile.
-- Add a hover link for paragraph titles in posts.
-- Change caption character for images. Use italics or something.
-- Add controls to avoid too much tags and dulpicates in the front matter.
-
-#### Tags score
-
-- Assign a score to each tag based on the number of global occurrences in the 
-posts' fron matter.
-- On the index page display only `n` tags, sorted by decreasing score.
-- This will avoid having too much irrelevant tags on the home page.
-
-
-
-## Theme installation
+On Parabola GNU/Linux-libre, you need to install the dependencies like this:
 
     # pacman -S ruby
     $ gem update
@@ -421,7 +414,55 @@ which is a pure liquid layout to be used as a wrapper on the
 
 jekyll-compress-html is released under the MIT license.
 
-## License
+# This version compared to the original one
+
+The last common commit between the-plain and the-plain-libre is
+[1443d83](https://github.com/frnmst/the-plain-libre/commit/1443d83ec881a7bfd4b62975da29f72f8f99d38a).
+
+- Removed all analytics
+- Removed Google font
+- Removed Gravatar
+- Removed MathJax
+- Simpler image handling
+- Fully static commenting system
+- Full tag and category support
+- Excerpts support
+- Better search Engine Optimization (SEO)
+- Compressed html output
+- Basic sitemap
+- Style
+  - Changed main font
+  - Changed background colors
+  - Bigger font rendering
+  - `outline: none` for links
+  - Last post update shown
+  - Lists CSS: `circle` instead of `disk`
+
+# TODO
+
+- Follow web typography guidelines like [these](http://webtypography.net/toc/)
+- Better mobile support
+- CNAME?
+- shell scipt that builds example posts, images (base64 or similar), etc using:
+
+      cat <<-EOF
+      # whatever
+      EOF
+
+  so that examples and real blog content can be decoupled.
+  This script will be called using the Makefile.
+- Add a hover link for paragraph titles in posts.
+- Change caption character for images. Use italics or something.
+- Add controls to avoid too much tags and dulpicates in the front matter.
+
+## Tags score
+
+- Assign a score to each tag based on the number of global occurrences in the 
+posts' fron matter.
+- On the index page display only `n` tags, sorted by decreasing score.
+- This will avoid having too much irrelevant tags on the home page.
+
+# License
 
 Copyright (C) 2017, Franco Masotti <franco.masotti@student.unife.it>
 
