@@ -46,8 +46,6 @@ It has been tested on [Parabola GNU/Linux-libre](https://www.parabola.nu/).
         - [Avatar](#avatar)
         - [Compressed HTML output](#compressed-html-output)
 - [This version compared to the original one](#this-version-compared-to-the-original-one)
-- [TODO](#todo)
-    - [Tags score](#tags-score)
 - [License](#license)
 
 [](TOC)
@@ -437,30 +435,6 @@ The last common commit between the-plain and the-plain-libre is
   - `outline: none` for links
   - Last post update shown
   - Lists CSS: `circle` instead of `disk`
-
-# TODO
-
-- Follow web typography guidelines like [these](http://webtypography.net/toc/)
-- Better mobile support
-- CNAME?
-- shell scipt that builds example posts, images (base64 or similar), etc using:
-
-      cat <<-EOF
-      # whatever
-      EOF
-
-  so that examples and real blog content can be decoupled.
-  This script will be called using the Makefile.
-- Add a hover link for paragraph titles in posts.
-- Change caption character for images. Use italics or something.
-- Add controls to avoid too much tags and dulpicates in the front matter.
-
-## Tags score
-
-- Assign a score to each tag based on the number of global occurrences in the 
-posts' fron matter.
-- On the index page display only `n` tags, sorted by decreasing score.
-- This will avoid having too much irrelevant tags on the home page.
 
 # License
 
