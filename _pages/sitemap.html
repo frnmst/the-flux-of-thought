@@ -22,7 +22,7 @@ permalink: /sitemap/
     <ul>
     {% for post in site_posts %}
         <li>
-            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            <a href="{{ post.url | prepend: site.baseurl }}.html">{{ post.title }}</a>
         </li>
     {% endfor %}
     </ul>

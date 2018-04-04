@@ -16,7 +16,7 @@ permalink: /tags/
    {% assign tag_name = tag | first %}
    {% for post in site.tags[tag_name] %}
         <li>
-            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            <a href="{{ post.url | prepend: site.baseurl }}.html">{{ post.title }}</a>
         </li>
    {% endfor %}
     </ul>
