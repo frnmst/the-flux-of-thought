@@ -54,7 +54,7 @@ It has been tested on [Parabola GNU/Linux-libre](https://www.parabola.nu/).
 
 On Parabola GNU/Linux-libre, you need to install the dependencies like this:
 
-    # pacman -S ruby
+    # pacman -S ruby ruby-rdoc
     $ gem update
     $ gem install jekyll jekyll-sitemap
 
