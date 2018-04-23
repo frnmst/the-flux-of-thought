@@ -2,18 +2,11 @@
 layout: default
 ---
 
-<article>
-
-	<h1 class="title">{{ page.title }}</h1>
-
-	<div class="divider"></div>
-
-    {% if page.is_tags %}
-        {% include tag_list.html %}
-    {% endif %}
-
-    <div id="main"></div>
-	{{ content }}
-
-</article>
+<h1 class="title">{{ page.title }}</h1>
+<div class="divider"></div>
+{% if page.is_tags %}
+    {% include tag_list.html %}
+{% endif %}
+<div id="main"></div>
+{{ content }}
 

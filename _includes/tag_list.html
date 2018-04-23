@@ -4,16 +4,14 @@
     <!--Tags summary with links as pararaphs -->
 {% endcomment %}
 
-<article>
-    <div class="tag-list">
+<div class="tag-list">
 {% for tag in site_tags %}
     {% assign tagg = tag[0] | slugify %}
     {% if page.is_home %}
     {% capture link %}{{ site.baseurl }}/tags/#{{ tagg }}{% endcapture %} 
-        <a href="{{ link }}">{{ tag[0] }}</a>&nbsp;
+    <a href="{{ link }}">{{ tag[0] }}</a>&nbsp;
     {% else %}
-        <a href="#{{ tagg }}">{{ tag[0] }}</a>&nbsp;
+    <a href="#{{ tagg }}">{{ tag[0] }}</a>&nbsp;
     {% endif %}
 {% endfor %}
-    </div>
-</article>
+</div>
