@@ -4,7 +4,7 @@ A forked version of [the-plain](https://github.com/heiswayi/the-plain) which
 focuses on more features and aims to be [fully free
 software](https://www.gnu.org/philosophy/free-sw.en.html).
 
-No Javascript is included and the font used is served from the local instance.
+No Javascript is included and no font is served.
 
 It has been tested on [Parabola GNU/Linux-libre](https://www.parabola.nu/).
 

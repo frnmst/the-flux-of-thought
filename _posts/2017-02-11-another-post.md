@@ -18,7 +18,7 @@ Some other text below the caption. Is it rendered fine?
 
 {% include image.html file="terminal.png" alt="ter" %}
 
-This is the liqid tag for the last case:
+This is the liquid tag for the last case:
 
 ```liquid
 {% raw %}
