@@ -1,14 +1,44 @@
-* {
-    box-sizing: border-box;
+/* For mobile phones */
+@media only screen and (max-width: 600px) {
+    body {
+        margin-left: 0.40625em;
+        margin-right: 0.40625em;
+    }
+    .post {
+        pre {
+            font-size:0.8125em;
+            line-height: 2em;
+
+            padding-left: 0.8125em;
+        }
+    }
+}
+
+/* For desktops */
+@media only screen and (min-width: 600px) {
+    body {
+        margin-left: 1.625em;
+        width: 75%;
+        outline-style: none;
+        overflow-x: hidden;
+    }
+    .post-metadata, .page-metadata, .footer, .comment {
+        padding-left: 3000em;
+        margin-left: -3000em;
+        padding-right: 3000em;
+        margin-right: -3000em;
+    }
+    .post {
+        pre {
+            font-size: 1.1375em;
+            line-height: 2em;
+
+            padding-left: 1.625em;
+        }
+    }
 }
 
 body {
-    outline-style: none;
-    overflow-x: hidden;
-
-    margin-left: 1.625em;
-/*    width: 100%; */
-
     text-align: left;
     text-rendering: optimizeLegibility;
 
@@ -27,7 +57,7 @@ body.modal-open {
     position: fixed;
 }
 
-/* Use for abbreviations*/
+/* Use for abbreviations */
 abbr {
   letter-spacing: 0.1em;
 }
@@ -52,12 +82,7 @@ blockquote {
     border-radius: 0.8125em;
 }
 
-p {
-  text-indent: 0;
-  line-height: 1.625em;
-  margin-top: 1.625em;
-  margin-bottom: 1.625em;
-}
+/* Headers */
 
 h1 {
   line-height: 1.625em;
@@ -71,6 +96,15 @@ h2 {
   margin-bottom: 1.263157em;
 }
 
+p {
+  text-indent: 0;
+  line-height: 1.625em;
+  margin-top: 1.625em;
+  margin-bottom: 1.625em;
+}
+
+/* Links */
+
 a {
     text-decoration: underline;
     text-decoration-color: #d9d9d9;
@@ -82,24 +116,56 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Custom */
+
 .index {
     font-size: 1em;
 }
 
 .tag-list
 {
-    a {
-        font-size: 0.75em;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
     }
+
+    li {
+        float: left;
+      /*  margin-top: -1em;*/
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    /*
+    a {
+        margin-left: 0.75em;
+        padding: 0.375em;
+        display: table;
+        text-decoration: none;
+        font-size: 0.75em;
+        background-color: #ffffff;
+        border-radius: 0.75em;
+        box-shadow: 0 0.203125em 0.203125em 0 grey, 0 0.203125em 0.203125em 0 grey; 
+    }
+    */
+/*
+    a:hover {
+        background-color: #404040;
+        color: #ffffff;
+    }
+*/
 }
 
 .post-metadata, .page-metadata, .footer, .comment {
-    /*
-    padding-left: 3000em;
-    margin-left: -3000em;
-    padding-right: 3000em;
-    margin-right: -3000em;
-*/
     background-color: #ffffff;
     box-shadow: inset 0 0 0.40625em grey;
 }
@@ -111,10 +177,7 @@ a:hover {
 
         box-shadow: inset 0 0 0.8125em grey;
 
-        padding-left: 1.625em;
         background-color: #e6e6e6;
-        font-size: 1.1375em;
-        line-height: 2em;
 
         white-space: pre-wrap;       /* css-3 */
         white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
@@ -145,9 +208,7 @@ footer
     jekyll-theme-note
     copyright
     license
-*/
 
-/*
 divider
 
 comment
@@ -161,5 +222,4 @@ image
 
 page-navigation
     home
-
 */

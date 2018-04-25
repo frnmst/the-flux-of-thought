@@ -1,7 +1,7 @@
 ---
 title: This is another post
 updated: 2017-04-09 23:00
-tags: [other, liquid, terminal]
+tags: [other, liquid, terminal, more, stuff]
 description: How to use markdown and liquid to render images belonging to a post.
 ---
 

@@ -27,7 +27,7 @@ include:            [ "_pages" ]
 exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "Makefile", "_repository_assets" ]
 
 # Ruby gems
-gems:
+plugins:
   - jekyll-sitemap
 
 # Excerpts

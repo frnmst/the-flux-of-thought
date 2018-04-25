@@ -12,7 +12,7 @@ serve:
 	@jekyll serve
 
 serve-global:
-	@jekyll serve --host=0.0.0.0
+	@jekyll serve --host=0.0.0.0 --port=3050
 
 clean:
 	@rm -rf _site
