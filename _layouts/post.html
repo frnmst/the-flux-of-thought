@@ -5,11 +5,15 @@ layout: default
 {% if page.tags %}
     {% assign page_tags = page.tags | sort %}
     <div class="tag-list">
+    <ul>
     {% for tag in page_tags %}
+        <li>
         {% assign tagg = tag | slugify %}
         {% capture link %}{{ site.baseurl }}/tags/#{{ tagg }}{% endcapture %}
         <a href="{{ link }}">{{ tag }}</a>&nbsp;
+        </li>
      {% endfor %}
+    </ul>
     </div>
 {% endif %}
 <div class="post-metadata">

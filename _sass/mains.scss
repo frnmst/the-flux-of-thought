@@ -18,7 +18,7 @@
 @media only screen and (min-width: 600px) {
     body {
         margin-left: 1.625em;
-        width: 75%;
+        width: 60%;
         outline-style: none;
         overflow-x: hidden;
     }
@@ -134,18 +134,8 @@ a:hover {
 
     li {
         float: left;
-      /*  margin-top: -1em;*/
     }
 
-    li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
-    /*
     a {
         margin-left: 0.75em;
         padding: 0.375em;
@@ -156,13 +146,11 @@ a:hover {
         border-radius: 0.75em;
         box-shadow: 0 0.203125em 0.203125em 0 grey, 0 0.203125em 0.203125em 0 grey; 
     }
-    */
-/*
+
     a:hover {
         background-color: #404040;
         color: #ffffff;
     }
-*/
 }
 
 .post-metadata, .page-metadata, .footer, .comment {
