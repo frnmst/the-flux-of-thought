@@ -14,7 +14,9 @@ layout: compress
             {% include tag_list.html %}
         {% endif %}
 
-		<div id="main"></div>
+        {% if page.is_post != true %}
+            <div id="main"></div>
+        {% endif %}
 
     	{{ content | replace: '&#8617;', '&#8617;&#xfe0e;' }}
 
