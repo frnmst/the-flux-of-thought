@@ -2,7 +2,17 @@
 layout: default
 ---
 
-<div class="center">
+{% if page.tags %}
+    {% assign page_tags = page.tags | sort %}
+    <div class="tag-list">
+    {% for tag in page_tags %}
+        {% assign tagg = tag | slugify %}
+        {% capture link %}{{ site.baseurl }}/tags/#{{ tagg }}{% endcapture %}
+        <a href="{{ link }}">{{ tag }}</a>&nbsp;
+     {% endfor %}
+    </div>
+{% endif %}
+<div class="post-metadata">
     <h1>{{ page.title }}</h1>
 	<time>First written on {{ page.date | date: '%B %-d, %Y' }}</time>
     {% assign page_date = page.date | date: '%F' %}
@@ -12,21 +22,8 @@ layout: default
     <br />
 	<time>Last updated on {{ page.updated | date: '%B %-d, %Y' }}</time>
     {% endif %}
-    {% if page.tags %}
-        <br />
-        <br />
-        {% assign page_tags = page.tags | sort %}
-        <div class="tag-list">
-        {% for tag in page_tags %}
-            {% assign tagg = tag | slugify %}
-            {% capture link %}{{ site.baseurl }}/tags/#{{ tagg }}{% endcapture %}
-            <a href="{{ link }}">{{ tag }}</a>&nbsp;
-        {% endfor %}
-        </div>
-    {% endif %}
 </div>
 
-<div class="divider"></div>
-<div id="main"></div>
-
+<div class="post">
 {{ content }}
+</div>

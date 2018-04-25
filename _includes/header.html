@@ -1,20 +1,21 @@
-<div class="main">
-    <a href="#main">skip to main content</a>
-    {% if page.url != '/sitemap/' %}
-        <a href="{{ site.baseurl }}/sitemap/">sitemap</a>
-    {% endif %}
+<div class="header">
+    <div class="top">
+        <a href="#main">skip to main content</a>
+        {% if page.url != '/sitemap/' %}
+            <a href="{{ site.baseurl }}/sitemap/">sitemap</a>
+        {% endif %}
+    </div>
+    <aside class="logo">
+	    {% if page.url == '/index.html' or page.url == '/' %}
+    		{% assign link = '/about' %}
+	    	{% assign prompt = 'About' %}
+    	{% else %}
+	    	{% assign link = '/' %}
+    		{% assign prompt = 'Back to Home' %}
+	    {% endif %}
+    	<a href="{{ link | prepend: site.baseurl }}">
+	    	<img src="{{ site.baseurl }}/assets/{{ site.avatar_path }}" width="80px" height="80px" alt="avatar" class="avatar">
+    	</a>
+	    <span class="logo-prompt">{{ prompt }}</span>
+    </aside>
 </div>
-
-<aside class="logo">
-	{% if page.url == '/index.html' or page.url == '/' %}
-		{% assign link = '/about' %}
-		{% assign prompt = 'About' %}
-	{% else %}
-		{% assign link = '/' %}
-		{% assign prompt = 'Back to Home' %}
-	{% endif %}
-	<a href="{{ link | prepend: site.baseurl }}">
-		<img src="{{ site.baseurl }}/assets/{{ site.avatar_path }}" width="80px" height="80px" alt="avatar" class="avatar">
-	</a>
-	<span class="logo-prompt">{{ prompt }}</span>
-</aside>

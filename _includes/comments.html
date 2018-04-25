@@ -1,7 +1,5 @@
 <div class="divider"></div>
 <div class="comment">
-    <div class="title-1"><h2>Comments</h2></div>
-
     {% capture mail %}{{ site.author_email }}{% endcapture %}
     {% assign mail_substring = mail | split: '@' %}
     {% assign mail_username = mail_substring[0] %}
@@ -11,7 +9,7 @@
     {% else %}
         {% capture mailto_prefix %}{{ mail_username }}+{{ page.path | remove: ".html" | remove: ".md" | remove: "_pages/" }}{% endcapture %}
     {% endif %}
-    <div class="title-2">
+    <div class="title">
         <h3>
             <a href="mailto:{{ mailto_prefix }}@{{ mail_domain }}">
                 Post a new comment</a>
