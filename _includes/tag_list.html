@@ -1,21 +1,53 @@
-{% assign site_tags = site.tags | sort %}
+{% comment %} This is pure madness and it needs to be fixes because and 
+O(n^2) loop is not acceptable...{% endcomment %}
+
+{% assign site_tags = site.tags %}
+
+{% for t in site_tags %}
+    {% assign tag_name = tag_name | append: t[0] | append: '#' %}
+    {% assign tag_frequency = tag_frequency | append: t[1].size | append: '#' %}
+{% endfor %}
+
+{% assign tag_name = tag_name | split: '#' %}
+{% assign tag_frequency = tag_frequency | split: '#' %}
+{% assign tag_frequency = tag_frequency | sort | reverse %}
+
+{% assign i = 0 %}
+{% for f in tag_frequency %}
+    {% comment %} Nice: srt to int. {% endcomment %}
+    {% assign freq = f | plus: 0 %}
+    {% for t in site.tags %}
+        {% if i < site.tags.size and freq == t[1].size %}
+            {% assign sorted_tags_by_freq = sorted_tags_by_freq | append: t[0] | append: '#' %}
+            {% assign i = i | plus: 1 %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+
+{% assign sorted_tags_by_freq = sorted_tags_by_freq | split: '#' %}
+{% assign sorted_tags_by_freq = sorted_tags_by_freq | uniq %}
 
 {% comment %}
-    <!--Tags summary with links as pararaphs -->
+{% for tag in sorted_tags_by_freq %}
+    {{ tag }}
+{% endfor %}
 {% endcomment %}
 
 <div class="tag-list">
-<ul>
-{% for tag in site_tags %}
-    <li>
-    {% assign tagg = tag[0] | slugify %}
-    {% if page.is_home %}
-    {% capture link %}{{ site.baseurl }}/tags/#{{ tagg }}{% endcapture %} 
-    <a href="{{ link }}">{{ tag[0] }}</a>&nbsp;
-    {% else %}
-    <a href="#{{ tagg }}">{{ tag[0] }}</a>&nbsp;
-    {% endif %}
-    </li>
-{% endfor %}
-</ul>
+    <ul>
+    {% for tag in sorted_tags_by_freq %}
+        <li>
+        {% assign tagg = tag | slugify %}
+        {% if page.is_home %}
+            {% assign freq = tag_frequency[forloop.index0] | plus: 0 %}
+            {% if freq >= site.min_tag_score %}
+                {% capture link %}{{ site.baseurl }}/tags/#{{ tagg }}{% endcapture %} 
+                <a href="{{ link }}">{{ tag }} [{{ freq }}]</a>
+            {% endif %}
+        {% else %}
+            <a href="#{{ tagg }}">{{ tag }}</a>
+        {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
 </div>

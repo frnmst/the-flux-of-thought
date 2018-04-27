@@ -1,7 +1,7 @@
 ---
 title: Lorem Ipsum
 updated: 2015-09-06 15:56
-tags: [lorem ipsum, dolorem sic, amet]
+tags: [lorem ipsum, dolorem sic, amet, download]
 ---
 
 ### The standard Lorem Ipsum passage, used since the 1500s
