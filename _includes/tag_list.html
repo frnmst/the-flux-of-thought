@@ -1,37 +1,31 @@
-{% comment %} This is pure madness and it needs to be fixes because and 
-O(n^2) loop is not acceptable...{% endcomment %}
+{% comment %} This is pure madness: an O(n^2) loop is not acceptable but 
+there is no other solution I am aware of using this templating
+language. Using a break instruction should improve the best running time 
+case {% endcomment %}
 
-{% assign site_tags = site.tags %}
-
-{% for t in site_tags %}
-    {% assign tag_name = tag_name | append: t[0] | append: '#' %}
+{% for t in site.tags %}
     {% assign tag_frequency = tag_frequency | append: t[1].size | append: '#' %}
 {% endfor %}
 
-{% assign tag_name = tag_name | split: '#' %}
 {% assign tag_frequency = tag_frequency | split: '#' %}
 {% assign tag_frequency = tag_frequency | sort | reverse %}
 
-{% assign i = 0 %}
+{% assign tag_counter = 0 %}
 {% for f in tag_frequency %}
-    {% comment %} Nice: srt to int. {% endcomment %}
+    {% comment %} Nice: srt to int: {% endcomment %}
     {% assign freq = f | plus: 0 %}
+    {% if tag_counter >= tag_frequency.size %}
+        {% break %}
+    {% endif %}
     {% for t in site.tags %}
-        {% if i < site.tags.size and freq == t[1].size %}
+        {% if freq == t[1].size %}
             {% assign sorted_tags_by_freq = sorted_tags_by_freq | append: t[0] | append: '#' %}
-            {% assign i = i | plus: 1 %}
+            {% assign tag_counter = tag_counter | plus: 1 %}
         {% endif %}
     {% endfor %}
 {% endfor %}
 
 {% assign sorted_tags_by_freq = sorted_tags_by_freq | split: '#' %}
-{% assign sorted_tags_by_freq = sorted_tags_by_freq | uniq %}
-
-{% comment %}
-{% for tag in sorted_tags_by_freq %}
-    {{ tag }}
-{% endfor %}
-{% endcomment %}
 
 <div class="tag-list">
     <ul>
