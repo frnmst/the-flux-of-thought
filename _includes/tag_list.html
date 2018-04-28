@@ -1,26 +1,25 @@
 {% comment %} This is pure madness: an O(n^2) loop is not acceptable but 
 there is no other solution I am aware of using this templating
-language. Using a break instruction should improve the best running time 
-case {% endcomment %}
+language. Using uniq to filter different frequencies should 
+lead to a better best case (if all frequencies are equal
+we get O(n) with n being the number of tags, otherwise
+if all freqencies are different we get O(n^2) {% endcomment %}
 
+{% comment %} Get all unique tags {% endcomment %}
 {% for t in site.tags %}
     {% assign tag_frequency = tag_frequency | append: t[1].size | append: '#' %}
 {% endfor %}
 
 {% assign tag_frequency = tag_frequency | split: '#' %}
-{% assign tag_frequency = tag_frequency | sort | reverse %}
+{% assign tag_frequency_iterator = tag_frequency | sort | reverse  %}
+{% assign tag_frequency = tag_frequency_iterator | uniq %}
 
-{% assign tag_counter = 0 %}
 {% for f in tag_frequency %}
     {% comment %} Nice: srt to int: {% endcomment %}
     {% assign freq = f | plus: 0 %}
-    {% if tag_counter >= tag_frequency.size %}
-        {% break %}
-    {% endif %}
     {% for t in site.tags %}
         {% if freq == t[1].size %}
             {% assign sorted_tags_by_freq = sorted_tags_by_freq | append: t[0] | append: '#' %}
-            {% assign tag_counter = tag_counter | plus: 1 %}
         {% endif %}
     {% endfor %}
 {% endfor %}
@@ -33,7 +32,7 @@ case {% endcomment %}
         <li>
         {% assign tagg = tag | slugify %}
         {% if page.is_home %}
-            {% assign freq = tag_frequency[forloop.index0] | plus: 0 %}
+            {% assign freq = tag_frequency_iterator[forloop.index0] | plus: 0 %}
             {% if freq >= site.min_tag_score %}
                 {% capture link %}{{ site.baseurl }}/tags/#{{ tagg }}{% endcapture %} 
                 <a href="{{ link }}">{{ tag }} [{{ freq }}]</a>

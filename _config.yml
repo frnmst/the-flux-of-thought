@@ -25,7 +25,7 @@ sass:
 # Other Params
 include:            [ "_pages" ]
 exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "Makefile", "_repository_assets" ]
-min_tag_score:       1
+min_tag_score:       2
 
 # Ruby gems
 plugins:
