@@ -17,8 +17,12 @@
 /* For desktops */
 @media only screen and (min-width: 700px) {
     body {
-        margin-left: 1.625em;
-        width: 55%;
+        margin-left: 5%;
+        margin-right: 5%;
+        @media only screen and (min-width: 1920px) {
+            margin-left: 25%;
+            margin-right: 25%;
+        }
         outline-style: none;
         overflow-x: hidden;
     }
@@ -27,12 +31,6 @@
         width: auto;
         width: 100%;
         box-sizing:border-box;
-        /*
-        padding-left: 3000em;
-        margin-left: -3000em;
-        padding-right: 3000em;
-        margin-right: -3000em;
-        */
         }
 
     .post {
@@ -62,6 +60,10 @@ body {
 body.modal-open {
     overflow: hidden;
     position: fixed;
+}
+
+a:hover {
+    transition: 0.3s;
 }
 
 /* Use for abbreviations */
@@ -219,7 +221,6 @@ a:hover {
     padding-top: 0.40625em;
 }
 
-
 .post {
     pre {
         border: none;
@@ -248,15 +249,34 @@ img {
 }
 
 .comment {
-    .mail {
-    }
+    .content {
+        margin-right:  1.625em;
+        margin-bottom:  1.625em;
+        a.odd {
+            background-color: #cccccc;
+        }
+        a.even {
+            background-color: #e6e6e6;
+        }
 
-    .odd {
-        background-color: red;
-    }
+        a:hover {
+            background-color: #ffffff;
+        }
 
-    .even {
-        background-color: blue;
+        a  {
+            display: block;
+            text-decoration: none;
+            text-decoration-color: #000000;
+            text-align: left;
+            border-radius: 0.8125em;
+            color: #000000;
+            margin-top: 1.625em;
+            font-size: inherit;
+            box-shadow:  0 0.203125em 0.203125em 0 grey, 0 0.203125em 0.203125em 0 grey;
+            .text {
+                padding: 0.8125em;
+            }
+        }
     }
 }
 

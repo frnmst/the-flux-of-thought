@@ -15,8 +15,10 @@
         </h3>
     </div>
 
+  <div class="content">
   {% assign comment_counter = 0 %}
-  {% for comment in site.comments %}
+  {% assign comments = site.comments | sort | reverse %}
+  {% for comment in comments %}
     {% assign page_path = page.path | replace: "_posts/", "" | remove: ".md" %}
     {% assign comment_fullpath = comment.path | replace: "_comments/", "" | split: "/" %}
     {% assign comment_path = comment_fullpath[0] %}
@@ -28,21 +30,16 @@
         {% else %}
             {% assign parity = "odd" %}
         {% endif %}
-    <div class="email {{ parity }}">
-        <table>
-            <tr>
-                <td><a href="#{{ comment_id }}" id="{{ comment_id }}">{{ comment.subject }}</a></td>
-            </tr>
-            <tr>
-                <td>{{ comment.from }}</td>
-            </tr>
-            <tr>
-                <td>{{ comment.date | date: "%c, %:z GMT" }}</td>
-            </tr>
-        </table>
-    {{ comment.content | markdownify }}
-    </div>
+    <a href="#{{ comment_id }}" id="{{ comment_id }}" class="{{ parity }}">
+        <div class="text">
+        {{ comment.subject }}
+        {{ comment.from }}
+        {{ comment.date | date: "%c, %:z GMT" }}
+        {{ comment.content | markdownify }}
+        </div>
+    </a>
     {% assign comment_counter = comment_counter | plus: 1 %}
   {% endif %}
 {% endfor %}
+</div>
 </div>
