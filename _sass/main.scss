@@ -18,7 +18,7 @@
 @media only screen and (min-width: 700px) {
     body {
         margin-left: 1.625em;
-        width: 60%;
+        width: 55%;
         outline-style: none;
         overflow-x: hidden;
     }
@@ -245,6 +245,19 @@ img {
 
     max-width: 100%;
     height: auto;
+}
+
+.comment {
+    .mail {
+    }
+
+    .odd {
+        background-color: red;
+    }
+
+    .even {
+        background-color: blue;
+    }
 }
 
 .footer {

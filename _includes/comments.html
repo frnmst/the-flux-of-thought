@@ -1,4 +1,3 @@
-<div class="divider"></div>
 <div class="comment">
     {% capture mail %}{{ site.author_email }}{% endcapture %}
     {% assign mail_substring = mail | split: '@' %}
@@ -16,45 +15,34 @@
         </h3>
     </div>
 
+  {% assign comment_counter = 0 %}
   {% for comment in site.comments %}
-
     {% assign page_path = page.path | replace: "_posts/", "" | remove: ".md" %}
     {% assign comment_fullpath = comment.path | replace: "_comments/", "" | split: "/" %}
     {% assign comment_path = comment_fullpath[0] %}
     {% assign comment_id = comment_fullpath[1] | remove: ".md" %}
-
     {% if comment_path == page_path %}
-        {% if forloop.first %}
-        <div class="divider"></div>
-        {% endif %}    
-
-    <div class="email">
+        {% assign parity_check = comment_counter | modulo: 2 %}
+        {% if parity_check == 0 %}
+            {% assign parity = "even" %}
+        {% else %}
+            {% assign parity = "odd" %}
+        {% endif %}
+    <div class="email {{ parity }}">
         <table>
             <tr>
-                <td>Subject</td>
-                {% comment %}
-                <!-- Link to single comment -->
-                {% endcomment %}
-                <td><a href="#{{ comment_id }}" id={{ comment_id }}>{{ comment.subject }}</a></td>
+                <td><a href="#{{ comment_id }}" id="{{ comment_id }}">{{ comment.subject }}</a></td>
             </tr>
             <tr>
-                <td>From</td>
                 <td>{{ comment.from }}</td>
             </tr>
             <tr>
-                    <td>Date</td>
                 <td>{{ comment.date | date: "%c, %:z GMT" }}</td>
             </tr>
         </table>
-    </div>
-
     {{ comment.content | markdownify }}
-    {% comment %}
-    <!-- Don't print the divider after the last comment -->
-    {% endcomment %}
-    {% if forloop.last == false %}
-    <div class="divider"></div>
-    {% endif %}
+    </div>
+    {% assign comment_counter = comment_counter | plus: 1 %}
   {% endif %}
 {% endfor %}
 </div>

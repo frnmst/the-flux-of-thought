@@ -6,12 +6,12 @@ software](https://www.gnu.org/philosophy/free-sw.en.html).
 
 No Javascript is included and no font is served.
 
-It has been tested on [Parabola GNU/Linux-libre](https://www.parabola.nu/).
+It has been tested on [Parabola GNU/Linux-libre](https://www.parabola.nu/)
+and on Firefox Klar on Android.
 
 ## Screenshots
 
-![screenshot](_repository_assets/screenshot.png)
-![screenshot2](_repository_assets/screenshot2.png)
+TODO
 
 # Table of contents
 
@@ -240,17 +240,46 @@ word *tag* to speak about both tags and categories.
 I gathered some ideas from [here](https://blog.webjeda.com/jekyll-categories/) 
 and using the official Jekyll documentation.
 
-A full list of tags is present on the home page, i.e: `./_pages/index.html`. 
+A list of tags is present on the home page, i.e: `./_pages/index.html`. 
 This list is just a set of links pointing to the appropriate entry in the 
-`./_pages/tags.md` page. This page has that same list as well as links to each 
-post belonging to a tag.
+`./_pages/tags.md` page.
 
-If a post contains at least one tag, this is reported at the top of the page 
-with a link pointing to the appropriate bookmark of `./_pages/tags.md` (just 
-like in the home page). A user looking at a post can see all related posts just 
-by clicking at those tag links.
+#### The tags score system
 
-#### Format
+A list of tags is present on the home page, i.e: `./_pages/index.html`. 
+This list is just a set of links pointing to the appropriate entry in the 
+`./_pages/tags.md` page and are presented using a "score" criteria. All 
+occurrencies of a tag are counted globally. If that frequency is greater or 
+equal than the `min_tag_score` variable in the `_config.yml` file then the tag
+list element is showed along with its score. On the other hand if the frequency
+is less than `min_tag_core` the tag will not be shown. If you want all the
+tags to be shown, simply set `min_tag_core` to `1`.
+
+You may have noticed that the tag list is presented in a descreasing number of
+occurrencies per tags. This method was chosen so that the relevant content
+is shown first.
+
+The logic for all this was adapted from 
+[here](https://raisedbyturtles.org/shopify-associative-arrays)
+and 
+[here](https://stackoverflow.com/questions/48529507/jekyll-show-post-count-for-sub-categories).
+
+#### Tags page
+
+The purpose of this page is to present links to posts for each tag in the 
+website. This page reports *all* tags in the website without the "tags score" 
+system except that the list will be sorted with descreasing frequency.
+
+Below the tags list there are links to each posts, organized by tags. If a user 
+clicks on one of the links in the tags list, the viewport will be moved to the
+list of posts containing that tag.
+
+#### Tags in posts
+
+If a post contains at least one tag, this will be reported at the top of the 
+page with a link pointing to the appropriate bookmark of `./_pages/tags.md` 
+(just like in the home page). A user looking at a post can see all related 
+posts just by clicking at those tag links.
 
 The tag entry is optional which means that you can specify from 0 to n tags. If 
 you want to add some, simply write your comma separated list of tags in the 
@@ -296,15 +325,9 @@ for more ideas.
 
 This theme contains an Atom file useful for RSS feeds in `./_pages/feed.xml`
 
-The link to `feed.xml` is available in the footer of every page
-thanks to a modified public domain svg icon. The purpose is that your readers 
-open this link with a feed reader so that they remain up to date with your 
-posts.
-
-A patch has been added to the SVG image because it was badly rendered on some 
-browsers available for Android. See 
-[this](http://bitiotic.com/blog/2012/04/12/fixing-svg-aspect-ratio-lossage-on-webkit/)
-article.
+The link to `feed.xml` is available in the navigation bar of every page
+The purpose is that your readers open this link with a feed reader so that 
+they can remain up to date with your posts.
 
 ### Search Engine Optimizaition (SEO)
 
@@ -412,9 +435,9 @@ which is a pure liquid layout to be used as a wrapper on the
 
 jekyll-compress-html is released under the MIT license.
 
-# This version compared to the original one
+# This version compared to the The Plain Libre
 
-The last common commit between the-plain and the-plain-libre is
+The last common commit between the-plain-libre and x is
 [1443d83](https://github.com/frnmst/the-plain-libre/commit/1443d83ec881a7bfd4b62975da29f72f8f99d38a).
 
 - Removed all analytics
