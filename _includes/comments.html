@@ -15,7 +15,7 @@
         </h3>
     </div>
 
-  <div class="content">
+  <div class="comment-content">
   {% assign comment_counter = 0 %}
   {% assign comments = site.comments | sort | reverse %}
   {% for comment in comments %}
@@ -32,9 +32,12 @@
         {% endif %}
     <a href="#{{ comment_id }}" id="{{ comment_id }}" class="{{ parity }}">
         <div class="text">
-        {{ comment.subject }}
-        {{ comment.from }}
-        {{ comment.date | date: "%c, %:z GMT" }}
+            <ul>
+                <div class="from"><li>{{ comment.from }}</li></li>
+                <div class="date"><li>{{ comment.date | date: "%b %e %Y, %R %Z" }}</li></div>
+            </ul>
+            <div class="hr"></div>
+         <div class="subject"><h3>{{ comment.subject }}</h3></div>
         {{ comment.content | markdownify }}
         </div>
     </a>
