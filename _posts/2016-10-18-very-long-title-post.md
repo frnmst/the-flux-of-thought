@@ -1,5 +1,5 @@
 ---
-title: For Example of very Long Title Would Be Typography Elements in One
+title: For Example of very Long Title Would Be Typography Elements in One and this title must be very long to check for overflowing
 updated: 2016-10-18 23:37
 tags: [long post, full example, all elements, lorem ipsum]
 ---

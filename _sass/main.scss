@@ -100,6 +100,10 @@ a:hover {
     text-decoration: underline;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .post {
     pre {
         border: none;
@@ -115,29 +119,31 @@ a:hover {
 }
 
 .post-metadata, .page-metadata, .footer, .comment {
-    background-color: #ffffff;
     box-shadow: inset 0 0 0.40625em grey;
+    background-color: #ffffff;
+}
+
+.post-metadata, .page-metadata, .footer, .comment, .index .post-list-metadata {
     border-radius:  1.625em;
     padding-left: 1.625em;
     padding-bottom: 0.40625em;
 }
 
-.post-metadata, .page-metadata, .footer, .comment, .comment-content {
+.post-metadata, .page-metadata, .footer, .comment, .comment-content, .index .post-list-metadata {
     margin-bottom: 1.625em;
 }
 
-.page-metadata, .footer, .comment {
+.page-metadata, .footer, .comment, .index .post-list-metadata {
     padding-top: 0.40625em;
 }
 
-.post-metadata, .page-metadata, .footer, .comment {
+.post-metadata, .page-metadata, .footer, .comment, .index .post-list-metadata {
     padding-right: 1.625em;
 }
 
 
 .top, .page-navigation, .tag-list {
     ul {
-        list-style-type: none;
         margin: 0;
         padding: 0;
         overflow: hidden;
@@ -183,8 +189,43 @@ a:hover {
    }
 }
 
-.tag-list
-{
+.index {
+    .post-list-div {
+        margin-top: 0.8125em;
+        margin-bottom: 0.8125em;
+    }
+
+    .post-list-date {
+        float: right;
+    }
+
+    .post-list-excerpt {
+        font-family: serif;
+        font-size: 0.8125em;
+    }
+
+    a {
+        text-decoration: none;
+        text-align: left;
+        color: #000000;
+    }
+
+    .post-list-metadata {
+        background-color: #ffffff;
+        box-shadow:  0 0.203125em 0.203125em 0 grey, 0 0.203125em 0.203125em 0 grey;
+    }
+
+    .post-list-metadata:hover {
+        background-color: #404040;
+        transition: 0.3s;
+    }
+
+    a:hover { 
+        color: #ffffff;
+    }
+}
+
+.tag-list {
     ul {
         margin-top: 0em;
         margin-bottom: 0.40625em;
@@ -208,14 +249,6 @@ a:hover {
         background-color: #404040;
         color: #ffffff;
     }
-}
-
-img {
-    box-shadow: 0 0.203125em 0.203125em 0 grey, 0 0.203125em 0.203125em 0 grey; 
-    border: none;
-    border-radius: 0.8125em;
-    max-width: 100%;
-    height: auto;
 }
 
 .comment-content, .tag-list {
@@ -259,7 +292,6 @@ img {
     }
 
     ul {
-        list-style-type: none;
         margin: 0;
         padding: 0;
         overflow: hidden;
@@ -285,4 +317,12 @@ img {
     }
 
     font-size: 0.8125em;
+}
+
+img {
+    box-shadow: 0 0.203125em 0.203125em 0 grey, 0 0.203125em 0.203125em 0 grey; 
+    border: none;
+    border-radius: 0.8125em;
+    max-width: 100%;
+    height: auto;
 }

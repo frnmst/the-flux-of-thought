@@ -33,8 +33,8 @@
     <a href="#{{ comment_id }}" id="{{ comment_id }}" class="{{ parity }}">
         <div class="text">
             <ul>
-                <div class="from"><li>{{ comment.from }}</li></li>
-                <div class="date"><li>{{ comment.date | date: "%b %e %Y, %R %Z" }}</li></div>
+                <span class="from"><li>{{ comment.from }}</li></span>
+                <span class="date"><li>{{ comment.date | date: "%b %e %Y, %R %Z" }}</li></span>
             </ul>
             <div class="hr"></div>
          <div class="subject"><h3>{{ comment.subject }}</h3></div>
