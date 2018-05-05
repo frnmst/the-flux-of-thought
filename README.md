@@ -4,22 +4,13 @@ A forked version of [the-plain](https://github.com/heiswayi/the-plain) which
 focuses on more features and aims to be [fully free
 software](https://www.gnu.org/philosophy/free-sw.en.html).
 
-No Javascript is included and no font is served.
-
-It has been tested on [Parabola GNU/Linux-libre](https://www.parabola.nu/)
-and on Firefox Klar on Android.
-
-## Screenshots
-
-TODO
-
-# Table of contents
+## Table of contents
 
 [](TOC)
 
 - [The Plain Libre](#the-plain-libre)
-    - [Screenshots](#screenshots)
-- [Table of contents](#table-of-contents)
+    - [Table of contents](#table-of-contents)
+    - [Philosophy](#philosophy)
     - [Dependencies](#dependencies)
     - [Building and serving](#building-and-serving)
     - [Tutorial](#tutorial)
@@ -46,10 +37,20 @@ TODO
             - [robots.txt](#robotstxt)
         - [Mobile support](#mobile-support)
         - [Compressed HTML output](#compressed-html-output)
-- [This version compared to the The Plain Libre](#this-version-compared-to-the-the-plain-libre)
-- [License](#license)
+    - [Tests](#tests)
+    - [This version compared to the The Plain Libre](#this-version-compared-to-the-the-plain-libre)
+    - [License](#license)
 
 [](TOC)
+
+## Philosophy
+
+- No Javascript is used.
+- No local fonts are served.
+- No remote fonts are included.
+- Boxes with outer shades are clickable links.
+- Boxes with inner shades are NOT clickable links.
+- Any box without shades, inner or outer, is the navbar.
 
 ## Dependencies
 
@@ -432,11 +433,16 @@ which is a pure liquid layout to be used as a wrapper on the
 
 jekyll-compress-html is released under the MIT license.
 
-# This version compared to the The Plain Libre
+## Tests
+
+It has been tested on [Parabola GNU/Linux-libre](https://www.parabola.nu/)
+and on Firefox Klar on Android.
+
+## This version compared to the The Plain Libre
 
 There are too many things to compare...
 
-# License
+## License
 
 Copyright (C) 2017-2018, Franco Masotti <franco.masotti@student.unife.it>
 
