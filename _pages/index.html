@@ -16,15 +16,9 @@ permalink: index.html
 	{% endunless %}
   <a href="{{ post.url | prepend: site.baseurl }}">
     <div class="post-list-metadata">
-			<span class="post-list-title">
-			    {{ post.title }}
-			</span>           
-			<span class="post-list-date">
-			    {{ post.date | date: "%b %d" }}
-			</span>
-
+			<span class="post-list-title">{{ post.title }}</span>           
+			<span class="post-list-date">{{ post.date | date: "%b %d" }}</span>
             <div class="post-list-div"></div>
-
             {% if site.excerpt_enabled %}
                 <div class="post-list-excerpt">
                 {% if post.content contains site.excerpt_separator %}
@@ -35,6 +29,6 @@ permalink: index.html
                 </div>
             {% endif %}
     </div>
-        </a>
+  </a>
 {% endfor %}
 </div>

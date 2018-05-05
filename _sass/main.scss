@@ -21,6 +21,10 @@
     body {
         margin-left: 5%;
         margin-right: 5%;
+        @media only screen and (max-width: 1375px) {
+            margin-left: 20%;
+            margin-right: 20%;
+        }
         @media only screen and (min-width: 1920px) {
             margin-left: 25%;
             margin-right: 25%;
@@ -101,7 +105,7 @@ a:hover {
 }
 
 ul {
-    list-style-type: none;
+    list-style-type: circle;
 }
 
 .post {
@@ -218,9 +222,6 @@ ul {
     .post-list-metadata:hover {
         background-color: #404040;
         transition: 0.3s;
-    }
-
-    a:hover { 
         color: #ffffff;
     }
 }
