@@ -35,17 +35,18 @@ TODO
         - [Static pages](#static-pages)
         - [Tags and categories](#tags-and-categories)
             - [Overview](#overview-2)
-            - [Format](#format)
+            - [The tags score system](#the-tags-score-system)
+            - [Tags page](#tags-page)
+            - [Tags in posts](#tags-in-posts)
         - [Excerpts](#excerpts)
         - [RSS feeds](#rss-feeds)
         - [Search Engine Optimizaition (SEO)](#search-engine-optimizaition-seo)
             - [meta and other SEO tags](#meta-and-other-seo-tags)
-            - [Sitemaps](#sitemaps)
+            - [Sitemap](#sitemap)
             - [robots.txt](#robotstxt)
         - [Mobile support](#mobile-support)
-        - [Avatar](#avatar)
         - [Compressed HTML output](#compressed-html-output)
-- [This version compared to the original one](#this-version-compared-to-the-original-one)
+- [This version compared to the The Plain Libre](#this-version-compared-to-the-the-plain-libre)
 - [License](#license)
 
 [](TOC)
@@ -214,7 +215,7 @@ Finally, notice the `otherpost=true` tag at the end.
 
 If you do not include the `alt` tag a default one will be provided instead.
 
-This include feature is currently available only for images.
+This include feature is currently available only for images (`img` HTML tag).
 
 ### Static pages
 
@@ -377,7 +378,7 @@ reported by previously cited articles:
     meta_excerpt_words
     meta_site_description_words
 
-#### Sitemaps
+#### Sitemap
 
 A sitemap used for web crawlers is available thanks to the 
 [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) plugin.
@@ -413,20 +414,16 @@ each one of them.
 
 ### Mobile support
 
-Mobile support is available for this theme through the CSS file. It works but 
-it could be much better.
-
-### Avatar
-
-Use a squared avatar in `./_assets/avatar.jpg`.
+Mobile support is available for this theme through the CSS file through the
+`@media` rules.
 
 ### Compressed HTML output
 
 By default Jekyll leaves lots of whitespace in the html source. You can verify 
 this yourself.
 
-Since useless white space == useless data, we transmit useless bytes, thus 
-slowing down the website.
+Since useless white space means useless data -> we transmit useless bytes -> 
+loading the website requires more time.
 
 For this reason I decided to use a compressed html output thanks to 
 [jekyll-compress-html](https://github.com/penibelst/jekyll-compress-html),
@@ -437,31 +434,11 @@ jekyll-compress-html is released under the MIT license.
 
 # This version compared to the The Plain Libre
 
-The last common commit between the-plain-libre and x is
-[1443d83](https://github.com/frnmst/the-plain-libre/commit/1443d83ec881a7bfd4b62975da29f72f8f99d38a).
-
-- Removed all analytics
-- Removed Google font
-- Removed Gravatar
-- Removed MathJax
-- Simpler image handling
-- Fully static commenting system
-- Full tag and category support
-- Excerpts support
-- Better search Engine Optimization (SEO)
-- Compressed html output
-- Basic sitemap
-- Style
-  - Changed main font
-  - Changed background colors
-  - Bigger font rendering
-  - `outline: none` for links
-  - Last post update shown
-  - Lists CSS: `circle` instead of `disk`
+There are too many things to compare...
 
 # License
 
-Copyright (C) 2017, Franco Masotti <franco.masotti@student.unife.it>
+Copyright (C) 2017-2018, Franco Masotti <franco.masotti@student.unife.it>
 
 [MIT](LICENSE.md)
 
