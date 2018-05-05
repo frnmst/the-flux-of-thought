@@ -1,8 +1,7 @@
-# The Plain Libre
+# The Flux Of Thought
 
-A forked version of [the-plain](https://github.com/heiswayi/the-plain) which
-focuses on more features and aims to be [fully free
-software](https://www.gnu.org/philosophy/free-sw.en.html).
+A full redesign of [the-plain-libre](https://github.com/frnmst/the-plain-libre) 
+Jekyll theme.
 
 ## Table of contents
 
@@ -327,7 +326,7 @@ for more ideas.
 
 This theme contains an Atom file useful for RSS feeds in `./_pages/feed.xml`
 
-The link to `feed.xml` is available in the navigation bar of every page
+The link to `feed.xml` is available in the navigation bar of every page.
 The purpose is that your readers open this link with a feed reader so that 
 they can remain up to date with your posts.
 
@@ -440,7 +439,12 @@ and on Firefox Klar on Android.
 
 ## This version compared to the The Plain Libre
 
-There are too many things to compare...
+There are too many things to compare, but in short terms:
+
+- the CSS file was written from scratch.
+- some Liquid templating language parts have been changed also because of the 
+  new CSS.
+- new tags score system for the index page.
 
 ## License
 
