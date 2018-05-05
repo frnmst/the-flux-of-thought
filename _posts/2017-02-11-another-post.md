@@ -7,14 +7,14 @@ description: How to use markdown and liquid to render images belonging to a post
 
 Hello again!
 
-You can use markdown as well as liquid to render local images. The preferred 
-method in this case is to use liquid.
- 
+You can use markdown as well as liquid to render local images. The preferred
+method in this case is to use liquid so that all "good" CSS rules get applied.
+
 ![ter]({{ site.baseurl }}/media/2017-02-11-another-post/terminal.png)
 
-{% include image.html file="terminal.png" alt="ter" caption="A terminal example caption" %}
+{% include image.html file="terminal.png" alt="example" caption="An example caption. This caption is very long so that we can check for possible overflows..." %}
 
-Some other text below the caption. Is it rendered fine?
+Some other text below the caption. Is this rendered fine?
 
 {% include image.html file="terminal.png" alt="ter" %}
 
@@ -22,7 +22,7 @@ This is the liquid tag for the last case:
 
 ```liquid
 {% raw %}
-    {% include image.html file="terminal.png" alt="ter" %}
+{% include image.html file="terminal.png" alt="example" caption="An example caption. This caption is very long so that we can check for possible overflows..." %}
 {% endraw %}
 ```
 

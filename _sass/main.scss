@@ -22,8 +22,8 @@
         margin-left: 5%;
         margin-right: 5%;
         @media only screen and (max-width: 1375px) {
-            margin-left: 20%;
-            margin-right: 20%;
+            margin-left: 10%;
+            margin-right: 10%;
         }
         @media only screen and (min-width: 1920px) {
             margin-left: 25%;
@@ -320,10 +320,44 @@ ul {
     font-size: 0.8125em;
 }
 
+
 img {
-    box-shadow: 0 0.203125em 0.203125em 0 grey, 0 0.203125em 0.203125em 0 grey; 
-    border: none;
-    border-radius: 0.8125em;
     max-width: 100%;
     height: auto;
+
+    /* Disable antialiasing when the picure is scaled. */
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: pixelated;
+}
+
+.img img, .figure {
+        box-shadow: 0 0.203125em 0.203125em 0 grey, 0 0.203125em 0.203125em 0 grey;
+        border-radius: 0.8125em;
+}
+
+.img img:hover, .figure:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.figure {
+    width: 99%;
+    background-color: #ffffff;
+    img {
+        width: 100%;
+        margin-right: 0;
+        border-top-left-radius: 0.8125em;
+        border-top-right-radius: 0.8125em;
+    }
+    .text {
+        text-align: center;
+        font-size: 0.8125em;
+        font-style: italic;
+    }
+    a {
+        text-decoration: none;
+        color: #000000;        
+    }
 }

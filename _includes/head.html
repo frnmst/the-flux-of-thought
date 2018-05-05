@@ -1,4 +1,4 @@
-{% comment %}<!--Seo metas -->{% endcomment %}
+{% comment %}<!--SEO metas -->{% endcomment %}
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,8 +9,7 @@
 	<title>{{ site.title }}</title>
 {% endif %}
 
-<meta name="description"
-content="{% if page.description %}{{ page.description | truncate: site.meta_description_words }}{% else if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: site.meta_excerpt_words }}{% else %}{{ site.description | truncate: site.meta_description_words }}{% endif %}">
+<meta name="description" content="{% if page.description %}{{ page.description | truncate: site.meta_description_words }}{% else if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: site.meta_excerpt_words }}{% else %}{{ site.description | truncate: site.meta_description_words }}{% endif %}">
 
 <link rel="icon" href="{{ site.baseurl }}/assets/favicon.png">
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/core.css">
