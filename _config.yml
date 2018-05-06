@@ -1,15 +1,13 @@
 # Site Info
 title:              "Blog testing"
-description:        "My blog testing."
+description:        "My blog testing"
 
 # Author Info
 author_name:        "Franco Masotti"
 author_email:       franco.masotti@student.unife.it
-github_username:    frnmst
-avatar_path:        avatar.jpg
 
 # Site Settings
-baseurl:            "/the-plain-libre" # Base URL must end WITHOUT a slash, default: ""
+baseurl:            "/the-flux-of-thought" # Base URL must end WITHOUT a slash, default: ""
 permalink:          /notes/:title # Post permalink. If you change this you must 
                                   # modify all the occurencies manually.
 timezone:           Europe/Rome # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -24,8 +22,7 @@ sass:
 
 # Other Params
 include:            [ "_pages" ]
-exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "Makefile", "_repository_assets" ]
-min_tag_score:       2
+exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "Makefile" ]
 
 # Ruby gems
 plugins:
@@ -35,6 +32,9 @@ plugins:
 excerpt_enabled:        true
 excerpt_separator:      "<!--more-->"
 excerpt_words:          20
+
+# Tags
+min_tag_score:       2
 
 # Meta tag options
 meta_description_words:         140
