@@ -9,6 +9,7 @@ Jekyll theme.
 
 - [The Flux Of Thought](#the-flux-of-thought)
     - [Table of contents](#table-of-contents)
+    - [Demo](#demo)
     - [Philosophy](#philosophy)
     - [Dependencies](#dependencies)
     - [Building and serving](#building-and-serving)
@@ -42,6 +43,10 @@ Jekyll theme.
     - [License](#license)
 
 [](TOC)
+
+## Demo
+
+https://frnmst.github.io/the-flux-of-thought/
 
 ## Philosophy
 
