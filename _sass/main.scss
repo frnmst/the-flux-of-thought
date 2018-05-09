@@ -270,7 +270,7 @@ ul {
     }
 
     a:hover {
-        background-color: #ffffff;
+        background-color: #f2f2f2;
     }
 
     a  {
@@ -322,13 +322,26 @@ img {
 }
 
 .img img, .figure {
-        box-shadow: 0 0.203125em 0.203125em 0 grey, 0 0.203125em 0.203125em 0 grey;
-        border-radius: 0.8125em;
+    box-shadow: 0 0.203125em 0.203125em 0 grey, 0 0.203125em 0.203125em 0 grey;
+    border-radius: 0.8125em;
 }
 
-.img img:hover, .figure:hover {
+.img img:hover {
     opacity: 0.5;
     transition: 0.3s;
+}
+
+.figure:hover {
+    background-color: #404040;
+    transition: 0.3s;
+    img {
+        opacity: 0.75;
+    }
+    .text {
+        color: #ffffff;
+        border-bottom-left-radius: 0.8125em;
+        border-bottom-right-radius: 0.8125em;
+    }
 }
 
 .figure {
