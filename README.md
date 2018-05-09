@@ -7,7 +7,7 @@ Jekyll theme.
 
 [](TOC)
 
-- [The Plain Libre](#the-plain-libre)
+- [The Flux Of Thought](#the-flux-of-thought)
     - [Table of contents](#table-of-contents)
     - [Philosophy](#philosophy)
     - [Dependencies](#dependencies)
@@ -38,6 +38,7 @@ Jekyll theme.
         - [Compressed HTML output](#compressed-html-output)
     - [Tests](#tests)
     - [This version compared to the The Plain Libre](#this-version-compared-to-the-the-plain-libre)
+    - [Useful resources](#useful-resources)
     - [License](#license)
 
 [](TOC)
@@ -68,6 +69,8 @@ Local serving (127.0.0.1)
 Global serving (0.0.0.0)
 
     $ make serve-global
+
+Connect to `http://127.0.0.1:5555/the-flux-of-thought/`.
 
 ## Tutorial
 
@@ -343,10 +346,8 @@ and [this](ttps://varvy.com/) SEO checker.
     in.
 - responsiveness
   - the theme is reported
-    [responsive by Google](https://search.google.com/search-console/mobile-friendly?hl=it&id=LupFsm0FA2J9L4PoK8LAVw)
+    [responsive by Google](https://search.google.com/test/mobile-friendly?id=mcEQCZtn8FzflLoGh3Boqw)
 - robots.txt
-- social media and other stuff
-  - TODO
 
 #### meta and other SEO tags
 
@@ -434,8 +435,8 @@ jekyll-compress-html is released under the MIT license.
 
 ## Tests
 
-It has been tested on [Parabola GNU/Linux-libre](https://www.parabola.nu/)
-and on Firefox Klar on Android.
+It has been tested on Iceweasel for [Parabola GNU/Linux-libre](https://www.parabola.nu/)
+and on Firefox Klar for Android.
 
 ## This version compared to the The Plain Libre
 
@@ -445,6 +446,11 @@ There are too many things to compare, but in short terms:
 - some Liquid templating language parts have been changed also because of the 
   new CSS.
 - new tags score system for the index page.
+
+## Useful resources
+
+https://www.w3.org/
+https://www.w3schools.com/default.asp
 
 ## License
 
