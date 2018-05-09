@@ -454,8 +454,8 @@ There are too many things to compare, but in short terms:
 
 ## Useful resources
 
-https://www.w3.org/
-https://www.w3schools.com/default.asp
+- https://www.w3.org/
+- Especially useful for CSS examples: https://www.w3schools.com/default.asp 
 
 ## License
 
