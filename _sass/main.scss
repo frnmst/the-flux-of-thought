@@ -292,23 +292,12 @@ ul {
         color: #ffffff;
     }
 
-    ul {
-        margin: 0;
-        padding: 0;
+    .from {
         overflow: hidden;
     }
-
-    li {
-        float: left;
-        display: block;
-    }
-
-    .from {
-        padding: 1em;
-    }
-
+    
     .date {
-        float: right;
+        font-style: italic;
     }
 }
 
@@ -358,6 +347,6 @@ img {
     }
     a {
         text-decoration: none;
-        color: #000000;        
+        color: #000000;
     }
 }

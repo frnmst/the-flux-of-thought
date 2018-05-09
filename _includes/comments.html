@@ -32,10 +32,8 @@
         {% endif %}
     <a href="#{{ comment_id }}" id="{{ comment_id }}" class="{{ parity }}">
         <div class="text">
-            <ul>
-                <span class="from"><li>{{ comment.from }}</li></span>
-                <span class="date"><li>{{ comment.date | date: "%b %e %Y, %R %Z" }}</li></span>
-            </ul>
+                <div class="from">{{ comment.from }}</div>
+                <div class="date">{{ comment.date | date: "%b %e %Y, %R %Z" }}</div>
             <div class="hr"></div>
          <div class="subject"><h3>{{ comment.subject }}</h3></div>
         {{ comment.content | markdownify }}
