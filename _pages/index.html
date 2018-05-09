@@ -14,7 +14,7 @@ permalink: index.html
 			<h3>Year {{ post.date | date: '%Y' }}</h3>
 		{% endif %}
 	{% endunless %}
-  <a href="{{ post.url | prepend: site.baseurl }}">
+  <a href="{{ post.url | prepend: site.baseurl }}.html">
     <div class="post-list-metadata">
 			<span class="post-list-title">{{ post.title }}</span>           
 			<span class="post-list-date">{{ post.date | date: "%b %d" }}</span>
