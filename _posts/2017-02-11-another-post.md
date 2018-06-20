@@ -26,6 +26,8 @@ This is the liquid tag for the last case:
 {% endraw %}
 ```
 
+`This is some text in <code> tags,` while this is some adjacent normal text.
+
 This is the source code of [QVM](https://raw.githubusercontent.com/frnmst/qvm/master/qvm)
 
 ```
