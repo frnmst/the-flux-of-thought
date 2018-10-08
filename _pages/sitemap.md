@@ -5,25 +5,25 @@ permalink: /sitemap/
 ---
 
 {% assign site_pages = site.pages | sort %}
-<h3>Pages</h3>
+### Pages
 <ul>
 {% for page in site_pages %}
     {% if page.title != 404 %}
-        <li>
-            <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        </li>
+<li>
+<a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+</li>
     {% endif %}
 {% endfor %}
 </ul>
 
 {% if site.posts %}
     {% assign site_posts = site.posts | sort %}
-    <h3>Posts</h3>
-    <ul>
+### Posts
+<ul>
     {% for post in site_posts %}
-        <li>
-            <a href="{{ post.url | prepend: site.baseurl }}.html">{{ post.title }}</a>
-        </li>
+<li>
+<a href="{{ post.url | prepend: site.baseurl }}.html">{{ post.title }}</a>
+</li>
     {% endfor %}
-    </ul>
+</ul>
 {% endif %}

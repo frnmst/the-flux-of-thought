@@ -1,6 +1,7 @@
 # Site Info
 title:              "Blog testing"
 description:        "My blog testing"
+website_source:     https://github.com/frnmst/the-flux-of-thought
 
 # Author Info
 author_name:        "Franco Masotti"

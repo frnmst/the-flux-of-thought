@@ -330,6 +330,18 @@ Have a look at
 [this article](http://frontendcollisionblog.com/jekyll/snippet/2015/03/23/how-to-show-a-summary-of-your-post-with-jekyll.html) 
 for more ideas.
 
+### Anchor headings
+
+Anchor headings are clickable links beside a `<h[1-6]>` tag. The purpose of 
+these elements is to get a quick link to a specific part of a page.
+You can modify the appearence of these links from the `./_config.yml` file.
+
+TODO.
+
+All this is possible thanks to the 
+[Jekyll Pure Liquid Heading Anchors](https://github.com/allejo/jekyll-anchor-headings)
+library.
+
 ### RSS feeds
 
 This theme contains an Atom file useful for RSS feeds in `./_pages/feed.xml`
