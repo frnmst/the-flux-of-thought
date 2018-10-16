@@ -18,7 +18,11 @@ layout: compress
             <div id="main"></div>
         {% endif %}
 
-        {% include anchor_headings.html html=content anchorBody="&#182;" %}
+        {% if site.anchor_headings_enabled %}
+            {% include anchor_headings.html html=content anchorBody="&#182;" %}
+        {% else %}
+            {{ content }}
+        {% endif %}
 
         {% comment %}Can't use == false since page.is_home might be undefined{% endcomment %}
         {% if page.is_home != true and page.is_404 != true and page.is_tags != true and page.is_sitemap != true %}

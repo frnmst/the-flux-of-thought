@@ -42,6 +42,10 @@ meta_description_words:         140
 meta_excerpt_words:             140
 meta_site_description_words:    140
 
+# Anchor headings
+anchor_headings_enabled:         true
+anchor_headings_character:      "a"
+
 # Keep comments hidden
 collections:
   comments:
@@ -72,7 +76,7 @@ defaults:
       is_post:      true
   -
     scope:
-      path:         "_pages/index.html"
+      path:         "_pages/index.md"
     values:
       is_home:      true
   -
@@ -87,7 +91,7 @@ defaults:
       is_tags:       true
   -
     scope:
-      path:         "_pages/sitemap.html"
+      path:         "_pages/sitemap.md"
     values:
       is_sitemap:   true
   -
