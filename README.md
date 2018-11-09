@@ -13,6 +13,8 @@ Jekyll theme.
     - [Philosophy](#philosophy)
     - [Dependencies](#dependencies)
     - [Building and serving](#building-and-serving)
+        - [Locally](#locally)
+        - [GitLab Pages](#gitlab-pages)
     - [Tutorial](#tutorial)
         - [Commenting system](#commenting-system)
             - [Overview](#overview)
@@ -68,6 +70,8 @@ On Parabola GNU/Linux-libre, you need to install the dependencies like this:
 
 ## Building and serving
 
+### Locally
+
 Local serving (127.0.0.1)
 
     $ make
@@ -77,6 +81,37 @@ Global serving (0.0.0.0)
     $ make serve-global
 
 Connect to `http://127.0.0.1:5555/the-flux-of-thought/`.
+
+### GitLab Pages
+
+If you use [GitLab Pages](https://about.gitlab.com/product/pages/) put the 
+following in `./.gitlab-ci.yml`. See also https://gitlab.com/pages/jekyll
+
+```
+image: ruby:2.3
+
+test:
+  stage: test
+  script:
+  - gem install jekyll
+  - jekyll build -d test
+  artifacts:
+    paths:
+    - test
+  except:
+  - master
+
+pages:
+  stage: deploy
+  script:
+  - gem install jekyll jekyll-sitemap
+  - jekyll build -d public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+```
 
 ## Tutorial
 
