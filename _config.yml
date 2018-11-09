@@ -44,7 +44,11 @@ meta_site_description_words:    140
 
 # Anchor headings
 anchor_headings_enabled:         true
-anchor_headings_character:      "a"
+anchor_headings_character:       "&#182;"
+anchor_headings_min:             1
+anchor_headings_max:             6
+# Puts the anchor heading before the title if set to true.
+anchor_headings_before:          false
 
 # Keep comments hidden
 collections:

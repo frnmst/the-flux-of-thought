@@ -30,6 +30,7 @@ Jekyll theme.
             - [Tags page](#tags-page)
             - [Tags in posts](#tags-in-posts)
         - [Excerpts](#excerpts)
+        - [Anchor headings](#anchor-headings)
         - [RSS feeds](#rss-feeds)
         - [Search Engine Optimizaition (SEO)](#search-engine-optimizaition-seo)
             - [meta and other SEO tags](#meta-and-other-seo-tags)
@@ -334,9 +335,8 @@ for more ideas.
 
 Anchor headings are clickable links beside a `<h[1-6]>` tag. The purpose of 
 these elements is to get a quick link to a specific part of a page.
-You can modify the appearence of these links from the `./_config.yml` file.
-
-TODO.
+You can modify the appearence of these links from the `./_config.yml` file 
+through the `anchor_headings_*` variables.
 
 All this is possible thanks to the 
 [Jekyll Pure Liquid Heading Anchors](https://github.com/allejo/jekyll-anchor-headings)
