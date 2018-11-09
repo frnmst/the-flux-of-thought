@@ -1,19 +1,25 @@
-# Site Info
+## Site Info
 title:              "Blog testing"
 description:        "My blog testing"
+# This should point to your website source.
 website_source:     https://github.com/frnmst/the-flux-of-thought
+# These should point to the-flux-of-thought repository.
+software_version: "0.0.3"
+# The following is used along the software_version variable to build the
+# software version url.
+software_release_base_url: https://github.com/frnmst/the-flux-of-thought/releases/tag
 
-# Author Info
+## Author Info
 author_name:        "Franco Masotti"
 author_email:       franco.masotti@student.unife.it
 
-# Site Settings
+## Site Settings
 baseurl:            "/the-flux-of-thought" # Base URL must end WITHOUT a slash, default: ""
 permalink:          /notes/:title # Post permalink. If you change this you must 
                                   # modify all the occurencies manually.
 timezone:           Europe/Rome # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-# Site Build
+## Site Build
 highlighter:        rouge
 markdown:           kramdown
 kramdown:
@@ -21,28 +27,28 @@ kramdown:
 sass:
     style:          :compressed
 
-# Other Params
+## Other Params
 include:            [ "_pages" ]
 exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "Makefile" ]
 
-# Ruby gems
+## Ruby gems
 plugins:
   - jekyll-sitemap
 
-# Excerpts
+## Excerpts
 excerpt_enabled:        true
 excerpt_separator:      "<!--more-->"
 excerpt_words:          20
 
-# Tags
+## Tags
 min_tag_score:       2
 
-# Meta tag options
+## Meta tag options
 meta_description_words:         140
 meta_excerpt_words:             140
 meta_site_description_words:    140
 
-# Anchor headings
+## Anchor headings
 anchor_headings_enabled:         true
 anchor_headings_character:       "&#182;"
 anchor_headings_min:             1
@@ -61,6 +67,7 @@ collections:
   assets:
     output:         true
 
+## Page names
 defaults:
   -
     scope:

@@ -6,7 +6,7 @@
 all: build serve
 
 build:
-	@jekyll build -V --safe -t
+	@jekyll build --future -V --safe -t
 
 serve:
 	@jekyll serve
