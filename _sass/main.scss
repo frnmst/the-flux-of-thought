@@ -333,21 +333,26 @@ ul {
 .footer {
     .license {
         font-weight: bold;
+        img {
+            /* Align the CC BY SA image with the text. */
+            max-width: 100%;
+            height: auto;
+            display: inline;
+            margin-right: none;
+            margin-left: none;
+            margin-bottom: -0.203125em;
+        }
     }
-
     font-size: 0.8125em;
 }
-
 
 img {
     max-width: 100%;
     height: auto;
-
-    /* Disable antialiasing when the picure is scaled. */
-    -ms-interpolation-mode: nearest-neighbor;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: pixelated;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0.8125em;
 }
 
 .img img, .figure {
@@ -368,17 +373,22 @@ img {
     }
     .text {
         color: #ffffff;
-        border-bottom-left-radius: 0.8125em;
-        border-bottom-right-radius: 0.8125em;
     }
 }
 
 .figure {
-    width: 99%;
+    display: auto;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
     background-color: #ffffff;
+    margin-bottom: 0.8125em;
     img {
-        width: 100%;
-        margin-right: 0;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
         border-top-left-radius: 0.8125em;
         border-top-right-radius: 0.8125em;
     }
