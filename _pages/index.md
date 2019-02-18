@@ -1,6 +1,7 @@
 ---
 layout: default
 permalink: index.html
+excerpt: none
 ---
 
 <div class="index" markdown="1">
