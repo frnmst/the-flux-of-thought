@@ -29,18 +29,20 @@ if all freqencies are different we get O(n^2) {% endcomment %}
 <div class="tag-list">
     <ul>
     {% for tag in sorted_tags_by_freq %}
-        <li>
         {% assign tagg = tag | slugify %}
         {% if page.is_home %}
             {% assign freq = tag_frequency_iterator[forloop.index0] | plus: 0 %}
             {% if freq >= site.min_tag_score %}
                 {% capture link %}{{ site.baseurl }}/tags/#{{ tagg }}{% endcapture %} 
-                <a href="{{ link }}">{{ tag }} [{{ freq }}]</a>
+                <li>
+                    <a href="{{ link }}">{{ tag }} [{{ freq }}]</a>
+                </li>
             {% endif %}
         {% else %}
-            <a href="#{{ tagg }}">{{ tag }}</a>
+            <li>
+                <a href="#{{ tagg }}">{{ tag }}</a>
+            </li>
         {% endif %}
-        </li>
     {% endfor %}
     </ul>
 </div>
