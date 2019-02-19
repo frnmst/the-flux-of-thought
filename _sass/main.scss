@@ -151,6 +151,13 @@ ul {
     }
 }
 
+.post-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    -webkit-padding-start: 0;
+}
+
 .post-list-metadata, .post-list-div, .post-list-excerpt {
     display: block;
 }

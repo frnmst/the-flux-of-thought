@@ -4,6 +4,7 @@ permalink: index.html
 excerpt: none
 ---
 
+<ul class="post-list">
 <div class="index" markdown="1">
 {% for post in site.posts %}
 	{% unless post.next %}
@@ -16,6 +17,7 @@ excerpt: none
 		{% endif %}
 	{% endunless %}
 <div markdown="0">
+<li>
 <a href="{{ post.url | prepend: site.baseurl }}.html">
 <span class="post-list-metadata">
 <span class="post-list-title">{{ post.title }}</span>           
@@ -32,6 +34,8 @@ excerpt: none
             {% endif %}
 </span>
 </a>
+</li>
 </div>
 {% endfor %}
 </div>
+</ul>
