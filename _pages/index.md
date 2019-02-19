@@ -17,20 +17,20 @@ excerpt: none
 	{% endunless %}
 <div markdown="0">
 <a href="{{ post.url | prepend: site.baseurl }}.html">
-<div class="post-list-metadata">
+<span class="post-list-metadata">
 <span class="post-list-title">{{ post.title }}</span>           
 <span class="post-list-date">{{ post.date | date: "%b %d" }}</span>
-<div class="post-list-div"></div>
+<span class="post-list-div"></span>
             {% if site.excerpt_enabled %}
-<div class="post-list-excerpt">
+<span class="post-list-excerpt">
                 {% if post.content contains site.excerpt_separator %}
                     {{ post.excerpt | strip_html }}
                 {% else %}
                     {{ post.excerpt | strip_html | truncatewords: site.excerpt_words }}
                 {% endif %}
-</div>
+</span>
             {% endif %}
-</div>
+</span>
 </a>
 </div>
 {% endfor %}
