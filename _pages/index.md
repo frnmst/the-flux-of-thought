@@ -4,7 +4,6 @@ permalink: index.html
 excerpt: none
 ---
 
-<ul class="post-list">
 <div class="index" markdown="1">
 {% for post in site.posts %}
 	{% unless post.next %}
@@ -17,6 +16,8 @@ excerpt: none
 		{% endif %}
 	{% endunless %}
 <div markdown="0">
+{% comment %}Start list here instead after "Year" to simplify liquid code. This works nonetheless.{%endcomment %}
+<ul class="post-list">
 <li>
 <a href="{{ post.url | prepend: site.baseurl }}.html">
 <span class="post-list-metadata">
@@ -35,7 +36,7 @@ excerpt: none
 </span>
 </a>
 </li>
+</ul>
 </div>
 {% endfor %}
 </div>
-</ul>
