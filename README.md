@@ -489,9 +489,9 @@ jekyll-compress-html is released under the MIT license.
 
 | OS | Browser | Executable | Version command | Browser Version |
 |----|---------|------------|-----------------|-----------------|
-| [Parabola GNU/Linux-libre](https://parabola.nu) | `/bin/iceweasel` | [Iceweasel](https://wiki.parabola.nu/iceweasel) | `$ iceweasel --version` | `Mozilla Iceweasel 61.0.2` |
-| [Parabola GNU/Linux-libre](https://parabola.nu) | `/bin/icecat` | [GNU Icecat](http://www.gnu.org/software/gnuzilla/) | `$ icecat --version` | `GNU icecat 60.3.0` |
-| [Parabola GNU/Linux-libre](https://parabola.nu) | `/bin/w3m` | [w3m](https://salsa.debian.org/debian/w3m) | `$ w3m -version`| `w3m version w3m/0.5.3+git20180125` | 
+| [Parabola GNU/Linux-libre](https://parabola.nu) | [Iceweasel](https://wiki.parabola.nu/iceweasel) | `/bin/iceweasel` | `$ iceweasel --version` | `Mozilla Iceweasel 61.0.2` |
+| [Parabola GNU/Linux-libre](https://parabola.nu) | [GNU Icecat](http://www.gnu.org/software/gnuzilla/) | `/bin/icecat` | `$ icecat --version` | `GNU icecat 60.3.0` |
+| [Parabola GNU/Linux-libre](https://parabola.nu) | [w3m](https://salsa.debian.org/debian/w3m) | `/bin/w3m` | `$ w3m -version`| `w3m version w3m/0.5.3+git20180125` | 
 | [Android 8.1.0](https://developer.android.com/about/versions/oreo/android-8.1) | [Firefox Klar](https://www.mozilla.org/en-US/firefox/mobile/) | - | - | `6.1.1` |
 
 ## This version compared to the The Plain Libre
