@@ -53,7 +53,7 @@ https://frnmst.github.io/the-flux-of-thought/
 
 ## Philosophy
 
-- No Javascript is used.
+- No Javascript is used. See [The JavaScript Trap](https://www.gnu.org/philosophy/javascript-trap.html)
 - No local fonts are served.
 - No remote fonts are included.
 - Boxes with outer shades are clickable links.
@@ -487,8 +487,12 @@ jekyll-compress-html is released under the MIT license.
 
 ## Tests
 
-It has been tested on Iceweasel for [Parabola GNU/Linux-libre](https://www.parabola.nu/)
-and on Firefox Klar for Android.
+| OS | Browser | Executable | Version command | Browser Version |
+|----|---------|------------|-----------------|-----------------|
+| [Parabola GNU/Linux-libre](https://parabola.nu) | `/bin/iceweasel` | [Iceweasel](https://wiki.parabola.nu/iceweasel) | `$ iceweasel --version` | `Mozilla Iceweasel 61.0.2` |
+| [Parabola GNU/Linux-libre](https://parabola.nu) | `/bin/icecat` | [GNU Icecat](http://www.gnu.org/software/gnuzilla/) | `$ icecat --version` | `GNU icecat 60.3.0` |
+| [Parabola GNU/Linux-libre](https://parabola.nu) | `/bin/w3m` | [w3m](https://salsa.debian.org/debian/w3m) | `$ w3m -version`| `w3m version w3m/0.5.3+git20180125` | 
+| [Android 8.1.0](https://developer.android.com/about/versions/oreo/android-8.1) | [Firefox Klar](https://www.mozilla.org/en-US/firefox/mobile/) | - | - | `6.1.1` |
 
 ## This version compared to the The Plain Libre
 
@@ -509,4 +513,3 @@ There are too many things to compare, but in short terms:
 Copyright (C) 2017-2018, Franco Masotti <franco.masotti@student.unife.it>
 
 [MIT](LICENSE.md)
-
