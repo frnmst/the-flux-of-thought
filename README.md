@@ -540,6 +540,7 @@ There are too many things to compare, but in short terms:
 The MIT License (MIT)
 
 Copyright (c) 2015 Heiswayi Nrird
+
 Copyright (c) 2017-2019 Franco Masotti <franco.masotti@live.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
