@@ -55,7 +55,7 @@ https://frnmst.github.io/the-flux-of-thought/
 
 ## Philosophy
 
-- No Javascript is used. See [The JavaScript Trap](https://www.gnu.org/philosophy/javascript-trap.html)
+- No Javascript is used. See [The JavaScript Trap](https://www.gnu.org/philosophy/javascript-trap.html).
 - No local fonts are served.
 - No remote fonts are included.
 - Boxes with outer shades are clickable links.
@@ -75,7 +75,7 @@ be installed on your system.
 | [Jekyll Sitemap Generator Plugin](https://github.com/jekyll/jekyll-sitemap) | - | - | `1.2.0` |
 | [GNU Make](http://www.gnu.org/software/make) | `/bin/make` | `$ make --version` | `GNU Make 4.2.1` |
 | [krmadown](https://kramdown.gettalong.org/index.html) | `~/.gem/ruby/2.5.0/bin/kramdown` | `$ kramdown --version` | `2.1.0` |
-| [rouge](https://github.com/jneen/rouge) | `~/.gem/ruby/2.5.0/bin/rougify` | `$ rougify --version` | `3.1.1` | 
+| [Rouge](https://github.com/jneen/rouge) | `~/.gem/ruby/2.5.0/bin/rougify` | `$ rougify --version` | `3.1.1` | 
 
 ## Installation
 
@@ -137,8 +137,8 @@ pages:
 #### Overview
 
 This theme handles comments in the most static way possible: 
-a `mailto` link is generated for each post thanks to GMAIL mail aliases, using 
-the address specified in the `_config.yml` file. This idea came out while 
+a `mailto` unique link is generated for each post, using the address specified 
+in the `_config.yml` file. This idea came out while 
 reading [this](https://caurea.org/2012/03/31/this-blog-has-comments-again.html) 
 page.
 
@@ -147,11 +147,13 @@ this section, you must create a new file in the `_comments` directory using the
 corresponding posts path name as file name. Let's say a user sends a comment
 for the `another-post` post. The `mailto` link will have this structure:
 
-    <your_gmail_email>+2017-02-11-another-post@gmail.com
+    <your_email_username>+2017-02-11-another-post@gmail.com
 
-You may notice the substring `2017-02-11-another-post` after the gmail's email 
-(but it works for any mailer system supporting these kind of mail aliases).
-This string is part of the file name corresponding to the post which is:
+This works for any mailer system supporting these kind of mail
+aliases, for example GMAIL.
+
+You may notice the substring `2017-02-11-another-post` after the email 
+username which is part of the post's file name:
 
     ./_posts/2017-02-11-another-post.md
 
@@ -169,15 +171,16 @@ file name will be used as an id, for example:
 
     0.md
 
-You can use any non spaced string, and avoid using `.md` except at the end of 
-this file name.
+The filename must not have whitespace characters and the substring `.md` except 
+at the end of it.
 
 Out final comment path is:
 
     ./comments/2017-02-11-another-post/0.md
 
 As a final remark you may have noticed that each comment is referenced as a 
-paragraph (using the id) and that markdown is enabled by default.
+paragraph (using the HTML `id` attribute) and that markdown is enabled by 
+default.
 
 #### Comment attributes
 
