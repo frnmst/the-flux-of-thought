@@ -62,6 +62,13 @@ https://frnmst.github.io/the-flux-of-thought/
 - Boxes with inner shades are NOT clickable links.
 - Any box without shades, inner or outer, is the navbar.
 
+## Version
+
+0.0.4
+
+See all 
+[the-flux-of-thought releases](https://github.com/frnmst/the-flux-of-thought/releases).
+
 ## Dependencies
 
 The theme is known to work with the the packages listed here and they must 

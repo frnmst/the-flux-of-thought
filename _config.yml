@@ -4,7 +4,7 @@ description:        "My blog testing"
 # This should point to your website source.
 website_source:     https://github.com/frnmst/the-flux-of-thought
 # These should point to the-flux-of-thought repository.
-software_version: "0.0.3"
+software_version: "0.0.4"
 # The following is used along the software_version variable to build the
 # software version url.
 software_release_base_url: https://github.com/frnmst/the-flux-of-thought/releases/tag
