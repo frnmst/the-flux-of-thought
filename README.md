@@ -12,6 +12,8 @@ Jekyll theme.
     - [Demo](#demo)
     - [Philosophy](#philosophy)
     - [Dependencies](#dependencies)
+    - [Installation](#installation)
+        - [Arch Linux based distros](#arch-linux-based-distros)
     - [Building and serving](#building-and-serving)
         - [Locally](#locally)
         - [GitLab Pages](#gitlab-pages)
@@ -62,21 +64,36 @@ https://frnmst.github.io/the-flux-of-thought/
 
 ## Dependencies
 
-On Parabola GNU/Linux-libre, you need to install the dependencies like this:
+The theme is known to work with the the packages listed here and they must 
+be installed on your system.
+
+| Package | Executable | Version command | Package Version |
+|---------|------------|-----------------|-----------------|
+| [Ruby](https://www.ruby-lang.org/en/) | `/bin/ruby` | `$ ruby --version` | `$ ruby 2.5.3p105 (2018-10-18 revision 65156)` |
+| [RDoc](https://ruby.github.io/rdoc/) | `/bin/rdoc` | `$ rdoc --version` |  `6.0.4` |
+| [Jekyll](https://jekyllrb.com/) | `~/.gem/ruby/2.5.0/bin/jekyll` | `$ jekyll --version` | `jekyll 3.8.5` |
+| [Jekyll Sitemap Generator Plugin](https://github.com/jekyll/jekyll-sitemap) | - | - | `1.2.0` |
+| [GNU Make](http://www.gnu.org/software/make) | `/bin/make` | `$ make --version` | `GNU Make 4.2.1` |
+| [krmadown](https://kramdown.gettalong.org/index.html) | `~/.gem/ruby/2.5.0/bin/kramdown` | `$ kramdown --version` | `2.1.0` |
+| [rouge](https://github.com/jneen/rouge) | `~/.gem/ruby/2.5.0/bin/rougify` | `$ rougify --version` | `3.1.1` | 
+
+## Installation
+
+### Arch Linux based distros
 
     # pacman -S ruby ruby-rdoc
     $ gem update
-    $ gem install jekyll jekyll-sitemap
+    $ gem install jekyll jekyll-sitemap kramdown rouge
 
 ## Building and serving
 
 ### Locally
 
-Local serving (127.0.0.1)
+Local serving, on `127.0.0.1`
 
     $ make
 
-Global serving (0.0.0.0)
+Global serving, on `0.0.0.0`
 
     $ make serve-global
 
@@ -199,7 +216,7 @@ For example:
 
 ### Media files
 
-Extending [this](https://eduardoboucas.com/blog/2014/12/07/including-and-managing-images-in-jekyll.html) 
+Extending [these](https://eduardoboucas.com/blog/2014/12/07/including-and-managing-images-in-jekyll.html) 
 ideas I came up with the following:
 
 #### Overview
@@ -389,7 +406,7 @@ they can remain up to date with your posts.
 
 I'm a noob in this field so I followed 
 [this](https://blog.webjeda.com/optimize-jekyll-seo/) tutorial
-and [this](ttps://varvy.com/) SEO checker.
+and [this](https://varvy.com/) SEO checker.
 
 - meta
 - sitemaps
@@ -508,8 +525,27 @@ There are too many things to compare, but in short terms:
 - https://www.w3.org/
 - Especially useful for CSS examples: https://www.w3schools.com/default.asp 
 
-## License
+## Copyright and License
 
-Copyright (C) 2017-2018, Franco Masotti <franco.masotti@student.unife.it>
+The MIT License (MIT)
 
-[MIT](LICENSE.md)
+Copyright (c) 2015 Heiswayi Nrird
+Copyright (c) 2017-2019 Franco Masotti <franco.masotti@live.com>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
