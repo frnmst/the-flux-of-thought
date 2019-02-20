@@ -11,6 +11,7 @@ Jekyll theme.
     - [Table of contents](#table-of-contents)
     - [Demo](#demo)
     - [Philosophy](#philosophy)
+    - [Version](#version)
     - [Dependencies](#dependencies)
     - [Installation](#installation)
         - [Arch Linux based distros](#arch-linux-based-distros)
@@ -45,7 +46,7 @@ Jekyll theme.
     - [Tests](#tests)
     - [This version compared to the The Plain Libre](#this-version-compared-to-the-the-plain-libre)
     - [Useful resources](#useful-resources)
-    - [License](#license)
+    - [Copyright and License](#copyright-and-license)
 
 [](TOC)
 
