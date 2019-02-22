@@ -6,18 +6,13 @@ excerpt: none
 
 <div class="index" markdown="1">
 {% for post in site.posts %}
-	{% unless post.next %}
-### Year {{ post.date | date: '%Y' }}
-	{% else %}
-		{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-		{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-		{% if year != nyear %}
-### Year {{ post.date | date: '%Y' }}
-		{% endif %}
-	{% endunless %}
-<div markdown="0">
-{% comment %}Start list here instead after "Year" to simplify liquid code. This works nonetheless.{%endcomment %}
+    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+    {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+    {% if year != nyear %}
+### Year {{ year }}
 <ul class="post-list">
+	{% endif %}
+<div markdown="0">
 <li>
 <a href="{{ post.url | prepend: site.baseurl }}.html">
 <span class="post-list-metadata">
@@ -36,7 +31,10 @@ excerpt: none
 </span>
 </a>
 </li>
-</ul>
 </div>
+{% capture pyear %}{{ post.previous.date | date: '%Y' }}{% endcapture %}
+{% if year != pyear %}
+</ul>
+{% endif %}
 {% endfor %}
 </div>
