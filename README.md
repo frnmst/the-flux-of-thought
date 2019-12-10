@@ -58,14 +58,14 @@ https://frnmst.github.io/the-flux-of-thought/
 
 - No Javascript is used. See [The JavaScript Trap](https://www.gnu.org/philosophy/javascript-trap.html).
 - No local fonts are served.
-- No remote fonts are included.
+- No remote fonts are included (called).
 - Boxes with outer shades are clickable links.
 - Boxes with inner shades are NOT clickable links.
 - Any box without shades, inner or outer, is the navbar.
 
 ## Version
 
-0.0.4
+0.0.5
 
 See all 
 [the-flux-of-thought releases](https://github.com/frnmst/the-flux-of-thought/releases).
@@ -77,13 +77,13 @@ be installed on your system.
 
 | Package | Executable | Version command | Package Version |
 |---------|------------|-----------------|-----------------|
-| [Ruby](https://www.ruby-lang.org/en/) | `/bin/ruby` | `$ ruby --version` | `$ ruby 2.5.3p105 (2018-10-18 revision 65156)` |
-| [RDoc](https://ruby.github.io/rdoc/) | `/bin/rdoc` | `$ rdoc --version` |  `6.0.4` |
-| [Jekyll](https://jekyllrb.com/) | `~/.gem/ruby/2.5.0/bin/jekyll` | `$ jekyll --version` | `jekyll 3.8.5` |
-| [Jekyll Sitemap Generator Plugin](https://github.com/jekyll/jekyll-sitemap) | - | - | `1.2.0` |
+| [Ruby](https://www.ruby-lang.org/en/) | `/bin/ruby` | `$ ruby --version` | `ruby 2.6.5p114 (2019-10-01 revision 67812)` |
+| [RDoc](https://ruby.github.io/rdoc/) | `/bin/rdoc` | `$ rdoc --version` |  `6.2.0` |
+| [Jekyll](https://jekyllrb.com/) | `~/.gem/ruby/2.5.0/bin/jekyll` | `$ jekyll --version` | `jekyll 4.0.0` |
+| [Jekyll Sitemap Generator Plugin](https://github.com/jekyll/jekyll-sitemap) | - | - | `1.4.0` |
 | [GNU Make](http://www.gnu.org/software/make) | `/bin/make` | `$ make --version` | `GNU Make 4.2.1` |
 | [krmadown](https://kramdown.gettalong.org/index.html) | `~/.gem/ruby/2.5.0/bin/kramdown` | `$ kramdown --version` | `2.1.0` |
-| [Rouge](https://github.com/jneen/rouge) | `~/.gem/ruby/2.5.0/bin/rougify` | `$ rougify --version` | `3.1.1` | 
+| [Rouge](https://github.com/jneen/rouge) | `~/.gem/ruby/2.5.0/bin/rougify` | `$ rougify --version` | `3.13.1` | 
 
 ## Installation
 
@@ -92,6 +92,19 @@ be installed on your system.
     # pacman -S ruby ruby-rdoc
     $ gem update
     $ gem install jekyll jekyll-sitemap kramdown rouge
+
+#### Upgrading from Jekyll 3.x to Jekyll 4.x
+
+In case you get something like `'private': nil is not a symbol nor a string (TypeError)`,
+run:
+
+
+    $ gem uninstall forwardable --version 1.3.0
+    $ gem install forwardable --version 1.2.0
+
+
+See also [this issue](https://github.com/jekyll/jekyll/issues/7930)
+and [this document](https://jekyllrb.com/docs/upgrading/3-to-4/)
 
 ## Building and serving
 
