@@ -127,12 +127,12 @@ If you use [GitLab Pages](https://about.gitlab.com/product/pages/) put the
 following in `./.gitlab-ci.yml`. See also https://gitlab.com/pages/jekyll
 
 ```
-image: ruby:2.3
+image: ruby:2.6
 
 test:
   stage: test
   script:
-  - gem install jekyll
+  - gem install 'jekyll:4.0.0' jekyll-sitemap 'forwardable:1.2.0'
   - jekyll build -d test
   artifacts:
     paths:
@@ -143,7 +143,7 @@ test:
 pages:
   stage: deploy
   script:
-  - gem install jekyll jekyll-sitemap
+  - gem install 'jekyll:4.0.0' jekyll-sitemap 'forwardable:1.2.0'
   - jekyll build -d public
   artifacts:
     paths:
