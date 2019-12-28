@@ -364,9 +364,10 @@ and
 Since version `0.1.0` sorting is done first by *tag score* and then
 alphabetically. 
 
-Some elements of logic were taken from [here](https://stackoverflow.com/questions/42846888/repeat-string-multiple-times-in-jekyll),
+Some elements of logic were taken from [here](https://stackoverflow.com/questions/42846888/repeat-string-multiple-times-in-jekyll), 
 [here](https://www.matthewsessions.com/blog/liquid-slice-array/), 
-[here](https://stackoverflow.com/questions/54769586/how-to-display-tags-in-jekyll-and-get-the-tag-to-click-through-to-all-relevant-c)
+[here](https://stackoverflow.com/questions/54769586/how-to-display-tags-in-jekyll-and-get-the-tag-to-click-through-to-all-relevant-c), 
+[here](https://gist.github.com/sskylar/8956549d1ae9dc91c89e74b1c5a0d8c9) 
 and the official [Liquid documentation](https://shopify.github.io/liquid/).
 
 #### Tags page
