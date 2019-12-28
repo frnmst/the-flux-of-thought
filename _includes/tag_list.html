@@ -1,46 +1,81 @@
-{% comment %} This is pure madness: an O(n^2) loop is not acceptable but 
-there is no other solution I am aware of using this templating
-language. Using uniq to filter different frequencies should 
-lead to a better best case (if all frequencies are equal
-we get O(n) with n being the number of tags, otherwise
-if all freqencies are different we get O(n^2) {% endcomment %}
+{% comment %}The following structure is 
+             the one used in the sorting:
+             sort by tag frequency and by name after building a
+             data structure, like this:
 
-{% comment %} Get all unique tags {% endcomment %}
+                          frequency|tag name
+                          ==================
+                          000008|mytag
+                          010000|anothertag
+                          000010|three
+                          000010|four
+
+                          frequency|tag_name
+                          ==================
+             becomes:     000008|mytag
+                          000010|four
+                          000010|three
+                          010000|anothertag
+
+             where the number of leading zeros for each frequency is computed with:
+             base_ten_power = len(str(max(number_of_posts_per_tag))) + 1
+             leading_zeros = base_ten_power - len(str(frequency))
+{% endcomment %}
+
+{% comment %}Get the frequency of the tag with the maximum frequency.
+{% endcomment %}
+{% assign x = '' %}
 {% for t in site.tags %}
-    {% assign tag_frequency = tag_frequency | append: t[1].size | append: '#' %}
+    {% assign x = x | append: t[1].size | append: ',' %}
 {% endfor %}
+{% assign b = x | split: ',' | sort | last | size %}
 
-{% assign tag_frequency = tag_frequency | split: '#' %}
-{% assign tag_frequency_iterator = tag_frequency | sort | reverse  %}
-{% assign tag_frequency = tag_frequency_iterator | uniq %}
+{% comment %}Str to int and add a leading zero later.
+{% endcomment %}
+{% assign base_ten_power = b | plus: 0 | plus: 1 %}
 
-{% for f in tag_frequency %}
-    {% comment %} Nice: srt to int: {% endcomment %}
-    {% assign freq = f | plus: 0 %}
-    {% for t in site.tags %}
-        {% if freq == t[1].size %}
-            {% assign sorted_tags_by_freq = sorted_tags_by_freq | append: t[0] | append: '#' %}
-        {% endif %}
+{% assign tags = '' %}
+{% assign leading_zeros = '' %}
+{% for t in site.tags %}
+    {% capture tag_frequency %}{{ t[1].size }}{% endcapture %}
+    {% assign len_tag_frequency = tag_frequency | size %}
+
+    {% comment %}Prepend a variable amount of leading '0' charaters so that
+                 sorting can be performed correctly.
+    {% endcomment %}
+    {% assign leading_zeros = '' %}
+    {% assign power = base_ten_power | minus: len_tag_frequency %}
+    {% for i in (1..power) %}
+        {% assign leading_zeros = leading_zeros | append: '0' %}
     {% endfor %}
+
+    {% assign tags = tags | append: leading_zeros | append: t[1].size | append: '|' | append: t[0] | append: '§' %}
 {% endfor %}
 
-{% assign sorted_tags_by_freq = sorted_tags_by_freq | split: '#' %}
+{% assign sorted_tags = tags | split: '§' | sort_natural | reverse %}
+
+{% if site.limit_tag_links %}
+     {% assign s = site.limit_tag_links | plus: 0 %}
+     {% assign sorted_tags = sorted_tags | slice: 0, s %}
+{% endif %}
 
 <div class="tag-list">
     <ul>
-    {% for tag in sorted_tags_by_freq %}
-        {% assign tagg = tag | slugify %}
+    {% for tag_elements in sorted_tags %}
+        {% assign tag = tag_elements | split: '|' %}
+        {% assign tag_name = tag[1]  %}
+        {% assign tagg = tag_name | slugify %}
+        {% assign freq = tag[0] | plus: 0 %}
         {% if page.is_home %}
-            {% assign freq = tag_frequency_iterator[forloop.index0] | plus: 0 %}
             {% if freq >= site.min_tag_score %}
                 {% capture link %}{{ site.baseurl }}/tags/#{{ tagg }}{% endcapture %} 
                 <li>
-                    <a href="{{ link }}">{{ tag }} [{{ freq }}]</a>
+                    <a href="{{ link }}">{{ tag_name }} [{{ freq }}]</a>
                 </li>
             {% endif %}
         {% else %}
             <li>
-                <a href="#{{ tagg }}">{{ tag }}</a>
+                <a href="#{{ tagg }}">{{ tag_name }}</a>
             </li>
         {% endif %}
     {% endfor %}

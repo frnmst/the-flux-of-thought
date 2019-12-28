@@ -4,14 +4,14 @@ description:        "My blog testing"
 # This should point to your website source.
 website_source:     https://github.com/frnmst/the-flux-of-thought
 # These should point to the-flux-of-thought repository.
-software_version: "0.0.5"
+software_version: "0.1.0"
 # The following is used along the software_version variable to build the
 # software version url.
 software_release_base_url: https://github.com/frnmst/the-flux-of-thought/releases/tag
 
 ## Author Info
 author_name:        "Franco Masotti"
-author_email:       franco.masotti@student.unife.it
+author_email:       franco.masotti@live.com
 
 ## Site Settings
 baseurl:            "/the-flux-of-thought" # Base URL must end WITHOUT a slash, default: ""
@@ -42,6 +42,8 @@ excerpt_words:          20
 
 ## Tags
 min_tag_score:       2
+# Set the following to false to avoid limiting the tag links.
+limit_tag_links:     16
 
 ## Meta tag options
 meta_description_words:         140

@@ -33,6 +33,8 @@ Jekyll theme.
     - [Tags and categories](#tags-and-categories)
       - [Overview](#overview-2)
       - [The tags score system](#the-tags-score-system)
+        - [Until version `0.0.5`](#until-version-005)
+        - [From version `0.1.0`](#from-version-010)
       - [Tags page](#tags-page)
       - [Tags in posts](#tags-in-posts)
     - [Excerpts](#excerpts)
@@ -66,7 +68,7 @@ https://frnmst.github.io/the-flux-of-thought/
 
 ## Version
 
-0.0.5
+0.1.0
 
 See all 
 [the-flux-of-thought releases](https://github.com/frnmst/the-flux-of-thought/releases).
@@ -334,28 +336,45 @@ This list is just a set of links pointing to the appropriate entry in the
 #### The tags score system
 
 A list of tags is present on the home page, i.e: `./_pages/index.html`. 
-This list is just a set of links pointing to the appropriate entry in the 
-`./_pages/tags.md` page and are presented using a "score" criteria. All 
+This list is just a set of links pointing to an appropriate entry in the 
+`./_pages/tags.md` page, which are presented using a *score* criteria. All 
 occurrencies of a tag are counted globally. If that frequency is greater or 
 equal than the `min_tag_score` variable in the `_config.yml` file then the tag
 list element is showed along with its score. On the other hand if the frequency
 is less than `min_tag_core` the tag will not be shown. If you want all the
 tags to be shown, simply set `min_tag_core` to `1`.
 
+You can limit the number of tags from home and tags page by setting the 
+`limit_tag_links` variable to a positive integer number. If you set it `false`
+the tags will not be limited.
+
 You may have noticed that the tag list is presented in a descreasing number of
 occurrencies per tags. This method was chosen so that the relevant content
 is shown first.
 
-The logic for all this was adapted from 
+##### Until version `0.0.5`
+
+Until version `0.0.5`, the logic for all this was adapted from 
 [here](https://raisedbyturtles.org/shopify-associative-arrays)
 and 
 [here](https://stackoverflow.com/questions/48529507/jekyll-show-post-count-for-sub-categories).
 
+##### From version `0.1.0`
+
+Since version `0.1.0` sorting is done first by *tag score* and then
+alphabetically. 
+
+Some elements of logic were taken from [here](https://stackoverflow.com/questions/42846888/repeat-string-multiple-times-in-jekyll),
+[here](https://www.matthewsessions.com/blog/liquid-slice-array/), 
+[here](https://stackoverflow.com/questions/54769586/how-to-display-tags-in-jekyll-and-get-the-tag-to-click-through-to-all-relevant-c)
+and the official [Liquid documentation](https://shopify.github.io/liquid/).
+
 #### Tags page
 
 The purpose of this page is to present links to posts for each tag in the 
-website. This page reports *all* tags in the website without the "tags score" 
+website. This page reports *all* tags in the website without the *tags score*
 system except that the list will be sorted with descreasing frequency.
+The tags reported on the top of the page follow the *tags score* system.
 
 Below the tags list there are links to each posts, organized by tags. If a user 
 clicks on one of the links in the tags list, the viewport will be moved to the
@@ -528,6 +547,8 @@ which is a pure liquid layout to be used as a wrapper on the
 jekyll-compress-html is released under the MIT license.
 
 ## Tests
+
+This theme is guaranteed to work correctly with the following web browsers:
 
 | OS | Browser | Executable | Version command | Browser Version |
 |----|---------|------------|-----------------|-----------------|
