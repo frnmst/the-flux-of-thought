@@ -1,7 +1,5 @@
-{% comment %}The following structure is 
-             the one used in the sorting:
-             sort by tag frequency and by name after building a
-             data structure, like this:
+{% comment %}Sort decreasingly, alphabetically by tag frequency and by name.
+             After building a data structure like this:
 
                           frequency|tag name
                           ==================
@@ -9,13 +7,19 @@
                           010000|anothertag
                           000010|three
                           000010|four
+                          000010|six
+                          000010|five
+
+             it becomes:
 
                           frequency|tag_name
                           ==================
-             becomes:     000008|mytag
-                          000010|four
-                          000010|three
                           010000|anothertag
+                          000010|six
+                          000010|three
+                          000010|four
+                          000010|five
+                          000008|mytag
 
              where the number of leading zeros for each frequency is computed with:
              base_ten_power = len(str(max(number_of_posts_per_tag))) + 1
