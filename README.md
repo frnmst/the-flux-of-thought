@@ -34,7 +34,7 @@ Jekyll theme.
       - [Overview](#overview-2)
       - [The tags score system](#the-tags-score-system)
         - [Until version `0.0.5`](#until-version-005)
-        - [From version `0.1.0`](#from-version-010)
+        - [Since version `0.1.0`](#since-version-010)
       - [Tags page](#tags-page)
       - [Tags in posts](#tags-in-posts)
     - [Excerpts](#excerpts)
@@ -359,7 +359,7 @@ Until version `0.0.5`, the logic for all this was adapted from
 and 
 [here](https://stackoverflow.com/questions/48529507/jekyll-show-post-count-for-sub-categories).
 
-##### From version `0.1.0`
+##### Since version `0.1.0`
 
 Since version `0.1.0` sorting is done first by *tag score* and then
 alphabetically. 
