@@ -4,6 +4,8 @@ title: Tags
 permalink: /tags/
 ---
 
+{% include tag_list.html %}
+
 <div class="tag-posts">
 
 {% assign site_tags = site.tags | sort %}

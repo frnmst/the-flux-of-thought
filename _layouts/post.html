@@ -2,6 +2,18 @@
 layout: default
 ---
 
+<div class="post-metadata">
+    <h1>{{ page.title }}</h1>
+	<div class="written-on">First written on {{ page.date | date: '%B %-d, %Y' }}</div>
+    {% assign page_date = page.date | date: '%F' %}
+    {% assign page_updated = page.updated | date: '%F' %}
+    {% if page_updated < page_date %}
+    <div class="updated-on">WARNING: check front matter <b>updated</b> variable</div>
+    {% elsif page_date != page_updated %}
+	<div class="updated-on">Last updated on {{ page.updated | date: '%B %-d, %Y' }}</div>
+    {% endif %}
+</div>
+
 {% if page.tags %}
     {% assign page_tags = page.tags | sort %}
     <div class="tag-list">
@@ -16,17 +28,6 @@ layout: default
     </ul>
     </div>
 {% endif %}
-<div class="post-metadata">
-    <h1>{{ page.title }}</h1>
-	<div class="written-on">First written on {{ page.date | date: '%B %-d, %Y' }}</div>
-    {% assign page_date = page.date | date: '%F' %}
-    {% assign page_updated = page.updated | date: '%F' %}
-    {% if page_updated < page_date %}
-    <div class="updated-on">WARNING: check front matter <b>updated</b> variable</div>
-    {% elsif page_date != page_updated %}
-	<div class="updated-on">Last updated on {{ page.updated | date: '%B %-d, %Y' }}</div>
-    {% endif %}
-</div>
 
 <div class="post" id="main">
 {% include anchor_headings.html html=content %}

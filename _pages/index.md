@@ -4,6 +4,8 @@ permalink: index.html
 excerpt: none
 ---
 
+{% include tag_list.html %}
+
 <div class="index" markdown="1">
 {% for post in site.posts %}
 	{% unless post.next %}
