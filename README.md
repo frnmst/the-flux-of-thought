@@ -47,6 +47,7 @@ Jekyll theme.
     - [Mobile support](#mobile-support)
     - [Compressed HTML output](#compressed-html-output)
   - [Tests](#tests)
+    - [HTML validation](#html-validation)
   - [This version compared to the The Plain Libre](#this-version-compared-to-the-the-plain-libre)
   - [Useful resources](#useful-resources)
   - [Copyright and License](#copyright-and-license)
@@ -557,6 +558,10 @@ This theme is guaranteed to work correctly with the following web browsers:
 | [Parabola GNU/Linux-libre](https://parabola.nu) | [GNU Icecat](http://www.gnu.org/software/gnuzilla/) | `/bin/icecat` | `$ icecat --version` | `GNU icecat 60.3.0` |
 | [Parabola GNU/Linux-libre](https://parabola.nu) | [w3m](https://salsa.debian.org/debian/w3m) | `/bin/w3m` | `$ w3m -version`| `w3m version w3m/0.5.3+git20180125` | 
 | [Android 8.1.0](https://developer.android.com/about/versions/oreo/android-8.1) | [Firefox Klar](https://www.mozilla.org/en-US/firefox/mobile/) | - | - | `6.1.1` |
+
+### HTML validation
+
+This Jekyll theme has been checked with the [HTML5 W3C validator](https://validator.w3.org/nu/)
 
 ## This version compared to the The Plain Libre
 

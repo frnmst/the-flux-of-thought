@@ -82,7 +82,7 @@ p {
 }
 
 a:hover {
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 /* Use for abbreviations only. */
@@ -261,7 +261,7 @@ ul {
 
     .post-list-metadata:hover {
         background-color: #404040;
-        transition: 0.3s;
+        transition: 0.2s;
         color: #ffffff;
     }
 }
@@ -373,12 +373,12 @@ img {
 
 .img img:hover {
     opacity: 0.5;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .figure:hover {
     background-color: #404040;
-    transition: 0.3s;
+    transition: 0.2s;
     img {
         opacity: 0.75;
     }
