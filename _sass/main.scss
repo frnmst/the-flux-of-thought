@@ -203,6 +203,27 @@ ul {
     }
 }
 
+.badges {
+    ul {
+        margin-top: 0.203125em;
+        margin-bottom: 0.203125em;
+        margin-left: 0em;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    li {
+        display: block;
+        float: left;
+        margin-left: 0.203125em;
+    }
+
+    img {
+        padding: 0;
+        margin: 0;
+    }
+}
+
 .top, .page-navigation {
     ul {
         font-size: 0.8125em;
@@ -342,18 +363,6 @@ ul {
 }
 
 .footer {
-    .license {
-        font-weight: bold;
-        img {
-            /* Align the CC BY SA image with the text. */
-            max-width: 100%;
-            height: auto;
-            display: inline;
-            margin-right: none;
-            margin-left: none;
-            margin-bottom: -0.203125em;
-        }
-    }
     font-size: 0.8125em;
 }
 
