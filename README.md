@@ -11,11 +11,13 @@ Jekyll theme.
   - [Table of contents](#table-of-contents)
   - [Demo](#demo)
   - [Philosophy](#philosophy)
-  - [Version](#version)
+  - [Versions](#versions)
   - [Dependencies](#dependencies)
   - [Installation](#installation)
     - [Arch Linux based distros](#arch-linux-based-distros)
-      - [Upgrading from Jekyll 3.x to Jekyll 4.x](#upgrading-from-jekyll-3x-to-jekyll-4x)
+  - [Upgrading](#upgrading)
+    - [Upgrading from Jekyll 3.x to Jekyll 4.x](#upgrading-from-jekyll-3x-to-jekyll-4x)
+    - [Upgrading from the flux-of-though 0.x to 1.x](#upgrading-from-the-flux-of-though-0x-to-1x)
   - [Building and serving](#building-and-serving)
     - [Locally](#locally)
     - [GitLab Pages](#gitlab-pages)
@@ -95,7 +97,7 @@ be installed on your system.
     $ gem update
     $ gem install jekyll jekyll-sitemap kramdown rouge
 
-## Upgrading 
+## Upgrading
 
 ### Upgrading from Jekyll 3.x to Jekyll 4.x
 
