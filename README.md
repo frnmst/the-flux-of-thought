@@ -65,11 +65,9 @@ https://frnmst.github.io/the-flux-of-thought/
 - No remote fonts are included (called).
 - Boxes with outer shades are clickable links.
 - Boxes with inner shades are NOT clickable links.
-- Any box without shades, inner or outer, is the navbar.
+- Any box without shades, inner or outer, is either the navbar or the badges in the footer.
 
-## Version
-
-0.1.0
+## Versions
 
 See all 
 [the-flux-of-thought releases](https://github.com/frnmst/the-flux-of-thought/releases).
@@ -87,7 +85,7 @@ be installed on your system.
 | [Jekyll Sitemap Generator Plugin](https://github.com/jekyll/jekyll-sitemap) | - | - | `1.4.0` |
 | [GNU Make](http://www.gnu.org/software/make) | `/bin/make` | `$ make --version` | `GNU Make 4.2.1` |
 | [krmadown](https://kramdown.gettalong.org/index.html) | `~/.gem/ruby/2.5.0/bin/kramdown` | `$ kramdown --version` | `2.1.0` |
-| [Rouge](https://github.com/jneen/rouge) | `~/.gem/ruby/2.5.0/bin/rougify` | `$ rougify --version` | `3.13.1` | 
+| [Rouge](https://github.com/jneen/rouge) | `~/.gem/ruby/2.5.0/bin/rougify` | `$ rougify --version` | `3.13.0` | 
 
 ## Installation
 
@@ -97,7 +95,9 @@ be installed on your system.
     $ gem update
     $ gem install jekyll jekyll-sitemap kramdown rouge
 
-#### Upgrading from Jekyll 3.x to Jekyll 4.x
+## Upgrading 
+
+### Upgrading from Jekyll 3.x to Jekyll 4.x
 
 In case you get something like `'private': nil is not a symbol nor a string (TypeError)`,
 run:
@@ -109,6 +109,11 @@ run:
 
 See also [this issue](https://github.com/jekyll/jekyll/issues/7930)
 and [this document](https://jekyllrb.com/docs/upgrading/3-to-4/)
+
+### Upgrading from the flux-of-though 0.x to 1.x
+
+Yaml keys in the configuration file have changed. Be sure to to fix your configuration
+file appropriately.
 
 ## Building and serving
 
@@ -340,13 +345,13 @@ A list of tags is present on the home page, i.e: `./_pages/index.html`.
 This list is just a set of links pointing to an appropriate entry in the 
 `./_pages/tags.md` page, which are presented using a *score* criteria. All 
 occurrencies of a tag are counted globally. If that frequency is greater or 
-equal than the `min_tag_score` variable in the `_config.yml` file then the tag
+equal than the `tags.score.min` variable in the `_config.yml` file then the tag
 list element is showed along with its score. On the other hand if the frequency
-is less than `min_tag_core` the tag will not be shown. If you want all the
-tags to be shown, simply set `min_tag_core` to `1`.
+is less than `tags.score.min` the tag will not be shown. If you want all the
+tags to be shown, simply set `tags.score.min` to `1`.
 
 You can limit the number of tags from home and tags page by setting the 
-`limit_tag_links` variable to a positive integer number. If you set it `false`
+`tags.score.link_limit` variable to a positive integer number. If you set it `false`
 the tags will not be limited.
 
 You may have noticed that the tag list is presented in a descreasing number of
@@ -458,8 +463,9 @@ THE SOFTWARE.
 
 Anchor headings are clickable links beside a `<h[1-6]>` tag. The purpose of 
 these elements is to get a quick link to a specific part of a page.
+
 You can modify the appearence of these links from the `./_config.yml` file 
-through the `anchor_headings_*` variables.
+through the `anchor_headings` variables.
 
 All this is possible thanks to the 
 [Jekyll Pure Liquid Heading Anchors](https://github.com/allejo/jekyll-anchor-headings)
@@ -467,7 +473,7 @@ library.
 
 ### RSS feeds
 
-This theme contains an Atom file useful for RSS feeds in `./_pages/feed.xml`
+This theme contains an Atom file useful for RSS feeds in `./_pages/feed.xml`.
 
 The link to `feed.xml` is available in the navigation bar of every page.
 The purpose is that your readers open this link with a feed reader so that 
@@ -486,7 +492,7 @@ and [this](https://varvy.com/) SEO checker.
     in.
 - responsiveness
   - the theme is reported
-    [responsive by Google](https://search.google.com/test/mobile-friendly?id=mcEQCZtn8FzflLoGh3Boqw)
+    [responsive by Google](https://search.google.com/test/mobile-friendly)
 - robots.txt
 
 #### meta and other SEO tags
@@ -511,13 +517,9 @@ description may not relate to the (whole) page content. Here's an example:
     post.
     ---
 
-You can also edit the following variables in `./_config.yml`to limit the number  
+You can also edit the `meta` variable in `./_config.yml`to limit the number  
 of words in the `description` meta tag. Avoid values greater than `160` as 
 reported by previously cited articles:
-
-    meta_description_words
-    meta_excerpt_words
-    meta_site_description_words
 
 #### Sitemap
 
@@ -608,7 +610,7 @@ The MIT License (MIT)
 
 Copyright (c) 2015 Heiswayi Nrird
 
-Copyright (c) 2017-2019 Franco Masotti <franco.masotti@live.com>
+Copyright (c) 2017-2020 Franco Masotti <franco.masotti@live.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
