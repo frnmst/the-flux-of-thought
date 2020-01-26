@@ -56,7 +56,6 @@ excerpts:
     end:            "<!--excerpt_end-->"
     words:          20
 
-limit_tag_links:     16
 tags:
     score:
         min:       2

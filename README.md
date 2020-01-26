@@ -414,20 +414,45 @@ just below the `Download this Theme` title:
 
 ### Excerpts
 
-Excerpts are reported in the home page.
+An excerpt is a portion of a post reported in the home page.
 
-Use the `<!--more-->` tag inside a post to mark the end of the excerpt.
+Any content between `<!--excerpt_start-->` and `<!--excerpt_end-->` tags 
+in a post will be used as excerpt.
 
-If this tag is omitted, the first 10 words of the post will be reported 
+If one or both of these tags are omitted, the first 20 words of the post will be reported 
 instead. You can specify the number of words in the excerpt by editing the 
-`excerpt_words` variable in the `./_config.yml` file.
+`excerpts.words` variable in the `./_config.yml` file.
 
-If you are not interested in excerpts set the `excerpt_enabled` variable to 
+If you are not interested in excerpts set the `excerpts.enabled` variable to 
 false in `./_config.yml`.
 
-Have a look at 
-[this article](http://frontendcollisionblog.com/jekyll/snippet/2015/03/23/how-to-show-a-summary-of-your-post-with-jekyll.html) 
-for more ideas.
+The liquid code that handles the excerpts was inspired by
+[this article](http://frontendcollisionblog.com/jekyll/snippet/2015/03/23/how-to-show-a-summary-of-your-post-with-jekyll.html).
+Here is its license and copyright:
+
+```
+The MIT License (MIT)
+
+Copyright (c) 2015 Joshua Beam
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
 
 ### Anchor headings
 
