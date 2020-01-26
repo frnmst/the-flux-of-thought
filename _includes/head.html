@@ -9,7 +9,16 @@
 	<title>{{ site.title }}</title>
 {% endif %}
 
-<meta name="description" content="{% if page.description %}{{ page.description | truncate: site.meta_description_words }}{% else if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: site.meta_excerpt_words }}{% else %}{{ site.description | truncate: site.meta_description_words }}{% endif %}">
+{% capture meta_description %}
+    {% if page.description %}
+        {{ page.description | truncate: site.meta.description_words }}
+    {% else if page.excerpt %}
+        {{ page.excerpt | strip_html | strip_newlines | truncate: site.meta.excerpt_words }}
+    {% else %}
+        {{ site.description | truncate: site.meta.description_words }}
+    {% endif %}
+{% endcapture %}
+<meta name="description" content="{{ meta_description }}">
 
 <link rel="icon" href="{{ site.baseurl }}/assets/favicon.png">
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/core.css">

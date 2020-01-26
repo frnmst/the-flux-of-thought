@@ -11,13 +11,13 @@ permalink: feed.xml
   <link href="{{ site.baseurl | append: feed.xml }}" rel="self"/>
   <rights>Copyright @
     {{ site.time | date: '%Y' }},
-    {{ site.author_name | xml_escape }}</rights>
+    {{ site.author.name | xml_escape }}</rights>
   <icon>{{ site.baseurl }}/assets/favicon.png</icon>
 
   <author>
-    <name>{{ site.author_name | xml_escape }}</name>
+    <name>{{ site.author.name | xml_escape }}</name>
     <uri>{{ site.baseurl }}</uri>
-    <email>{{ site.author_email | xml_escape }}</email>
+    <email>{{ site.author.email | xml_escape }}</email>
   </author>
 
   <updated>{{ site.time | date_to_xmlschema }}</updated>

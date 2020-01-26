@@ -8,7 +8,7 @@ layout: default
     {% assign page_date = page.date | date: '%F' %}
     {% assign page_updated = page.updated | date: '%F' %}
     {% if page_updated < page_date %}
-    <div class="updated-on">WARNING: check front matter <b>updated</b> variable</div>
+    <div class="updated-on">*** ERROR: check front matter <b>updated</b> variable ***</div>
     {% elsif page_date != page_updated %}
 	<div class="updated-on">Last updated on {{ page.updated | date: '%B %-d, %Y' }}</div>
     {% endif %}

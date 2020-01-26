@@ -1,18 +1,18 @@
 <div class="footer">
     <div class="jekyll-theme-note">
-        Made using <a href="https://github.com/frnmst/the-flux-of-thought" title="The Flux Of Thought theme by Franco Masotti">The Flux Of Thought</a>
-           version <a href="{{ site.software_release_base_url }}/{{ site.software_version }}">{{ site.software_version }}</a>
+        Made using <a href="{{ site.software.home }}" title="The Flux Of Thought theme by Franco Masotti">The Flux Of Thought</a>
+           version <a href="{{ site.software.release_base_url }}/{{ site.software.version }}">{{ site.software.version }}</a>
     </div>
     <div class="license">
-        <a href="{{ site.website_source }}">Website content</a> is released under the
-        <a href="https://creativecommons.org/licenses/by-sa/4.0/">{{ site.software_license_name }}</a> license
+        <a href="{{ site.website.source }}">Website content</a> is released under the
+        <a href="{{ site.website.license.url }}">{{ site.website.license.name }}</a> license
     </div>
     <div class="copyright">
-        &copy; {{ site.time | date: '%Y' }} {{ site.author_name }}
+        &copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
     </div>
     <div class="badges">
         <ul>
-        <li><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="{{ site.baseurl }}/assets/badge-license_cc_by_sa_4_0.svg" alt="{{ site.software_license_name }}"></a></li>
+        <li><a href="{{ site.website.license.url }}"><img src="{{ site.baseurl }}/assets/badge-license_cc_by_sa_4_0.svg" alt="{{ site.website.license.name }}"></a></li>
         <li><a href="https://jekyllrb.com/"><img src="{{ site.baseurl }}/assets/badge-powered_by_jekyll.svg" alt="powered by Jekyll"></a></li>
         <li><a href="https://www.gnu.org/philosophy/javascript-trap.en.html"><img src="{{ site.baseurl }}/assets/badge-no_javascript.svg" alt="no JavaScript"></a></li>
         <li><a href="https://html.spec.whatwg.org/"><img src="{{ site.baseurl }}/assets/badge-uses_html5.svg" alt="uses HTML5"></a></li>

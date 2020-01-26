@@ -63,7 +63,7 @@
      {% assign sorted_tags = sorted_tags | slice: 0, s %}
 {% endif %}
 
-<div class="tag-list">
+<div class="tag-list" markdown="0">
     <ul>
     {% for tag_elements in sorted_tags %}
         {% assign tag = tag_elements | split: '|' %}
@@ -71,7 +71,7 @@
         {% assign tagg = tag_name | slugify %}
         {% assign freq = tag[0] | plus: 0 %}
         {% if page.is_home %}
-            {% if freq >= site.min_tag_score %}
+            {% if freq >= site.tag_list.score.min %}
                 {% capture link %}{{ site.baseurl }}/tags/#{{ tagg }}{% endcapture %} 
                 <li>
                     <a href="{{ link }}">{{ tag_name }} [{{ freq }}]</a>

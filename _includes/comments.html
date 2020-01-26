@@ -1,5 +1,5 @@
 <div class="comment">
-    {% capture mail %}{{ site.author_email }}{% endcapture %}
+    {% capture mail %}{{ site.author.email }}{% endcapture %}
     {% assign mail_substring = mail | split: '@' %}
     {% assign mail_username = mail_substring[0] %}
     {% assign mail_domain = mail_substring[1] %}

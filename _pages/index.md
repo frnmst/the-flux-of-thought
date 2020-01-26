@@ -5,40 +5,72 @@ excerpt: none
 ---
 
 {% include tag_list.html %}
+    
+<div class="index" markdown="0">
+{% assign i=0 | plus: 0 %}
 
-<div class="index" markdown="1">
 {% for post in site.posts %}
-	{% unless post.next %}
-### Year {{ post.date | date: '%Y' }}
-	{% else %}
-		{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-		{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-		{% if year != nyear %}
-### Year {{ post.date | date: '%Y' }}
-		{% endif %}
-	{% endunless %}
-<div markdown="0">
-{% comment %}Start list here instead after "Year" to simplify liquid code. This works nonetheless.{%endcomment %}
-<ul class="post-list">
-<li>
-<a href="{{ post.url | prepend: site.baseurl }}.html">
-<span class="post-list-metadata">
-<span class="post-list-title">{{ post.title }}</span>           
-<span class="post-list-date">{{ post.date | date: "%b %d" }}</span>
-<span class="post-list-div"></span>
-            {% if site.excerpt_enabled %}
-<span class="post-list-excerpt">
-                {% if post.content contains site.excerpt_separator %}
-                    {{ post.excerpt | strip_html }}
-                {% else %}
-                    {{ post.excerpt | strip_html | truncatewords: site.excerpt_words }}
-                {% endif %}
-</span>
+    {% assign open_list = false %}
+
+    {% assign current_year=post.date | date: '%Y' %}
+    {% if post.next %}
+        {% assign next_year=post.next.date | date: '%Y' %}
+    {% endif %}
+
+    {% if i != 0 %}
+        {% if post.next %}
+            {% if current_year != next_year %}
+                </ul>
             {% endif %}
-</span>
-</a>
-</li>
-</ul>
+        {% endif %}
+    {% endif %}
+
+<div markdown="1">
+    {% if i == 0 %}
+### Year {{ current_year }}
+        {% assign open_list = true %}
+    {% elsif post.next %}
+        {% if current_year != next_year %}
+### Year {{ current_year }}
+            {% assign open_list = true %}
+        {% endif %}
+    {% endif %}
 </div>
+
+    {% if open_list %}
+        <ul class="post-list">
+    {% endif %}
+
+    <li>
+
+{% comment %}See http://frontendcollisionblog.com/jekyll/snippet/2015/03/23/how-to-show-a-summary-of-your-post-with-jekyll.html
+             which is released under the MIT license, Copyright (c) 2015 Joshua Beam
+{% endcomment %}
+{% capture post_excerpt %}
+            <span class="post-list-excerpt">
+{% if post.content contains site.excerpts.start and post.content contains site.excerpts.end %}
+    {% assign start=post.content | split: site.excerpts.start | last %}
+    {% assign end=start | split: site.excerpts.end | first %}
+    {{ end | strip_html }}
+{% else %}
+    {{ post.content | strip_html | truncatewords: site.excerpts.words }}
+{% endif %}
+            </span>
+{% endcapture %}
+
+        <a href="{{ post.url | prepend: site.baseurl }}.html">
+            <span class="post-list-metadata">
+                <span class="post-list-title">{{ post.title }}</span>           
+                <span class="post-list-date">{{ post.date | date: "%b %d" }}</span>
+                <span class="post-list-div"></span>
+                {{ post_excerpt }}
+            </span>
+        </a>
+    </li>
+
+    {% if post.next == false %}
+        </ul>
+    {% endif %}
+
+    {% assign i=i | plus: 1 %}
 {% endfor %}
-</div>

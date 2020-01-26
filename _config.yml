@@ -1,23 +1,36 @@
 ## Site Info
 title:              "Blog testing"
 description:        "My blog testing"
-# This should point to your website source.
-website_source:     https://github.com/frnmst/the-flux-of-thought
-# These should point to the-flux-of-thought repository.
-software_version: "0.1.0"
-# The following is used along the software_version variable to build the
-# software version url.
-software_release_base_url: https://github.com/frnmst/the-flux-of-thought/releases/tag
 
-## Author Info
-author_name:        "Franco Masotti"
-author_email:       franco.masotti@live.com
+website:
+    # This should point to your website source.
+    source:     https://github.com/frnmst/the-flux-of-thought
+    license:
+        url: "https://creativecommons.org/licenses/by-sa/4.0/"
+        name: "CC-BY-SA 4.0"
+
+software:
+    # These should point to the-flux-of-thought repository.
+    home: https://github.com/frnmst/the-flux-of-thought
+    version: "0.1.0"
+    # The following is used along the version variable to build the
+    # software version url.
+    release_base_url: "https://github.com/frnmst/the-flux-of-thought/releases/tag"
+
+author:
+    name: "Franco Masotti"
+    email: "franco.masotti@live.com"
 
 ## Site Settings
-baseurl:            "/the-flux-of-thought" # Base URL must end WITHOUT a slash, default: ""
-permalink:          /notes/:title # Post permalink. If you change this you must 
-                                  # modify all the occurencies manually.
-timezone:           Europe/Rome # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+# Base URL must end WITHOUT a slash, default: ""
+baseurl:            "/the-flux-of-thought"
+
+# Post permalink. If you change this you must
+# modify all the occurencies manually.
+permalink:          /notes/:title
+# https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:           Europe/Rome
+uture:             true
 
 ## Site Build
 highlighter:        rouge
@@ -27,36 +40,42 @@ kramdown:
 sass:
     style:          :compressed
 
-## Other Params
-include:            [ "_pages" ]
-exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "Makefile" ]
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: []
+  blanklines: false
+  profile: false
+  startings: []
 
-## Ruby gems
-plugins:
-  - jekyll-sitemap
+excerpts:
+    enabled:        true
+    start:          "<!--excerpt_start-->"
+    end:            "<!--excerpt_end-->"
+    words:          20
 
-## Excerpts
-excerpt_enabled:        true
-excerpt_separator:      "<!--more-->"
-excerpt_words:          20
-
-## Tags
-min_tag_score:       2
-# Set the following to false to avoid limiting the tag links.
 limit_tag_links:     16
+tags:
+    score:
+        min:       2
+    # Set the following to false to avoid limiting the tag links.
+    link_limit:     16
 
-## Meta tag options
-meta_description_words:         140
-meta_excerpt_words:             140
-meta_site_description_words:    140
+meta:
+    description_words:         140
+    excerpt_words:             140
+    site_description_words:    140
 
-## Anchor headings
-anchor_headings_enabled:         true
-anchor_headings_character:       "&#182;"
-anchor_headings_min:             1
-anchor_headings_max:             6
-# Puts the anchor heading before the title if set to true.
-anchor_headings_before:          false
+anchor_headings:
+    enabled:         true
+    character:       "&#182;"
+    min:             1
+    max:             6
+
+    # Puts the anchor heading before the title if set to true.
+    before:          false
 
 # Keep comments hidden
 collections:
@@ -114,3 +133,11 @@ defaults:
     values:
       layout:       comment
       is_comment:   true
+
+## Other Params
+include:            [ "_pages" ]
+exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "Makefile" ]
+
+## Ruby gems
+plugins:
+  - jekyll-sitemap

@@ -15,8 +15,8 @@ layout: compress
             <div id="main"></div>
         {% endif %}
 
-        {% if site.anchor_headings_enabled %}
-            {% include anchor_headings.html html=content anchorBody=site.anchor_headings_character anchorClass="hAnchor" h_min=site.anchor_headings_min h_max=site.anchor_headings_max beforeHeading=site.anchor_headings_before %}
+        {% if site.anchor_headings.enabled %}
+            {% include anchor_headings.html html=content anchorBody=site.anchor_headings.character anchorClass="hAnchor" h_min=site.anchor_headings.min h_max=site.anchor_headings.max beforeHeading=site.anchor_headings.before %}
         {% else %}
             {{ content }}
         {% endif %}
