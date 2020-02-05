@@ -1,6 +1,6 @@
 ---
 title: Download this Theme
-updated: 2010-04-14 17:39
+updated: 2020-02-05 20:21
 categories:  Download
 tags: [download, terminal, image from another post]
 ---
@@ -9,7 +9,7 @@ The Plain Libre is just another white clean and minimalist Jekyll theme that
 designed to focus on writing matters. This theme is best use for personal blog 
 type. No local or remote font is served.
 
-> **_Fork_** or **_download_** the theme [**here**](https://github.com/frnmst/the-plain-libre).
+> **_Fork_** or **_download_** the theme [**here**](https://github.com/frnmst/the-flux-of-thought).
 
 <!--more-->
 
