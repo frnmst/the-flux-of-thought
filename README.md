@@ -65,9 +65,7 @@ https://frnmst.github.io/the-flux-of-thought/
 - No Javascript is used. See [The JavaScript Trap](https://www.gnu.org/philosophy/javascript-trap.html).
 - No local fonts are served.
 - No remote fonts are included (called).
-- Boxes with outer shades are clickable links.
-- Boxes with inner shades are NOT clickable links.
-- Any box without shades, inner or outer, is either the navbar or the badges in the footer.
+- A very minimal CSS is served.
 
 ## Versions
 

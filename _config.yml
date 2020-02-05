@@ -54,7 +54,7 @@ excerpts:
     enabled:        true
     start:          "<!--excerpt_start-->"
     end:            "<!--excerpt_end-->"
-    words:          20
+    words:          10
 
 tags:
     score:

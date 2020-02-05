@@ -11,6 +11,8 @@ layout: compress
 	<body>
 		{% include header.html %}
 
+        <hr>
+
         {% if page.is_post != true %}
             <div id="main"></div>
         {% endif %}
@@ -23,8 +25,11 @@ layout: compress
 
         {% comment %}Can't use == false since page.is_home might be undefined{% endcomment %}
         {% if page.is_home != true and page.is_404 != true and page.is_tags != true and page.is_sitemap != true %}
+            <hr>
             {% include comments.html %}
         {% endif %} 
+
+        <hr>
 
         {% if page.is_post %}
             {% include post_navigation.html %}

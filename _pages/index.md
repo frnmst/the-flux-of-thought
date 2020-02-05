@@ -4,8 +4,14 @@ permalink: index.html
 excerpt: none
 ---
 
+# {{ site.title }}
+
+## Tags
+
 {% include tag_list.html %}
-    
+
+## Years
+
 <div class="index" markdown="0">
 {% assign i=0 | plus: 0 %}
 
@@ -27,11 +33,11 @@ excerpt: none
 
 <div markdown="1">
     {% if i == 0 %}
-### Year {{ current_year }}
+### {{ current_year }}
         {% assign open_list = true %}
     {% elsif post.next %}
         {% if current_year != next_year %}
-### Year {{ current_year }}
+### {{ current_year }}
             {% assign open_list = true %}
         {% endif %}
     {% endif %}
@@ -59,12 +65,7 @@ excerpt: none
 {% endcapture %}
 
         <a href="{{ post.url | prepend: site.baseurl }}.html">
-            <span class="post-list-metadata">
-                <span class="post-list-title">{{ post.title }}</span>           
-                <span class="post-list-date">{{ post.date | date: "%b %d" }}</span>
-                <span class="post-list-div"></span>
-                {{ post_excerpt }}
-            </span>
+[ {{ post.date | date: "%F" }} ] {{ post.title }} { {{ post_excerpt }} }
         </a>
     </li>
 
@@ -74,3 +75,4 @@ excerpt: none
 
     {% assign i=i | plus: 1 %}
 {% endfor %}
+
