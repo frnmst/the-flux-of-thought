@@ -20,6 +20,9 @@ software:
 author:
     name: "Franco Masotti"
     email: "franco.masotti@live.com"
+    buymeacoffee:
+        message: "Buy me a coffee"
+        url: "https://buymeacoff.ee/frnmst"
 
 ## Site Settings
 # Base URL must end WITHOUT a slash, default: ""

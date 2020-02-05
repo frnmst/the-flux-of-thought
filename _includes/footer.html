@@ -10,6 +10,12 @@
     <div>
         &copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
     </div>
+    {% if site.author.buymeacoffee %}
+    <div>
+        <a href="{{ site.author.buymeacoffee.url }}">{{ site.author.buymeacoffee.message }}</a>
+    </div>
+    {% endif %}
+    <hr>
     <div>
         <ul>
             <li><a href="https://jekyllrb.com/"><img src="{{ site.baseurl }}/assets/badge-powered_by_jekyll.svg" alt="powered by Jekyll"></a></li>
