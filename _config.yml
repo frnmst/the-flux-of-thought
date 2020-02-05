@@ -59,7 +59,7 @@ excerpts:
     end:            "<!--excerpt_end-->"
     words:          10
 
-tags:
+tag_list:
     score:
         min:       2
     # Set the following to false to avoid limiting the tag links.
