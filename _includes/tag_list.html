@@ -63,7 +63,7 @@
      {% assign sorted_tags = sorted_tags | slice: 0, s %}
 {% endif %}
 
-<div class="tag-list" markdown="0">
+<div markdown="0">
     <ul>
     {% for tag_elements in sorted_tags %}
         {% assign tag = tag_elements | split: '|' %}

@@ -48,12 +48,10 @@ excerpt: none
     {% endif %}
 
     <li>
-
 {% comment %}See http://frontendcollisionblog.com/jekyll/snippet/2015/03/23/how-to-show-a-summary-of-your-post-with-jekyll.html
              which is released under the MIT license, Copyright (c) 2015 Joshua Beam
 {% endcomment %}
 {% capture post_excerpt %}
-            <span class="post-list-excerpt">
 {% if post.content contains site.excerpts.start and post.content contains site.excerpts.end %}
     {% assign start=post.content | split: site.excerpts.start | last %}
     {% assign end=start | split: site.excerpts.end | first %}
@@ -61,9 +59,7 @@ excerpt: none
 {% else %}
     {{ post.content | strip_html | truncatewords: site.excerpts.words }}
 {% endif %}
-            </span>
 {% endcapture %}
-
         <a href="{{ post.url | prepend: site.baseurl }}.html">
 [ {{ post.date | date: "%F" }} ] {{ post.title }} { {{ post_excerpt }} }
         </a>
@@ -75,4 +71,3 @@ excerpt: none
 
     {% assign i=i | plus: 1 %}
 {% endfor %}
-

@@ -1,4 +1,4 @@
-<div class="comment">
+<div>
     {% capture mail %}{{ site.author.email }}{% endcapture %}
     {% assign mail_substring = mail | split: '@' %}
     {% assign mail_username = mail_substring[0] %}
@@ -8,14 +8,14 @@
     {% else %}
         {% capture mailto_prefix %}{{ mail_username }}+{{ page.path | remove: ".html" | remove: ".md" | remove: "_pages/" }}{% endcapture %}
     {% endif %}
-    <div class="title">
+    <div>
         <h3>
             <a href="mailto:{{ mailto_prefix }}@{{ mail_domain }}">
                 Post a new comment</a>
         </h3>
     </div>
 
-  <div class="comment-content">
+  <div>
   {% assign comment_counter = 0 %}
   {% assign comments = site.comments | sort | reverse %}
   {% for comment in comments %}
@@ -31,11 +31,11 @@
             {% assign parity = "odd" %}
         {% endif %}
     <a href="#{{ comment_id }}" id="{{ comment_id }}" class="{{ parity }}">
-        <div class="text">
+        <div>
                 <div class="from">{{ comment.from }}</div>
                 <div class="date">{{ comment.date | date: "%b %e %Y, %R %Z" }}</div>
-            <div class="hr"></div>
-         <div class="subject"><h3>{{ comment.subject }}</h3></div>
+            <div></div>
+         <div><h3>{{ comment.subject }}</h3></div>
         {{ comment.content | markdownify }}
         </div>
     </a>

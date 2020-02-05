@@ -5,14 +5,14 @@
 {% endif %}
 
 {% if include.caption %}
-<div class="figure">
+<div>
 <a href="{{ url | prepend: site.baseurl }}" target="_blank">
     <img src="{{ url | prepend: site.baseurl }}" alt="{% if include.alt %}{{ include.alt }}{% else %}Image{% endif %}">
-    <div class="text">{{ include.caption }}</div>
+    <div>{{ include.caption }}</div>
 </a>
 </div>
 {% else %}
-<div class="img">
+<div>
 <a href="{{ url | prepend: site.baseurl }}" target="_blank">
     <img src="{{ url | prepend: site.baseurl }}" alt="{% if include.alt %}{{ include.alt }}{% else %}Image{% endif %}">
 </a>

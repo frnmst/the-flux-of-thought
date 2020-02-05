@@ -8,7 +8,7 @@ permalink: /tags/
 
 <hr>
 
-<div class="tag-posts">
+<div>
 
 {% assign site_tags = site.tags | sort %}
 
