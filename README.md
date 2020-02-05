@@ -18,6 +18,7 @@ Jekyll theme.
   - [Upgrading](#upgrading)
     - [Upgrading from Jekyll 3.x to Jekyll 4.x](#upgrading-from-jekyll-3x-to-jekyll-4x)
     - [Upgrading from the flux-of-though 0.x to 1.x](#upgrading-from-the-flux-of-though-0x-to-1x)
+    - [Upgrading from the flux-of-though 1.x to 2.x](#upgrading-from-the-flux-of-though-1x-to-2x)
   - [Building and serving](#building-and-serving)
     - [Locally](#locally)
     - [GitLab Pages](#gitlab-pages)
@@ -114,6 +115,10 @@ and [this document](https://jekyllrb.com/docs/upgrading/3-to-4/)
 
 Yaml keys in the configuration file have changed. Be sure to to fix your configuration
 file appropriately.
+
+### Upgrading from the flux-of-though 1.x to 2.x
+
+The original CSS has been replaced with a minimal CSS. See [this](https://webdesign.tutsplus.com/articles/undress-to-impress-check-your-websites-without-css--cms-22489)
 
 ## Building and serving
 
