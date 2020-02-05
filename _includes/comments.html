@@ -30,12 +30,11 @@
         {% else %}
             {% assign parity = "odd" %}
         {% endif %}
-    <a href="#{{ comment_id }}" id="{{ comment_id }}" class="{{ parity }}">
+    <a href="#comment-{{ comment_id }}" id="comment-{{ comment_id }}" class="{{ parity }}">
         <div>
-                <div class="from">{{ comment.from }}</div>
-                <div class="date">{{ comment.date | date: "%b %e %Y, %R %Z" }}</div>
-            <div></div>
-         <div><h3>{{ comment.subject }}</h3></div>
+             <div>Subject: {{ comment.subject }}</div>
+             <div>From: {{ comment.from }}</div>
+             <div>Arrived on: {{ comment.date | date: "%b %e %Y, %R %Z" }}</div>
         {{ comment.content | markdownify }}
         </div>
     </a>
