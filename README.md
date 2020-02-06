@@ -68,6 +68,10 @@ https://frnmst.github.io/the-flux-of-thought/
 - No remote fonts are included (called).
 - A very minimal CSS is served.
 
+
+<a href="https://www.buymeacoffee.com/frnmst" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
+
+
 ## Versions
 
 See all 

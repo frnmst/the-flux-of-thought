@@ -1,69 +1,69 @@
 ## Site Info
-title:              "Blog testing"
-description:        "My blog testing"
+title:                  "Blog testing"
+description:            "My blog testing"
 
 website:
     # This should point to your website source.
-    source:     https://github.com/frnmst/the-flux-of-thought
+    source:             "https://github.com/frnmst/the-flux-of-thought"
     license:
-        url: "https://creativecommons.org/licenses/by-sa/4.0/"
-        name: "CC-BY-SA 4.0"
+        url:            "https://creativecommons.org/licenses/by-sa/4.0/"
+        name:           "CC-BY-SA 4.0"
 
 software:
     # These should point to the-flux-of-thought repository.
-    home: https://github.com/frnmst/the-flux-of-thought
-    version: "1.0.0"
+    home:               "https://github.com/frnmst/the-flux-of-thought"
+    version:            "2.0.2"
     # The following is used along the version variable to build the
     # software version url.
-    release_base_url: "https://github.com/frnmst/the-flux-of-thought/releases/tag"
+    release_base_url:   "https://github.com/frnmst/the-flux-of-thought/releases/tag"
 
 author:
-    name: "Franco Masotti"
-    email: "franco.masotti@live.com"
+    name:               "Franco Masotti"
+    email:              "franco.masotti@live.com"
     buymeacoffee:
-        message: "Buy me a coffee"
-        url: "https://buymeacoff.ee/frnmst"
+        message:        "Buy me a coffee"
+        url:            "https://buymeacoff.ee/frnmst"
 
 ## Site Settings
 # Base URL must end WITHOUT a slash, default: ""
-baseurl:            "/the-flux-of-thought"
+baseurl:                "/the-flux-of-thought"
 
 # Post permalink. If you change this you must
 # modify all the occurencies manually.
-permalink:          /notes/:title
+permalink:              "/notes/:title"
 # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:           Europe/Rome
-uture:             true
+timezone:               "Europe/Rome"
+future:                  true
 
 ## Site Build
-highlighter:        rouge
-markdown:           kramdown
+highlighter:            "rouge"
+markdown:               "kramdown"
 kramdown:
-    input:          GFM
+    input:              "GFM"
 sass:
-    style:          :compressed
+    style:              ":compressed"
 
 compress_html:
-  clippings: all
-  comments: ["<!-- ", " -->"]
-  endings: all
+  clippings:            "all"
+  comments:             ["<!-- ", " -->"]
+  endings:              "all"
   ignore:
-    envs: []
-  blanklines: false
-  profile: false
-  startings: []
+    envs:               []
+  blanklines:           false
+  profile:              false
+  startings:            []
 
 excerpts:
-    enabled:        true
-    start:          "<!--excerpt_start-->"
-    end:            "<!--excerpt_end-->"
-    words:          10
+    enabled:            true
+    start:              "<!--excerpt_start-->"
+    end:                "<!--excerpt_end-->"
+    words:              10
 
 tag_list:
     score:
-        min:       2
+        min:            2
     # Set the following to false to avoid limiting the tag links.
-    link_limit:     16
+    link_limit:         16
 
 meta:
     description_words:         140
@@ -71,74 +71,74 @@ meta:
     site_description_words:    140
 
 anchor_headings:
-    enabled:         true
-    character:       "&#182;"
-    min:             1
-    max:             6
+    enabled:            true
+    character:          "&#182;"
+    min:                1
+    max:                6
 
     # Puts the anchor heading before the title if set to true.
-    before:          false
+    before:             false
 
 # Keep comments hidden
 collections:
   comments:
-    output:         false
+    output:             false
   pages:
-    output:         false
+    output:             false
   media:
-    output:         true
+    output:             true
   assets:
-    output:         true
+    output:             true
 
 ## Page names
 defaults:
   -
     scope:
-      path:         ""
+      path:             ""
     values:
-      layout:       "null"
+      layout:           "null"
   -
     scope:
-      type:         "pages"
+      type:             "pages"
     values:
-      layout:       "page"
+      layout:           "page"
   -
     scope:
-      type:         "posts"
+      type:             "posts"
     values:
-      layout:       "post"
-      is_post:      true
+      layout:           "post"
+      is_post:          true
   -
     scope:
-      path:         "_pages/index.md"
+      path:             "_pages/index.md"
     values:
-      is_home:      true
+      is_home:          true
   -
     scope:
-      path:         "_pages/404.md"
+      path:             "_pages/404.md"
     values:
-      is_404:       true
+      is_404:           true
   -
     scope:
-      path:         "_pages/tags.md"
+      path:             "_pages/tags.md"
     values:
-      is_tags:       true
+      is_tags:           true
   -
     scope:
-      path:         "_pages/sitemap.md"
+      path:             "_pages/sitemap.md"
     values:
-      is_sitemap:   true
+      is_sitemap:       true
   -
     scope:
-      path:         "comments"
-      type:         comments
+      path:             "comments"
+      type:             "comments"
     values:
-      layout:       comment
-      is_comment:   true
+      layout:           "comment"
+      is_comment:       true
 
 ## Other Params
-include:            [ "_pages" ]
-exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "Makefile" ]
+include:                [ "_pages" ]
+exclude:                [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "Makefile" ]
 
 ## Ruby gems
 plugins:
