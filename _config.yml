@@ -19,7 +19,7 @@ software:
 
 author:
     name:               "Franco Masotti"
-    email:              "franco.masotti@live.com"
+    email:              "frnmst.blog@outlook.com"
     buymeacoffee:
         message:        "Buy me a coffee"
         url:            "https://buymeacoff.ee/frnmst"
@@ -138,7 +138,7 @@ defaults:
 
 ## Other Params
 include:                [ "_pages" ]
-exclude:                [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "Makefile" ]
+exclude:                [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "Makefile", "Pipfile", "Pipfile.lock", ".pre-commit-config.yaml" ]
 
 ## Ruby gems
 plugins:

@@ -4,13 +4,13 @@
     {% assign mail_username = mail_substring[0] %}
     {% assign mail_domain = mail_substring[1] %}
     {% if page.is_post %}
-        {% capture mailto_prefix %}{{ mail_username }}+{{ page.path | remove: ".md" | remove: "_posts/" }}{% endcapture %}
+        {% capture mailto_subject %}{{ page.path | remove: ".md" | remove: "_posts/" | urlencode }}{% endcapture %}
     {% else %}
-        {% capture mailto_prefix %}{{ mail_username }}+{{ page.path | remove: ".html" | remove: ".md" | remove: "_pages/" }}{% endcapture %}
+        {% capture mailto_subject %}{{ page.path | remove: ".html" | remove: ".md" | remove: "_pages/" | urlencode }}{% endcapture %}
     {% endif %}
     <div>
         <h3>
-            <a href="mailto:{{ mailto_prefix }}@{{ mail_domain }}">
+            <a href="mailto:{{ mail_username }}@{{ mail_domain }}?subject={{ mailto_subject }}">
                 Post a new comment</a>
         </h3>
     </div>
