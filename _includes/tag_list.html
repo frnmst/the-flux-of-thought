@@ -72,7 +72,7 @@
         {% assign freq = tag[0] | plus: 0 %}
         {% if page.is_home %}
             {% if freq >= site.tag_list.score.min %}
-                {% capture link %}{{ site.baseurl }}/tags/#{{ tagg }}{% endcapture %} 
+                {% capture link %}{{ site.baseurl }}/tags/#{{ tagg }}{% endcapture %}
                 <li>
                     <a href="{{ link }}">{{ tag_name }} [{{ freq }}]</a>
                 </li>

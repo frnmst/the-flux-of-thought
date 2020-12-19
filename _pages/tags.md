@@ -25,4 +25,3 @@ permalink: /tags/
 {% endfor %}
 
 </div>
-

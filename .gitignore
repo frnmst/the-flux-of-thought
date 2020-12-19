@@ -1,6 +1,7 @@
 _site/
 .sass-cache/
 .jekyll-cache/
+/Pipfile.lock
 
 # Windows image file caches
 Thumbs.db
