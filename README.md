@@ -84,13 +84,13 @@ be installed on your system.
 
 | Package | Executable | Version command | Package Version |
 |---------|------------|-----------------|-----------------|
-| [Ruby](https://www.ruby-lang.org/en/) | `/bin/ruby` | `$ ruby --version` | `ruby 2.6.5p114 (2019-10-01 revision 67812)` |
-| [RDoc](https://ruby.github.io/rdoc/) | `/bin/rdoc` | `$ rdoc --version` |  `6.2.0` |
-| [Jekyll](https://jekyllrb.com/) | `~/.gem/ruby/2.5.0/bin/jekyll` | `$ jekyll --version` | `jekyll 4.0.0` |
+| [Ruby](https://www.ruby-lang.org/en/) | `/bin/ruby` | `$ ruby --version` | `ruby 2.7.1p83 (2020-03-31 revision a0c7c23c9c)` |
+| [RDoc](https://ruby.github.io/rdoc/) | `/bin/rdoc` | `$ rdoc --version` |  `6.2.1` |
+| [Jekyll](https://jekyllrb.com/) | `~/.gem/ruby/2.7.0/bin/jekyll` | `$ jekyll --version` | `jekyll 4.0.1` |
 | [Jekyll Sitemap Generator Plugin](https://github.com/jekyll/jekyll-sitemap) | - | - | `1.4.0` |
-| [GNU Make](http://www.gnu.org/software/make) | `/bin/make` | `$ make --version` | `GNU Make 4.2.1` |
-| [krmadown](https://kramdown.gettalong.org/index.html) | `~/.gem/ruby/2.5.0/bin/kramdown` | `$ kramdown --version` | `2.1.0` |
-| [Rouge](https://github.com/jneen/rouge) | `~/.gem/ruby/2.5.0/bin/rougify` | `$ rougify --version` | `3.13.0` |
+| [GNU Make](http://www.gnu.org/software/make) | `/bin/make` | `$ make --version` | `GNU Make 4.3` |
+| [krmadown](https://kramdown.gettalong.org/index.html) | `~/.gem/ruby/2.7.0/bin/kramdown` | `$ kramdown --version` | `2.2.1` |
+| [Rouge](https://github.com/jneen/rouge) | `~/.gem/ruby/2.7.0/bin/rougify` | `$ rougify --version` | `3.19.0` |
 
 ## Installation
 
