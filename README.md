@@ -188,7 +188,7 @@ this section, you must create a new file in the `_comments` directory using the
 corresponding posts path name as file name. Let's say a user sends a comment
 for the `another-post` post. The `mailto` URI will have this structure:
 
-    mailto:<your_email_username>@gmail.com?subject=2017-02-11-another-post
+    mailto:<your_email>?subject=2017-02-11-another-post
 
 The `2017-02-11-another-post` substring is obtained from the post's file name:
 
