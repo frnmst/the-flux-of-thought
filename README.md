@@ -176,23 +176,21 @@ pages:
 #### Overview
 
 This theme handles comments in the most static way possible:
-a `mailto` unique link is generated for each post, using the address specified
-in the `_config.yml` file. This idea came out while
-reading [this](https://caurea.org/2012/03/31/this-blog-has-comments-again.html)
-page.
+a `mailto` unique URI is generated for each post, using the address specified
+in the `_config.yml` file. The original idea implemented a system of mail aliases
+like [this](https://caurea.org/2012/03/31/this-blog-has-comments-again.html).
+It is not always possible to use aliases so a different solution using a `subject`
+query is now implemented (see the [Mailto](https://en.wikipedia.org/wiki/Mailto)
+article).
 
-Moreover, for each post a comment section gets exposed. To get comments inside
+For each post a comment section gets exposed. To get comments inside
 this section, you must create a new file in the `_comments` directory using the
 corresponding posts path name as file name. Let's say a user sends a comment
-for the `another-post` post. The `mailto` link will have this structure:
+for the `another-post` post. The `mailto` URI will have this structure:
 
-    <your_email_username>+2017-02-11-another-post@gmail.com
+    mailto:<your_email_username>@gmail.com?subject=2017-02-11-another-post
 
-This works for any mailer system supporting these kind of mail
-aliases, for example GMAIL.
-
-You may notice the substring `2017-02-11-another-post` after the email
-username which is part of the post's file name:
+The `2017-02-11-another-post` substring is obtained from the post's file name:
 
     ./_posts/2017-02-11-another-post.md
 
