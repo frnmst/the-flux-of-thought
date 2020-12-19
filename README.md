@@ -54,6 +54,7 @@ Jekyll theme.
   - [This version compared to the The Plain Libre](#this-version-compared-to-the-the-plain-libre)
   - [Useful resources](#useful-resources)
   - [Copyright and License](#copyright-and-license)
+  - [Trusted source](#trusted-source)
 
 <!--TOC-->
 
@@ -636,3 +637,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Trusted source
+
+You can check the authenticity of new releases using my public key.
+
+Instructions, sources and keys can be found at [frnmst.gitlab.io/software](https://frnmst.gitlab.io/software/)
