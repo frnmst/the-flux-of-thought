@@ -1,8 +1,5 @@
 <div>
     {% capture mail %}{{ site.author.email }}{% endcapture %}
-    {% assign mail_substring = mail | split: '@' %}
-    {% assign mail_username = mail_substring[0] %}
-    {% assign mail_domain = mail_substring[1] %}
     {% if page.is_post %}
         {% capture mailto_subject %}{{ page.path | remove: ".md" | remove: "_posts/" | urlencode }}{% endcapture %}
     {% else %}
@@ -10,7 +7,7 @@
     {% endif %}
     <div>
         <h3>
-            <a href="mailto:{{ mail_username }}@{{ mail_domain }}?subject={{ mailto_subject }}">
+            <a href="mailto:{{ mail }}?subject={{ mailto_subject }}">
                 Post a new comment</a>
         </h3>
     </div>
