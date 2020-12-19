@@ -12,7 +12,7 @@ website:
 software:
     # These should point to the-flux-of-thought repository.
     home:               "https://github.com/frnmst/the-flux-of-thought"
-    version:            "2.0.2"
+    version:            "3.0.0"
     # The following is used along the version variable to build the
     # software version url.
     release_base_url:   "https://github.com/frnmst/the-flux-of-thought/releases/tag"
