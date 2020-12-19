@@ -4,6 +4,15 @@
 # See LICENSE file for details.
 
 PORT = 3050
+default: install-dev
+
+install-dev:
+	pipenv install --dev
+	pipenv run pre-commit install
+
+uninstall-dev:
+	pipenv --rm
+
 all: clean build serve-global
 
 build:
@@ -17,3 +26,5 @@ serve-global:
 
 clean:
 	@rm -rf _site
+
+.PHONY: default install-dev uninstall-dev all build serve serve-global clean
